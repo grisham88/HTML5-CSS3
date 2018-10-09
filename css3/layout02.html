@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Layout</title>
+    <style>
+        /* Elemente haben Defaultmargins */
+        #wrapper {
+            width: 540px;
+        }
+
+        header {
+            background-color: #ddd;
+            height: 80px;
+        }
+
+        #left {
+            background-color: yellow;
+            float: left;
+            width: calc(35% - 10px);
+            padding: 5px;
+        }
+
+        #middle {
+            background-color: orange;
+            float: left;
+            width: calc(40% - 10px);
+            padding: 5px;
+        }
+
+        #right {
+            background-color: pink;
+            float: left;
+            width: calc(25% - 10px);
+            padding: 5px;
+        }
+
+        footer {
+            background-color: #ddd;
+            height: 60px;
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Floating Layout</h1>
+    <div id="wrapper">
+        <header>Header</header>
+        <div id="left">
+            <h3>Spalte 1</h3>
+            <p id="p1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, blanditiis.</p>
+        </div>
+        <div id="middle">
+            <h3>Spalte 2</h3>
+            <p id="p1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, blanditiis.</p>
+        </div>
+        <div id="right">
+            <h3>Spalte 3</h3>
+            <p id="p1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, blanditiis.</p>
+        </div>
+        <footer>Footer</footer>
+    </div>
+</body>
+
+</html>

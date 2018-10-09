@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Positionierung</title>
+    <title>Floating - float: left</title>
     <style>
         /* Elemente haben Defaultmargins */
         body {
@@ -13,25 +13,21 @@
             background-color: white;
         }
 
-        /* Im Flow COLLAPSEN die Margins => 16px + 16px -> 16px Abstand */
         p {
             padding: 5px;
             border: 1px solid black;
         }
 
-        /* Hier: Topmargin von BODY collapst in Topmargin des ersten P !! */
-
         #p1 {}
 
         #p2 {
             background-color: pink;
-            position: relative;
-            top: 30px;
-            left: 20px;
-            z-index: -5;
+            float: left;
         }
 
         #p3 {
+            /* wo gefloatet wird */
+            clear: both;
             background-color: lightgreen;
         }
 
@@ -40,9 +36,9 @@
 </head>
 
 <body>
-    <h1>Positionierung</h1>
+    <h1>Floating</h1>
     <p id="p1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, blanditiis.</p>
-    <p id="p2"><b>positon: relative;</b> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores eligendi
+    <p id="p2"><b>float: left;</b> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores eligendi
         dignissimos velit.</p>
     <p id="p3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur, veniam laudantium! Ipsa pariatur
         ut
