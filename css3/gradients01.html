@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Boxmodell und Flowlayout</title>
+    <style>
+        /* Elemente haben Defaultmargins */
+        body {
+            margin: 8px;
+            background-color: white;
+        }
+
+        /* Im Flow COLLAPSEN die Margins => 16px + 16px -> 16px Abstand */
+        p {
+            padding: 10px;
+            margin: 30px;
+        }
+
+        /* Hier: Topmargin von BODY collapst in Topmargin des ersten P !! */
+
+        #p1 {
+            background-color: #ddd;
+        }
+
+        #p2 {
+            /* ein Gradient IST ein Bild!!! */
+            /* background-image: url(special.gif); */
+            background-image: linear-gradient(to bottom, #ddd 0%, lightblue 100%);
+        }
+
+        #p3 {
+            /*to right -> gibt die Fließrichtung des Farbverlaufs an
+             1.ter Prozentwert gibt an ab wann der Farbverlauf beginnt und mit dem 2ten Wert wo er endet, die Zahlen vor dem ersten und nachdem 2ten wert sind ohne Verlauf*/
+            background-image: linear-gradient(to right, #eee 30%, #555 70%);
+        }
+
+        #p4 {
+            background-image: linear-gradient(to right, #eee 40%, #555 80%);
+        }
+
+        #p5 {
+            background-image: linear-gradient(155deg, rgb(247, 226, 226) 30%, rgb(255, 0, 0) 70%);
+        }
+
+        #p6 {
+            background-image: linear-gradient(to right, pink 30%, lightblue 40%, lightblue 60%, green 70%);
+        }
+
+        #p7 {
+            background-image: linear-gradient(155deg, pink 30%, lightblue 40%, lightblue 60%, green 70%);
+        }
+
+        #p8 {
+            background-image: linear-gradient(90deg, #eee 50%, #999 50%);
+            background-size: 4px 4px;
+            background-repeat: repeat;
+        }
+
+        #p8:hover {
+            background-image: linear-gradient(135deg, #eee 50%, #999 50%);
+            background-size: 4px 4px;
+            background-repeat: repeat;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Box-Shadow</h1>
+    <p id="p1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, blanditiis.</p>
+    <p id="p2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores eligendi dignissimos velit.</p>
+    <p id="p3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequuntur, veniam laudantium! Ipsa pariatur
+        ut
+        ratione officia ducimus ex velit mollitia!</p>
+    <p id="p4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus voluptatibus delectus veniam dolorem
+        molestias,
+        debitis odio voluptates sequi distinctio et quasi soluta laborum nihil ut voluptate.</p>
+    <p id="p5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus voluptatibus delectus veniam dolorem
+        molestias,
+        debitis odio voluptates sequi distinctio et quasi soluta laborum nihil ut voluptate.</p>
+    <p id="p6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus voluptatibus delectus veniam dolorem
+        molestias,
+        debitis odio voluptates sequi distinctio et quasi soluta laborum nihil ut voluptate.</p>
+    <p id="p7">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus voluptatibus delectus veniam dolorem
+        molestias,
+        debitis odio voluptates sequi distinctio et quasi soluta laborum nihil ut voluptate.</p>
+    <p id="p8">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus voluptatibus delectus veniam dolorem
+        molestias,
+        debitis odio voluptates sequi distinctio et quasi soluta laborum nihil ut voluptate.</p>
+</body>
+
+</html>

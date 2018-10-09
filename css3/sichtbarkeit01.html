@@ -10,7 +10,7 @@
         /* Elemente haben Defaultmargins */
         body {
             margin: 8px;
-            background-color: orange;
+            background-color: white;
         }
 
         /* Im Flow COLLAPSEN die Margins => 16px + 16px -> 16px Abstand */
@@ -22,29 +22,23 @@
         /* Hier: Topmargin von BODY collapst in Topmargin des ersten P !! */
 
         #p1 {
-            background-color: yellow;
-            box-shadow: 15px 15px 10px darkgrey;
+            background-color: #ddd;
         }
 
         #p2 {
-            background-color: pink;
-            border-radius: 20px;
-            box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.5);
+            /* ein Gradient IST ein Bild!!! */
+            /* background-image: url(special.gif); */
+            background-image: linear-gradient(to bottom, #ddd 0%, lightblue 100%);
         }
 
         #p3 {
-            box-shadow: 0 0 10px red;
+            /*to right -> gibt die Fließrichtung des Farbverlaufs an
+             1.ter Prozentwert gibt an ab wann der Farbverlauf beginnt und mit dem 2ten Wert wo er endet, die Zahlen vor dem ersten und nachdem 2ten wert sind ohne Verlauf*/
+            background-image: linear-gradient(to right, #eee 30%, #555 70%);
         }
 
         #p4 {
-            box-shadow: -10px -10px 10px red,
-                10px 10px 10px green;
-        }
-
-        #p5 {
-            box-shadow: inset 0 0 10px red,
-                0px 0px 0px 4px green,
-                0px 0px 0px 8px red;
+            background-image: linear-gradient(to right, #eee 40%, #555 80%);
         }
     </style>
 </head>
@@ -59,10 +53,6 @@
     <p id="p4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus voluptatibus delectus veniam dolorem
         molestias,
         debitis odio voluptates sequi distinctio et quasi soluta laborum nihil ut voluptate.</p>
-    <p id="p5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus voluptatibus delectus veniam dolorem
-        molestias,
-        debitis odio voluptates sequi distinctio et quasi soluta laborum nihil ut voluptate.</p>
-
 </body>
 
 </html>
