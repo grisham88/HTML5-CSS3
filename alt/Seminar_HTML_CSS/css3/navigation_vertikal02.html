@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vertikale Navigation</title>
+    <style>
+
+        div#content  {
+            border-left: 1px solid #aaa;
+            margin-left: 190px;
+            padding-left:10px;
+        }
+
+         div#content p:first-of-type {
+             font-weight:bold;
+         }
+
+        div#nav  {
+            float:left;
+            width:180px;
+        }   
+        /* Erste Ebene: */
+        div#nav ul {
+            /* Schritt 1: Bullets entfernen: */
+            list-style-type:none;
+            /* Schritt 2: Padding-Left UL nullen */
+            padding-left:0;
+            /* Schritt 3: Margin UL nullen (Top/Bottom) */
+            margin:0;
+        }
+        div#nav ul li {
+            margin-bottom:5px;
+            position:relative; /* yeah! */
+        }
+        div#nav ul li a {
+            /* Schritt 4: Unterstrich entfernen */
+            text-decoration: none;
+            /* Schritt 5: als Block deklarieren! */
+            display:block;
+            /* Präsentation hier hin !!! */
+            padding:10px;
+            background-color: #ccc;
+            color:#333;
+            text-align:center;
+            font-weight:bold;
+        }       
+        div#nav ul li a:hover {
+            background-color: #aaa;
+        }   
+        /* Zweite Ebene: */
+        div#nav ul li ul {
+            display:none;
+            position:absolute;
+            left:180px;
+            padding-left:5px;
+            top:0;
+            width:150px;
+        }
+        div#nav ul li:hover ul {
+            display:block;
+        }       
+        div#nav ul ul li {
+
+        }
+        div#nav ul ul li a {
+            background-color: #eee;
+        }       
+        div#nav ul ul li a:hover {
+            background-color: #ddd;
+        }  
+    </style>
+</head>
+<body>
+    <div id="nav">
+        <!-- ul>li*6>a{Hauptmenü $} -->
+        <ul>
+            <li><a href="#">Hauptmenü 1</a></li>
+            <li><a href="#">Hauptmenü 2</a>
+               <!-- ul>li*3>a{Untermenü $} -->
+               <ul>
+                   <li><a href="">Untermenü 1</a></li>
+                   <li><a href="">Untermenü 2</a></li>
+                   <li><a href="">Untermenü 3</a></li>
+               </ul>
+            </li>
+            <li><a href="#">Hauptmenü 3</a></li>
+            <li><a href="#">Hauptmenü 4</a>
+                <ul>
+                    <li><a href="">Untermenü 1</a></li>
+                    <li><a href="">Untermenü 2</a></li>
+                    <li><a href="">Untermenü 3</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Hauptmenü 5</a></li>
+            <li><a href="#">Hauptmenü 6</a></li>
+        </ul>
+    </div>
+    <div class="Inhalt" id="content">
+        <h1>Das ist ein Layout?</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus, non molestiae eligendi praesentium distinctio error a culpa! Voluptatem, nulla delectus ipsum eaque voluptates quas, omnis optio, tempora, alias perferendis nisi?</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus, non molestiae eligendi praesentium distinctio error a culpa! Voluptatem, nulla delectus ipsum eaque voluptates quas, omnis optio, tempora, alias perferendis nisi?</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus, non molestiae eligendi praesentium distinctio error a culpa! Voluptatem, nulla delectus ipsum eaque voluptates quas, omnis optio, tempora, alias perferendis nisi?</p>  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus, non molestiae eligendi praesentium distinctio error a culpa! Voluptatem, nulla delectus ipsum eaque voluptates quas, omnis optio, tempora, alias perferendis nisi?</p>   </div>
+</body>
+</html>

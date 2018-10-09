@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <title>font-size-adjust</title>
+<script type="text/javascript" src="css-beispiele.js"></script>
+<link rel="stylesheet" href="cd_style.css" type="text/css" />
+<link rel="stylesheet" href="css-beispiele.css" type="text/css" />
+</head>
+<body>
+<h1>Fontproperties: font-size-adjust (CSS 2; in CSS 2.1 entfernt)</h1>
+<div id="edit">
+  <p>Das <span class="beispiel">font-size-adjust</span>-Property ist dazu gedacht, 
+    die x-Höhe der Schrift innerhalb des Elementcontainers an die x-Höhe der Schrift 
+    des umliegenden Containers anzupassen, sofern unterschiedliche Schriften verwendet 
+    werden. Als Ausgangspunkt und Maß für die Lesbarkeit dient der Aspektwert 
+    einer Schrift, der sich aus dem Verhältnis von Schrifthöhe zur Höhe der Kleinbuchstaben 
+    (x-Höhe) bestimmt. Besitzt eine Schrift einen kleineren Aspektwert als die 
+    Bezugsschrift, so sollte sie mittels font-size-adjust vergrößert werden, ansonsten 
+    verkleinert. </p>
+<p class="werte">Werte:<br/>
+	numerisch
+</p>
+<form onsubmit="return false">
+<p><b>Ausprobieren:</b><br/>font-size-adjust:<input name="fontSizeAdjust" onchange="editieren(this)"/><input type="button" class="button" value="Test"/>
+</p>
+</form>
+<p class="beispiel">Beispiel:<br/>
+Verdana (0.58) nach Comic Sans MS (0.54):<br/>
+font-size-adjust: 1.07<br/>
+Verdana (0.58) nach Georgia (0.50):<br/>
+font-size-adjust: 1.16<br/>
+Verdana (0.58) nach Times New Roman (0.46):<br/>
+font-size-adjust: 1.26
+</p>
+<p class="komp">Anmerkung:<br/> Das font-size-adjust-Property wird derzeit von keinem Browser unterstützt und wurde daher aus der Spezifikation CSS 2.1 wieder entfernt.</p>
+
+
+</div>
+<div id="view">
+<p style="background-color:#ddd">Dieser Textabsatz ist ein Beispielabsatz. Er enthält keinen sinnvollen Inhalt, sondern dient lediglich dazu, dem folgenden Absatz voranzustehen. Er wird durch die CSS-Editierung nicht erfasst. Er hat eine hellgraue Hintergrundfarbe, um besser sichtbar zu sein.</p>
+<p id="ziel">Dieser Absatz kann durch CSS-Formatierungen, die links im Editierbereich vorgenommen werden, in seiner Präsentation geändert werden. Sie können hierfür in den Feldern des Editierbereichs beliebige Eingaben machen, die sofort sichtbar umgesetzt werden (solange die Werte zulässig sind, selbstredend :-).</p>
+<p style="background-color:#ddd">Dieser Textabsatz ist ein Beispielabsatz. Er enthält keinen sinnvollen Inhalt, sondern dient lediglich dazu, dem editierbaren Absatz zu folgen. Er wird durch die CSS-Editierung nicht erfasst. Er hat ebenfalls eine hellgraue Hintergrundfarbe, um besser sichtbar zu sein.</p>
+</div>
+
+</body>
+</html>

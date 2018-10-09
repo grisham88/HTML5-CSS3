@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <title>Positioning-Properties: visibility</title>
+<script type="text/javascript" src="css-beispiele.js"></script>
+<link rel="stylesheet" href="cd_style.css" type="text/css" />
+<link rel="stylesheet" href="css-beispiele.css" type="text/css" />
+</head>
+<body>
+<h1>Positioning-Properties: visibility</h1>
+<div id="edit">
+  <p>Das <span class="beispiel">visibility</span>-Property steuert die Sichtbarkeit 
+    eines Elementcontainers. Dieser nimmt, unabhängig von den dort vorgenommenen 
+    Einstellungen stets den gleichen Raum an der ihm angewiesenen Position ein.<br />
+    Der Wert <span class="beispiel">collapse</span> wirkt auf Tabellenelemente 
+    wie Zeilen <span class="beispiel">&lt;tr></span> und Spalten <span class="beispiel">&lt;col></span> 
+    bzw. Spaltengruppen <span class="beispiel">&lt;colgroup></span> und entfernt 
+    diese aus der Anzeige. Hierbei wird der von ihnen sonst eingenommene Platz 
+    jedoch freigemacht, so dass im Flow folgende Elemente nachrücken. Auf Nicht-Tabellenelemente 
+    angewendet, wirkt die Einstellung <span class="beispiel">collapse</span> wie 
+    <span class="beispiel">hidden</span>. </p>
+ <p class="werte">Werte:<br/>
+	visible, hidden, collapse, inherit</p>
+
+<form onsubmit="return false">
+<p><b>Ausprobieren:</b><br/>visibility:<select name="visibility" onchange="editieren(this)" >
+<option value="inherit">inherit</option>
+<option value="hidden">hidden</option>
+<option value="visible">visible</option>
+<option value="collapse">collapse</option>
+</select></p>
+</form>
+</div>
+<div id="view"><p style="background-color:#ddd">Dieser Textabsatz ist ein Beispielabsatz. Er enthält keinen sinnvollen Inhalt, sondern dient lediglich dazu, dem folgenden Absatz voranzustehen. Er wird durch die CSS-Editierung nicht erfasst. Er hat eine hellgraue Hintergrundfarbe, um besser sichtbar zu sein.</p>
+<div style="border:thin solid; height:85px;">
+    <div id="ziel" style="border:thin solid; width:80%;position:relative;left:10px;top:10px"> 
+      Stylen Sie diesen Container mit dem <span class="beispiel">visibility</span>-Property. 
+    </div>
+</div>
+
+
+<p style="background-color:#ddd">Dieser Textabsatz ist ein Beispielabsatz. Er enthält keinen sinnvollen Inhalt, sondern dient lediglich dazu, dem editierbaren Absatz zu folgen. Er wird durch die CSS-Editierung nicht erfasst. Er hat ebenfalls eine hellgraue Hintergrundfarbe, um besser sichtbar zu sein.</p></div>
+
+</body>
+</html>

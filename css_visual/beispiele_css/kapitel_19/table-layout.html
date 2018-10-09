@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <title>table-layout</title>
+<script type="text/javascript" src="css-beispiele.js"></script>
+<style type="text/css">
+/* <![CDATA[ */
+td { width:100px; }
+/* ]]> */
+</style>
+<link rel="stylesheet" href="cd_style.css" type="text/css" />
+<link rel="stylesheet" href="css-beispiele.css" type="text/css" />
+</head>
+<body>
+<h1>Tabellen-Properties: table-layout</h1>
+<div id="edit">
+  
+  <p>Das <span class="beispiel">table-layout</span>-Property bestimmt, ob die 
+    Abmessungen der Tabelle als Höchstmaße interpretiert werden sollen, oder die 
+    Tabelle sich den Inhalten in der Breite anpassen darf. Defaultwert ist <span class="beispiel">auto</span>. 
+  </p>
+  <p class="werte">Werte:<br/>
+	auto, fixed, inherit</p>
+<p class="beispiel">Beispiel:<br />
+table { table-layout:auto; }
+</p>	
+<form onsubmit="return false">
+<p><b>Ausprobieren:</b><br/>
+table-layout:<select type="text" name="tableLayout" onchange="editieren(this)">
+<option value="inherit">inherit</option>
+<option value="auto">auto</option>
+<option value="fixed">fixed</option>
+</select>
+</p>
+</form>
+
+
+
+
+</div>
+<div id="view">
+<p style="background-color:#ddd">Dieser Textabsatz ist ein Beispielabsatz. Er enthält keinen sinnvollen Inhalt, sondern dient lediglich dazu, dem folgenden Absatz voranzustehen. Er wird durch die CSS-Editierung nicht erfasst. Er hat eine hellgraue Hintergrundfarbe, um besser sichtbar zu sein.</p>
+<div style="font-size:0.8em">
+
+<table border="1" id="ziel" cellspacing="2" style="width:200px">
+  <tr>
+    <td><img src="bild_klein.jpg" alt="Bild"/></td>
+    <td><img src="bild_klein.jpg" alt="Bild"/></td>
+    <td><img src="bild_klein.jpg" alt="Bild"/></td>
+  </tr>
+  <tr>
+    <td>Lorem&nbsp;ipsum&nbsp;dolor&nbsp;sit&nbsp;amet.</td>
+    <td>Lorem&nbsp;ipsum&nbsp;dolor&nbsp;sit&nbsp;amet.</td>
+    <td>Lorem&nbsp;ipsum&nbsp;dolor&nbsp;sit&nbsp;amet.</td>
+  </tr>
+</table>
+
+
+
+</div>
+<p style="background-color:#ddd">Dieser Textabsatz ist ein Beispielabsatz. Er enthält keinen sinnvollen Inhalt, sondern dient lediglich dazu, dem editierbaren Absatz zu folgen. Er wird durch die CSS-Editierung nicht erfasst. Er hat ebenfalls eine hellgraue Hintergrundfarbe, um besser sichtbar zu sein.</p>
+</div>
+
+</body>
+</html>

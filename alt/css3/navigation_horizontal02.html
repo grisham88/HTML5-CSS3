@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Horiozontale Navigation</title>
+    <style>
+    
+    /* Hier die Selektoren für die Layoutbereiche */
+        div#nav {
+            _border:1px solid green;
+            background-color:#ccc;
+
+        }
+        div#content {
+            _border:1px solid red;
+
+        }
+
+    /* Inhalte Navigation #nav */
+        div#nav ul {
+            _border:1px solid red;
+            margin:0;               /* 1) Margin entfernen */
+            list-style-type:none;   /* 2) Bullets weg */
+            padding-left:0;         /* 3) Defaultpadding weg */
+        }
+        div#nav li {
+            _border:1px solid yellowgreen;
+            display:inline-block;
+            margin: 20px 5px 0 5px;
+        }
+        div#nav a {
+            _border:1px solid blue;
+            /* ALLE Präsentation für's Menü hier! */
+            color:white;
+            background-color:#aaa;
+            padding: 10px;
+            text-decoration:none;   /* 4) Unterstrich weg */
+            display:block;          /* 5) als Block !! Muss!! */
+        }
+        div#nav a:hover {
+            background-color:#fff;
+            color:black;
+        }  
+
+    /* Inhalte Content #content */
+    
+    </style>
+</head>
+<body>
+    <div id="nav">
+        <!-- hier immer eine UL-Liste -->
+        <!-- ul>li*5>a{Hauptmenü $} -->
+        <ul>
+            <li><a href="#">Hauptmenü 1</a></li>
+            <li><a href="#">Hauptmenü 2</a></li>
+            <li><a href="#">Hauptmenü 3</a></li>
+            <li><a href="#">Hauptmenü 4</a></li>
+            <li><a href="#">Hauptmenü 5</a></li>
+        </ul>
+    </div>
+    <div id="content">
+        <h1>Horizontale Navigation (Inline-Block)</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni, ipsam unde? Harum, aut voluptas veniam eaque at minima. Voluptates minus voluptate aliquam sed! Quod, molestiae. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni, ipsam unde? Harum, aut voluptas veniam eaque at minima. Voluptates minus voluptate aliquam sed! Quod, molestiae.</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni, ipsam unde? Harum, aut voluptas veniam eaque at minima. Voluptates minus voluptate aliquam sed! Quod, molestiae.</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni, ipsam unde? Harum, aut voluptas veniam eaque at minima. Voluptates minus voluptate aliquam sed! Quod, molestiae. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni, ipsam unde? Harum, aut voluptas veniam eaque at minima. Voluptates minus voluptate aliquam sed! Quod, molestiae.</p>
+    </div>
+</body>
+</html>

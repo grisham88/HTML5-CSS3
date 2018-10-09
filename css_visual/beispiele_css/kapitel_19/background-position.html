@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <title>background-position</title>
+<script type="text/javascript" src="css-beispiele.js"></script>
+<link rel="stylesheet" href="cd_style.css" type="text/css" />
+<link rel="stylesheet" href="css-beispiele.css" type="text/css" />
+</head>
+<body>
+<h1>Farben und Hintergründe: background-position</h1>
+<div id="edit">
+  <p>Das <span class="beispiel">background-position</span>-Property bezieht sich 
+    auf die Position eines mit <span class="beispiel">background</span> oder <span class="beispiel">background-image</span> 
+    eingebundenen Hintergrundbildes. Das Property übernimmt Längen- bzw. Prozentangaben 
+    oder Schlüsselwörter, die einzeln oder paarweise kombiniert auftreten können. 
+  </p>
+
+<p class="werte">Werte:<br/>
+	[prozent], [laenge], [prozent laenge], [laenge prozent], [laenge laenge],[prozent prozent], top left, top right, bottom left, bottom right, center, inherit</p>
+
+<p class="beispiel">Beispiel:<br/>
+body { background: url("bg.gif") 50px 150px }<br/>
+body { background: url("bg.gif") center } <br/>
+body { background-position right top }<br/>
+body { background-position: 27% 3cm; }<br/>
+
+</p>
+
+<form onsubmit="return false">
+<p><b>Ausprobieren:</b><br/>background-position:<select name="backgroundPosition" onchange="backgrounds(this)">
+<option value="inherit">inherit</option>
+<option value="50px 150px">50px 150px</option>
+<option value="27% 3cm">27% 3cm</option>
+<option value="center">center</option>
+<option value="top right">top right</option>
+<option value="top left">top left</option>
+<option value="bottom left">bottom left</option>
+<option value="bottom right">bottom right</option>
+</select></p></p>
+</form>
+</div>
+<div id="view">
+<iframe id="bgdemo" name="bgdemo" src="background_demo.html" width="100%" height="250"></iframe>
+</div>
+
+</body>
+</html>

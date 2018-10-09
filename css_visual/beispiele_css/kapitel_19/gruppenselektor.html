@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <title>Gruppenselektor</title>
+<script type="text/javascript" src="css-beispiele.js"></script>
+<link rel="stylesheet" href="cd_style.css" type="text/css" />
+<link rel="stylesheet" href="css-beispiele.css" type="text/css" />
+</head>
+<body>
+<h1>CSS Selektoren: Gruppenselektor</h1>
+<div id="edit">
+<p class="beispiel">Syntax:<br/>
+selektorA, selektorB, selektorC
+</p>
+  <p>Soll die gleiche Regel für mehrere Selektoren gelten, so können diese <i>gruppiert</i> werden. Hierfür werden die Einzelselektoren zu einer <b>kommagetrennten Liste</b> zusammengefügt. 
+Im einfachsten Fall ist es eine Liste aus Typselektoren</p>
+<p class="beispiel">Beispiel:<br/>
+h1, h2, h3 {font-family:arial;}<br/>
+<br/>
+/* drei Klassenselektoren gruppiert: */<br/>
+.klasseA, .klasseB, .klasseC:hover {...}
+</p>  
+
+<p class="komp">Kompatibilität:<br/>
+   Der Gruppenselektor wird von allen Browsern unterstützt.</p>
+</div>
+<div id="view">
+
+</div>
+
+</body>
+</html>

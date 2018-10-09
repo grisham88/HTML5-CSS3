@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Minilayout</title>
+    <style>
+
+
+        body {
+            _margin:40px;
+            _outline:1px solid red;
+        }
+        #wrapper {
+            width:70%;
+            margin:0 auto;
+        }
+
+        #header {
+            height: 200px;
+            background-color: #aaa;
+            position:relative;
+        }
+        #search {
+            padding:10px;
+            width:250px;
+            background-color:#ccc;
+            position:absolute;
+            right:5px;
+            bottom:5px;
+        }
+        #content {
+            height: 500px;
+            background-color: #bbb;
+        }        
+    
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+            <div id="header">
+                <div id="search">
+                    <input type="text"><button>Suche</button>
+                </div>
+            </div> 
+            <div id="content"></div>
+    </div>
+</body>
+</html>

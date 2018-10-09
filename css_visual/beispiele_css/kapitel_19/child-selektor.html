@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <title>Child Selektor</title>
+<script type="text/javascript" src="css-beispiele.js"></script>
+<link rel="stylesheet" href="cd_style.css" type="text/css" />
+<link rel="stylesheet" href="css-beispiele.css" type="text/css" />
+</head>
+<body>
+<h1>CSS Selektoren: Child Selektor </h1>
+<div id="edit">
+<p class="beispiel">Syntax:<br/>
+elternelement > kindelement
+</p>
+  <p>Dieser zusammengesetzte Selektor erfasst alle Elemente vom Typ <span class="beispiel">kindelement</span>, 
+    die ein Elternelement vom Typ <span class="beispiel">elternelement</span> 
+    besitzen. Zwischen den Einzelselektoren steht das Kombinatorsymbol <span class="beispiel">></span>, 
+    das von Leerzeichen umgeben sein darf (die Leerzeichen dürfen entfallen, da 
+    das Kombinatorzeichen nicht Teil eines Elementnamens sein kann).</p>  
+  <p class="beispiel">Beispiel:<br/>
+    /* erfasst &lt;b&gt; als Kindelement von &lt;a&gt;: */<br />
+  a > b </p>  
+<p class="komp">Kompatibilität:<br/>
+   Der Child-Selektor wird von allen modernen Browsern unterstützt (Mozilla, Firefox, Safari, Opera; auch IE5/Mac). Der Internet Explorer für Windows hingegen kennt den Child-Selektor erst ab Version 7.0. </p>
+</div>
+<div id="view">
+
+</div>
+
+</body>
+</html>

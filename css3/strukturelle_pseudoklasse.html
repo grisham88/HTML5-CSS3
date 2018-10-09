@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Listen mit strukturellen Pseudoklassen</title>
+    <style>
+        #ul1 li.first {
+            background-color: lightgreen;
+        }
+
+        #ul1 li.last {
+            background-color: lightblue;
+        }
+
+        #ul2 li:nth-child(odd) {
+            background-color: lightblue;
+        }
+
+        #ul2 li:first-child {
+            background-color: lightgreen;
+        }
+
+        #ul2 li:nth-child(even) {
+            background-color: lightcoral;
+        }
+
+        #ul2 li:nth-child(4) {
+            background-color: yellow;
+        }
+
+        #ul2 li:last-child {
+            background-color: orange;
+        }
+
+        #ul3 li:nth-child(n) {
+            background-color: aliceblue;
+        }
+
+        /* n beginnt bei 0 */
+        #ul4 li:nth-child(n+2) {
+            background-color: darkcyan;
+        }
+
+        #ul5 li:nth-child(2n) {
+            background-color: peachpuff;
+        }
+
+        div.article p:first-of-type {
+            font-weight: bold;
+            color: red;
+            background-color: yellow;
+        }
+
+        div.article p:first-of-type:hover {
+            font-weight: bold;
+            color: green;
+            font-size: 2em;
+            background-color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <h3>Liste 1</h3>
+    <!-- ul>li*4{Listitem $) -->
+    <ul id="ul1">
+        <li class="first">Listitem 1</li>
+        <li>Listitem 2</li>
+        <li>Listitem 3</li>
+        <li class="last">Listitem 4</li>
+    </ul>
+    <h3>Liste 2</h3>
+    <!-- ul>li*7{$. Element} -->
+    <ul id="ul2">
+        <li>1. Element</li>
+        <li>2. Element</li>
+        <li>3. Element</li>
+        <li>4. Element</li>
+        <li>5. Element</li>
+        <li>6. Element</li>
+        <li>7. Element</li>
+    </ul>
+    <h3>Liste 3</h3>
+    <!-- ul>li*3{$. Element} -->
+    <ul id="ul3">
+        <li>1. Element</li>
+        <li>2. Element</li>
+        <li>3. Element</li>
+    </ul>
+    <h3>Liste 4</h3>
+    <!-- ul>li*4{$. Element} -->
+    <ul id="ul4">
+        <li>1. Element</li>
+        <li>2. Element</li>
+        <li>3. Element</li>
+        <li>4. Element</li>
+    </ul>
+
+    <h3>Liste 5</h3>
+    <!-- ul>li*3{$. Element} -->
+    <ul id="ul5">
+        <li>1. Element</li>
+        <li>2. Element</li>
+        <li>3. Element</li>
+    </ul>
+    <div class="article">
+        <h1>Artikel</h1>
+        <!-- p*2{Textabsatz im Artikel.} -->
+        <p>Textabsatz im Artikel.</p>
+        <p>Textabsatz im Artikel.</p>
+    </div>
+</body>
+
+</html>

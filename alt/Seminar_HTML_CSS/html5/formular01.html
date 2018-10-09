@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HTML 5 Formulare</title>
+    <style>
+
+        form#myForm {
+            width:400px;
+            border: 2px solid green;
+            margin:30px;
+        }
+
+        form#myForm div.control-group {
+            padding: 10px;
+        }
+
+        form#myForm label {
+            display:inline-block;
+            width:100px;
+        }
+
+        form#myForm input[type=submit] {
+            margin-left:114px;
+        }
+    
+    
+    </style>
+</head>
+<body>
+    <form action="#" method="get" id="myForm">
+        <div class="control-group">
+            <label for="user">Username</label>
+            <input id="user" 
+                   placeholder="Ihr Name"
+                   type="text" 
+                   name="username"
+                   required>
+        </div>
+
+        <div class="control-group">
+            <label for="email">Email</label>
+            <input id="email" 
+                   placeholder="E-Mail"
+                   type="email" 
+                   name="email">
+        </div>
+
+        <div class="control-group">
+            <label for="PLZ">PLZ</label>
+            <input id="plz" 
+                   placeholder="PLZ"
+                   type="text" 
+                   name="plz"
+                   pattern="[0-9]{5}" 
+                   title="Eine PLZ besteht aus fünf Ziffern">
+        </div>
+
+        <!-- date-Input: nicht in IE, Firefox, Safari -->
+        <div class="control-group">
+            <label for="rd">Reisedatum</label>
+            <input id="rd" 
+                   type="date" 
+                   name="rd">
+        </div>  
+
+        <div class="control-group">
+            <label for="preis">Zimmerpreis</label>
+            <input id="preis"
+                   oninput="this.form.preisoutput.value=this.value"
+                   value="30" 
+                   min="10"
+                   max="50"
+                   step="10"
+                   type="range" 
+                   name="preis">
+            <!-- output-Element: IE ab 13 -->
+            <output id="preisoutput">30</output>
+        </div>    
+
+        <div class="control-group">
+            <label for="ziel">Reiseziel</label>
+            <input id="ziel" 
+                   type="text" 
+                   name="ziel"
+                   list="reiseziel">
+        </div>          
+
+        <div>
+            <input type="submit" value="Abschicken">
+        </div>
+    </form>
+
+
+    <datalist id="reiseziel">
+        <option value="Rom">Rom</option>
+        <option value="Paris">Paris</option>
+        <option value="London">London</option>
+    </datalist>^
+    
+    <!-- form-Attribut: nicht in IE -->
+    <button type="submit" form="myForm">Auch Abschicken</button>
+</body>
+</html>

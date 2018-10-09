@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <title>background-color</title>
+<script type="text/javascript" src="css-beispiele.js"></script>
+<link rel="stylesheet" href="cd_style.css" type="text/css" />
+<link rel="stylesheet" href="css-beispiele.css" type="text/css" />
+</head>
+<body>
+<h1>Farben und Hintergründe: background-color</h1>
+<div id="edit">
+  <p>Das Property <span class="beispiel">background-color</span> bestimmt die 
+    Hintergrundfarbe des Containerinhaltsbereichs eines Elements. Handelt es sich 
+    um den <span class="beispiel">&lt;body&gt;</span>-Container, ist dies die 
+    Hintergrundfarbe des gesamten Dokuments, die an die in diesem enthaltenen 
+    Container weitervererbt wird. </p>
+
+<p class="werte">Werte:<br/>
+	[farbname], [farbwert], transparent, inherit</p>
+
+<p class="beispiel">Beispiel:<br/>
+/* abgekürzte Farbwertsyntax: */<br/>
+body { background-color: #F00 }<br/>
+body { background-color: transparent; }<br/>
+body { background-color: #dddddd; }
+
+</p>
+
+<form onsubmit="return false">
+<p><b>Ausprobieren:</b><br/>background-color:<input name="backgroundColor" onchange="backgrounds(this)"/>
+<input type="button" class="button" value="Test"/></p>
+</form>
+</div>
+<div id="view">
+<iframe id="bgdemo" name="bgdemo" src="background_demo.html" width="100%" height="250"></iframe>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <title>@media</title>
+<script type="text/javascript" src="css-beispiele.js"></script>
+<link rel="stylesheet" href="cd_style.css" type="text/css" />
+<link rel="stylesheet" href="css-beispiele.css" type="text/css" />
+</head>
+<body>
+<h1>CSS At-Rules: @media</h1>
+<div id="edit">
+  <p>Die Anweisung <span class="beispiel">@media</span> kann innerhalb eines Stylesheets 
+    als Schalter eingesetzt werden, um bestimmte, in einem Block zusammengefasste 
+    Stylesheetregeln medienabhängig auszuführen. Die Anweisung kann alternativ 
+    zu einem eigenständigen, medienspezifischen Stylesheet verwendet werden. 
+  </p>
+<p class="beispiel">Beispiel:<br/>
+/* Screenausgabe mit eingeblendeter Navigation: */<br/>
+<br/>
+      #nav { display:block; }<br/>
+/* Druckausgabe mit ausgeblendeter Navigation: */<br/>
+<br/>
+@media print {<br/>
+      #nav { display:none; }<br/>
+      /* weitere Änderungen für Druckausgabe: */<br/>
+      ...<br/>
+}
+
+</p>  
+
+<p class="komp">Kompatibilität:<br/>
+    Das <span class="beispiel">@media</span>-Rule wird von allen aktuellen Browsern 
+    unterstützt. Mangelhaft oder gar nicht implementiert ist es lediglich in älteren 
+    oder historischen Browsern wie IE 4 und IE 5 (Win), sowie in Netscape 4.x.</p>
+</div>
+<div id="view">
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <title>font-stretch</title>
+<script type="text/javascript" src="css-beispiele.js"></script>
+<link rel="stylesheet" href="cd_style.css" type="text/css" />
+<link rel="stylesheet" href="css-beispiele.css" type="text/css" />
+</head>
+<body>
+<h1>Fontproperties: font-stretch (CSS 2; in CSS 2.1 entfernt)</h1>
+<div id="edit">
+  <p>Das <span class="beispiel">font-stretch</span>-Property streckt oder staucht 
+    die Zeichenabstände innerhalb eines Textes. </p>
+<p class="werte">Werte:<br/>
+	ultra-condensed, extra-condensed, condensed, semi-condensed, normal, semi-expanded, expanded, extra-expanded, ultra-expanded, inherit
+</p>
+<form onsubmit="return false">
+<p><b>Ausprobieren:</b><br/>font-stretch:<select name="fontStretch" onchange="editieren(this)">
+<option value="ultra-condensed">ultra-condensed</option>
+<option value="extra-condensed">extra-condensed</option>
+<option value="condensed">condensed</option>
+<option value="semi-condensed">semi-condensed</option>
+<option value="normal">normal</option>
+<option value="semi-expanded">semi-expanded</option>
+<option value="expanded">expanded</option>
+<option value="extra-expanded">extra-expanded</option>
+<option value="ultra-expanded">ultra-expanded</option>
+<option value="inherit">inherit</option>
+</select></p>
+</form>
+<p class="beispiel">Beispiel:<br/>
+body { font-stretch:normal; }<br/>
+p    { font-stretch:extra-condensed; }<br/>
+p    { font-stretch:semi-expand; }
+</p>
+<p class="komp">Anmerkung:<br/> Das font-stretch-Property wird derzeit von keinem Browser unterstützt und wurde daher aus der Spezifikation CSS 2.1 wieder entfernt.</p>
+
+
+</div>
+<div id="view">
+<p style="background-color:#ddd">Dieser Textabsatz ist ein Beispielabsatz. Er enthält keinen sinnvollen Inhalt, sondern dient lediglich dazu, dem folgenden Absatz voranzustehen. Er wird durch die CSS-Editierung nicht erfasst. Er hat eine hellgraue Hintergrundfarbe, um besser sichtbar zu sein.</p>
+<p id="ziel">Dieser Absatz kann durch CSS-Formatierungen, die links im Editierbereich vorgenommen werden, in seiner Präsentation geändert werden. Sie können hierfür in den Feldern des Editierbereichs beliebige Eingaben machen, die sofort sichtbar umgesetzt werden (solange die Werte zulässig sind, selbstredend :-).</p>
+<p style="background-color:#ddd">Dieser Textabsatz ist ein Beispielabsatz. Er enthält keinen sinnvollen Inhalt, sondern dient lediglich dazu, dem editierbaren Absatz zu folgen. Er wird durch die CSS-Editierung nicht erfasst. Er hat ebenfalls eine hellgraue Hintergrundfarbe, um besser sichtbar zu sein.</p>
+</div>
+
+</body>
+</html>

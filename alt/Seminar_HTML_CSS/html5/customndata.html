@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Daten im Dokument: data-* </title>
+    <script>
+    
+        // ajaxen ... was? Ich brauche den URL
+    
+
+    </script>
+</head>
+<body>
+    <h1>Daten im DOM</h1>
+    <div id="ausgabe" data-ajaxurl="/daten/dok1.html"></div>
+    <div class="ajaxer" title="Der Titel">Ich habe Infos...</div>
+    <div id="test" data-app1-test="Ein Test für App 1" data-app2-test="Ein Test für App 2"></div>
+    <script>
+    
+        var ausgabe = document.getElementById('ausgabe');
+        console.log(ausgabe);
+        var attrdaten = ausgabe.getAttribute('data-ajaxurl');
+        console.log(attrdaten);
+        var datasetdaten = ausgabe.dataset.ajaxurl;
+        console.log(datasetdaten);
+        var test = document.getElementById('test');
+        console.log(test.dataset);
+        test.dataset.app2Test = "Ganz neuer Wert hier!";
+        console.log(test.dataset);
+        test.dataset.app2Test = 42;
+        console.log(typeof test.dataset.app2Test);  // number? Nö. string!!      
+        delete test.dataset.app2Test;
+         console.log(test.dataset);        
+    </script>
+</body>
+</html>

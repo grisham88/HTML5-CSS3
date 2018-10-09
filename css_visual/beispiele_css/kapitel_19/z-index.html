@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <title>Positioning-Properties: z-index</title>
+<script type="text/javascript" src="css-beispiele.js"></script>
+<link rel="stylesheet" href="cd_style.css" type="text/css" />
+<link rel="stylesheet" href="css-beispiele.css" type="text/css" />
+</head>
+<body>
+<h1>Positioning-Properties: z-index</h1>
+<div id="edit">
+  <p>Das <span class="beispiel">z-index</span>-Property bestimmt die Tiefenstaffelung 
+    sich überlagernder, positionierter Elemente. Es können ganze Zahlen oder 
+    der Wert <span class="beispiel">auto</span> übergeben werden.</p>
+ <p class="werte">Werte:<br/>
+	[numerisch], auto, inherit</p>
+
+<form onsubmit="return false">
+<p><b>Ausprobieren:</b><br/>z-index:<select name="zIndex" onchange="editieren(this)" >
+<option value="inherit">inherit</option>
+<option value="auto">auto</option>
+<option value="0">0</option>
+<option value="5">5</option>
+<option value="10">10</option>
+<option value="15">15</option>
+<option value="20">20</option>
+<option value="25">25</option>
+<option value="30">30</option>
+<option value="-5">-5</option>
+</select></p>
+</form>
+</div>
+<div id="view">
+  <p>Sie können den <span class="beispiel">z-index</span> der roten Ebene beeinflussen:</p>
+<p style="width:100px;height:100px;position:relative;background:yellow;border:1px solid black;z-index:15;text-align:center">z-index:15</p>
+<p id="ziel" style="width:100px;height:100px;position:relative;top:-70px;left:30px;background:red;border:1px solid black;z-index:20;color:white;text-align:center">z-index:20</p>
+<p style="width:100px;height:100px;position:relative;top:-150px;left:60px;background:blue;border:1px solid black;z-index:25;color:white;text-align:center">z-index:25</p>
+</div>
+
+</body>
+</html>

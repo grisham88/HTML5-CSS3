@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <title>background-repeat</title>
+<script type="text/javascript" src="css-beispiele.js"></script>
+<link rel="stylesheet" href="cd_style.css" type="text/css" />
+<link rel="stylesheet" href="css-beispiele.css" type="text/css" />
+</head>
+<body>
+<h1>Farben und Hintergründe: background-repeat</h1>
+<div id="edit">
+  <p>Das Property <span class="beispiel">background-repeat </span>bestimmt, ob 
+    und in welche Richtung(en) ein Hintergrundbild innerhalb der Containerfläche 
+    wiederholt (gekachelt) wird. </p>
+
+<p class="werte">Werte:<br/>
+	repeat, no-repeat, repeat-x, repeat-y, inherit</p>
+
+<p class="beispiel">Beispiel:<br/>
+body { background-repeat: repeat-y; }<br/>
+body { background-repeat: no-repeat; }
+
+</p>
+
+<form onsubmit="return false">
+<p><b>Ausprobieren:</b><br/>background-repeat:<select name="backgroundRepeat" onchange="backgrounds(this)">
+<option value="inherit">inherit</option>
+<option  value="repeat">repeat</option>
+<option value="no-repeat">no-repeat</option>
+<option value="repeat-x">repeat-x</option>
+<option value="repeat-y">repeat-y</option>
+</select></p></p>
+</form>
+</div>
+<div id="view">
+<iframe id="bgdemo" name="bgdemo" src="background_demo.html" width="100%" height="250"></iframe>
+</div>
+
+</body>
+</html>

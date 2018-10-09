@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <title>display</title>
+<script type="text/javascript" src="css-beispiele.js"></script>
+<link rel="stylesheet" href="cd_style.css" type="text/css" />
+<link rel="stylesheet" href="css-beispiele.css" type="text/css" />
+</head>
+<body>
+<h1>Displayproperties: display</h1>
+<div id="edit">
+  <p>Das display-Property legt mit einer großen Anzahl wählbarer Werte die Art und Weise der Darstellung eines Elementcontainers fest. Hierbei können auch grundsätzliche Eigenschaften von HTML-Elementen, wie deren Darstellung als Block- oder Inlineelemente überschrieben werden. </p>
+<p class="werte">Werte:<br/>
+	none, inline, block, inline-block, table, inline-table, table-header-group, table-footer-group, table-column-group, table-column, table-row-group, table-row, table-cell, table-caption, list-item, run-in, inherit</p>
+<form onsubmit="return false">
+<p><b>Ausprobieren:</b><br/>
+display:<select type="text" name="display" onchange="editieren(this)">
+<option value="inline">inline</option>
+<option value="none">none</option>
+<option value="block">block</option>
+<option value="inline">inline-block</option>
+<option value="list-item">list-item</option>
+<option value="run-in">run-in</option>
+<option value="inherit">inherit</option>
+</select> (einige hier anwendbare Werte)
+</p></div>
+<div id="view">
+<p style="background-color:#ddd">Dieser Textabsatz ist ein Beispielabsatz. Er enthält keinen sinnvollen Inhalt, sondern dient lediglich dazu, dem folgenden Absatz voranzustehen. Er wird durch die CSS-Editierung nicht erfasst. Er hat eine hellgraue Hintergrundfarbe, um besser sichtbar zu sein.</p>
+<p><span>Dieser Satz steht in einem &lt;span&gt;-Container. </span><span id="ziel">Dieser Inlinecontainer wird erfasst.</span> <span>Dieser Inlinecontainer steht nach dem erfassten Inlinecontainer.</span></p>
+<p style="background-color:#ddd">Dieser Textabsatz ist ein Beispielabsatz. Er enthält keinen sinnvollen Inhalt, sondern dient lediglich dazu, dem editierbaren Absatz zu folgen. Er wird durch die CSS-Editierung nicht erfasst. Er hat ebenfalls eine hellgraue Hintergrundfarbe, um besser sichtbar zu sein.</p>
+</div>
+
+</body>
+</html>

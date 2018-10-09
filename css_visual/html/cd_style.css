@@ -1,0 +1,131 @@
+body {
+		font-family: Arial, Helvetica, sans-serif;
+		color:#555555;
+		}
+
+h1, h2 {
+
+	font-size: 1.5em;
+}
+
+
+p {
+
+	font-size: 0.8em;
+	line-height:1.5em;
+}
+
+table table {border-collapse:collapse;}
+
+td th {font-size: 0.8em;background-color:#2E5086;color:#fff;}
+
+td td {font-size: 0.8em;}
+
+h3 {
+
+
+	font-size: 1.2em;
+}
+h4 {
+
+
+
+	font-size: 1em;
+}
+h2 {
+
+	font-size: 1.3em;
+}
+a {
+	color: #333333;
+	text-decoration: underline;
+}
+.mini {
+	font-size: 0.7em;
+	line-height: 1.5em;
+
+}
+.rot {
+	font-weight: bold;
+	color: #FF0033;
+}
+
+a.install {
+					background:#eee url('../img/cd.gif') 0% 50% no-repeat;
+					padding:1px 0 3px 15px;
+					text-decoration:none;
+					}
+					
+a.install:hover			{
+					background:#eee url('../img/cd.gif')  0% 50% no-repeat;
+					border-top:1px dotted #2E5086;
+					padding:1px 0 3px 15px;
+					border-bottom:1px dotted #2E5086;
+					}					
+
+a.extern				{
+					background:url('../img/extern.gif') 0% 50% no-repeat;
+					padding:1px 0 3px 15px;
+					color:#2E5086;
+					text-decoration:none;
+					}
+					
+a.extern:hover			{
+					background:#D6DFEC url('../img/extern.gif')  0% 50% no-repeat;
+					border-top:1px dotted #2E5086;
+					padding:1px 0 3px 15px;
+					border-bottom:1px dotted #2E5086;
+					}
+
+/* Navigation */
+
+ul.mainnav {	list-style-type:none;
+				margin:0;
+				padding:0;
+				font-size:0.8em;
+			}
+
+ul.mainnav li {padding-left:2em;margin-bottom:0.2em;}		
+
+ul.mainnav li a { display:block; 
+				width:11em;
+				padding:0.2em 0.5em;
+				text-decoration:none;
+				font-weight:bold;
+				background-color:#F2F7FB;
+				border:1px solid #2E5086;
+				}	
+				
+ul.mainnav li a.current {background-color:#D6DFEC;} 
+
+ul.subnav li a.current {background-color:#D6DFEC;} 
+
+				
+				
+ul.mainnav li a:hover {	color:#333333;
+					background-color:#D6DFEC;} /* 0C92CF   CBD7EF*/
+					
+ul.subnav	{	list-style-type:none;
+			margin: 0 1em;
+			padding:0;
+			}
+				
+ul.subnav li a { display:block; 
+				width:9em;
+				padding:0.1em 0.5em;
+				text-decoration:none;
+				font-weight:normal;
+				background-color:#FFFFFF;
+				border:0px;
+				border-left:1px dotted #999999;
+				border-bottom:1px dotted #999999;
+				}							
+ul.subnav li a:hover {background-color:#EEEEEE;}
+
+
+
+/* Navigation Ende */.kastenrot {
+	background-color: #FFCCCC;
+	border: 1px solid #333333;
+	padding: 3px;
+}

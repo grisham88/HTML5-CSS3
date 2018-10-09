@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <title>list-style-position </title>
+<script type="text/javascript" src="css-beispiele.js"></script>
+<link rel="stylesheet" href="cd_style.css" type="text/css" />
+<link rel="stylesheet" href="css-beispiele.css" type="text/css" />
+</head>
+<body>
+<h1>Listenstyle Properties: list-style-position </h1>
+<div id="edit">
+  <p>Das <span class="beispiel">list-style-position</span>-Property bestimmt die 
+    Position des Aufzählungselements gegenüber der Box des Listenelements. Defaultwert 
+    ist <span class="beispiel">outside</span>.</p>
+<p class="werte">Werte:<br/>
+	inside, outside, inherit</p>
+
+<p class="beispiel">Beispiel:<br/>
+&lt;div style="display:list-item; <br/>
+ llist-style-position:outside">Tulpen&lt;/div>
+
+</p>
+
+<form onsubmit="return false">
+<p><b>Ausprobieren:</b><br/>list-style-position:<select name="listStyle" onchange="editieren(this)">
+<option value="disc inherit">inherit</option>
+<option value="disc inside">inside</option>
+<option value="disc outside">outside</option>
+</select>
+</p>
+</form>
+
+</div>
+<div id="view">
+<p style="background-color:#ddd">Dieser Textabsatz ist ein Beispielabsatz. Er enthält keinen sinnvollen Inhalt, sondern dient lediglich dazu, dem folgenden Absatz voranzustehen. Er wird durch die CSS-Editierung nicht erfasst. Er hat eine hellgraue Hintergrundfarbe, um besser sichtbar zu sein.</p>
+<p>Eine Liste:</p>
+<ul id="ziel" style="list-style:none; font-size:0.8em" >
+<li>Rosen</li>
+<li>Tulpen</li>
+<li>Nelken</li>
+</ul>
+
+<p style="background-color:#ddd">Dieser Textabsatz ist ein Beispielabsatz. Er enthält keinen sinnvollen Inhalt, sondern dient lediglich dazu, dem editierbaren Absatz zu folgen. Er wird durch die CSS-Editierung nicht erfasst. Er hat ebenfalls eine hellgraue Hintergrundfarbe, um besser sichtbar zu sein.</p>
+</div>
+
+</body>
+</html>

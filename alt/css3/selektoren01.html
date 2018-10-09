@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Selektoren in CSS</title>
+    <link rel="stylesheet" href="selektoren01.css">
+    <style>
+
+        /*
+            Selektor       ID          Klasse       Typ
+                                       Attribut
+            --------------------------------------------
+            *               0              0           0
+            h1              0              0           1
+            div p           0              0           2
+            .beispiel       0              1           0
+            p.blauText      0              1           1
+            a:hover         0              1           1
+            [title]         0              1           0
+            [title='X']     0              1           0
+            #p1             1              0           0
+            p#p1            1              0           1
+            div#d1 p        1              0           2
+            div#d1 > p      1              0           2
+        
+        
+        */
+    
+        h1 {
+            color:red;
+        }
+
+        h1 {
+            color:green;
+            background-color: yellow;
+        }
+
+    
+
+        p.blauText {
+            color:blue;
+        }
+
+
+
+        .rotText {
+            color:red;
+        } 
+
+        p {
+            background-color: pink;
+            color:white;
+        }
+
+ 
+
+        [title] {
+            background-color: lightblue;
+        }
+        [title='Anderer Titel'] {
+            background-color: lightgreen;
+        }  
+    
+        a {
+            background-color:#ddd;
+        }
+
+        a.extern {
+            background-color: lightblue;
+        }
+
+        a:hover {
+            background-color: orange;
+        }       
+
+        /* Descendant-Selektor */
+        div#d1 p {
+            background-color: yellow;
+            color:black;
+        }
+        /* Child-Selektor */
+        div#d1 > p {
+            background-color: orange;
+            color:black;
+        }
+
+        #p1 {
+            background-color: yellowgreen;
+        }
+
+
+    
+    </style>
+
+</head>
+<body>
+    <h1 class="blauText">Eine Überschrift, die gestylt wird</h1>
+    <p>Ein Textabsatz, der auch gestylt wird.</p>
+    <p title="Ein Titel">Ein Textabsatz mit Titel, der auch gestylt wird.</p>
+    <p title="Anderer Titel">Ein Textabsatz mit Titel, der auch gestylt wird.</p>  
+    <p id="p1">Ein Textabsatz mit ID, der auch gestylt wird.</p>
+    <p class="rotText">Ein Textabsatz mit Klasse, der auch gestylt wird.</p>
+    <p class="blauText">Ein Textabsatz, der auch gestylt wird.</p>
+    <p class="blauText rotText">Ein Textabsatz mit ZWEI Klassen, der auch gestylt wird.</p>
+    
+    <h3>Ein <a href="#" class="extern">Link</a> nach draußen...</h3>
+    
+    
+    <div id="d1">
+        <p>Ein Textabsatz im DIV, der auch gestylt wird.</p>
+        <div>
+            <p>Ein Textabsatz im DIV, der auch gestylt wird.</p>
+        </div>
+    </div>
+</body>
+</html>

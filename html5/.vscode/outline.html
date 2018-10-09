@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Outline</title>
+    <style>
+        h1 {
+            color: red;
+        }
+
+        section h1,
+        h2 {
+            color: green;
+        }
+
+        section section h1,
+        h3 {
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Überschrift Level 1</h1>
+    <p>Zu Level 1. Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime dolor a iure.</p>
+    <section>
+        <h1>Überschrift Level 2</h1>
+        <p>Zu Level 2. Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores fugiat dicta adipisci eum
+            voluptates debitis?</p>
+        <section>
+            <h1>Überschrift Level 3</h1>
+            <p>Zu Level 3. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem, voluptatem.</p>
+        </section>
+    </section>
+    <section>
+        <h1>Überschrift Level 2</h1>
+        <p>Zu Level 2. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure?</p>
+    </section>
+    <p>Zu Level 1. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laborum commodi mollitia sequi.</p>
+    <section>
+        <!-- Überschrift müssen wir IMMER NOCH anpassen!? -> h3 wird standmäßig in einer Section zu h1 -->
+        <h1>Überschrift Level 3</h1>
+        <p>Zu Level 3. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem, voluptatem.</p>
+    </section>
+</body>
+
+</html>

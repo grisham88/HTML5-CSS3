@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <title>vertical-align</title>
+<script type="text/javascript" src="css-beispiele.js"></script>
+<link rel="stylesheet" href="cd_style.css" type="text/css" />
+<link rel="stylesheet" href="css-beispiele.css" type="text/css" />
+</head>
+<body>
+<h1>Textproperties: vertical-align</h1>
+<div id="edit">
+
+  <p>Das <span class="beispiel">vertical-align</span>-Property bestimmt die vertikale 
+    Ausrichtung eines Inlinecontainers innerhalb des durch das umliegende Blockelement 
+    zur Verfügung gestellten Raumes. </p>
+
+<p class="werte">Werte:<br/>
+	baseline, bottom, middle, sub, super, text-bottom, text-top, top, [prozent], inherit</p>
+
+<p class="beispiel">Beispiel:<br/>
+p { line-height: 0.9;}    /* Faktor */<br/>
+p { line-height: 1.2em;}  /* Längenangabe */<br/>
+p { line-height: 140%;}   /* Prozentangabe */<br/>
+
+</p>
+
+<form onsubmit="return false">
+<p><b>Ausprobieren:</b><br/>vertical-align:<select name="verticalAlign" onchange="editieren(this)">
+<option value="inherit">inherit</option>
+<option value="baseline">baseline</option>
+<option value="bottom">bottom</option>
+<option value="middle">middle</option>
+<option value="sub">sub</option>
+<option value="super">super</option>
+<option value="text-bottom">text-bottom</option>
+<option value="text-top">text-top</option>
+<option value="top">top</option>
+</select>
+</form>
+
+</div>
+<div id="view">
+<p style="line-height:150px; font-size:30px;border:1px dotted #ddd;">Test: <span id="ziel" style="line-height:20px;font-size:12px;">Dieser Text kann vertikal ausgerichtet werden.</span></p>
+</div>
+
+</body>
+</html>

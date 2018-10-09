@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <title>unicode-bidi</title>
+<script type="text/javascript" src="css-beispiele.js"></script>
+<link rel="stylesheet" href="cd_style.css" type="text/css" />
+<link rel="stylesheet" href="css-beispiele.css" type="text/css" />
+</head>
+<body>
+<h1>Textproperties: unicode-bidi</h1>
+<div id="edit">
+  <p>Das <span class="beispiel">unicode-bidi</span>-Property bestimmt, wie bidirektionale 
+    Textinhalte zu behandeln sind. Es ist in Zusammenhang mit dem <span class="beispiel">direction</span>-Property 
+    zu betrachten. </p>
+
+<p class="werte">Werte:<br/>
+	normal, embed, bidi-override, inherit</p>
+
+<p class="beispiel">Beispiel:<br/>
+p { text-transform: lowercase }<br/>
+p { text-transform: uppercase }
+</p>
+
+<form onsubmit="return false">
+<p><b>Ausprobieren:</b><br/>unicode-bidi:<select name="unicodeBidi" onchange="editieren(this)">
+<option value="normal">normal</option>
+<option value="embed">embed</option>
+<option value="bidi-override">bidi-override</option>
+<option value="inherit">inherit</option>
+</select></p>
+<p><b>Ausprobieren:</b><br/>
+direction:<select name="direction" onchange="editieren(this)">
+<option value="rtl">rtl</option>
+<option value="ltr">ltr</option>
+</select></p>
+</form>
+</div>
+<div id="view">
+<p style="background-color:#ddd">Dieser Textabsatz ist ein Beispielabsatz. Er enthält keinen sinnvollen Inhalt, sondern dient lediglich dazu, dem folgenden Absatz voranzustehen. Er wird durch die CSS-Editierung nicht erfasst. Er hat eine hellgraue Hintergrundfarbe, um besser sichtbar zu sein.</p>
+<p id="ziel">Dieser Absatz kann durch CSS-Formatierungen, die links im Editierbereich vorgenommen werden, in seiner Präsentation geändert werden. Sie können hierfür in den Feldern des Editierbereichs beliebige Eingaben machen, die sofort sichtbar umgesetzt werden (solange die Werte zulässig sind, selbstredend :-). </p>
+<p style="background-color:#ddd">Dieser Textabsatz ist ein Beispielabsatz. Er enthält keinen sinnvollen Inhalt, sondern dient lediglich dazu, dem editierbaren Absatz zu folgen. Er wird durch die CSS-Editierung nicht erfasst. Er hat ebenfalls eine hellgraue Hintergrundfarbe, um besser sichtbar zu sein.</p>
+</div>
+
+</body>
+</html>

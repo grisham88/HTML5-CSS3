@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="test" 
+         title="Das ist ein Test" 
+         testwert="42"
+         data-mein-testwert="43">Testdiv</div>
+    <script>
+    
+    var test = document.getElementById('test')
+    console.log(test.title);
+    console.log(test.testwert);
+    test.dataset.meinspeicher = 11;
+    console.log(test.dataset.meinTestwert);
+    test.dataset.meinTestwert = 17;
+    console.log(test.dataset.meinTestwert); 
+    test.dataset.meinZweitertest = "Hi!"; 
+
+    test.className="egal";
+    </script>
+</body>
+</html>

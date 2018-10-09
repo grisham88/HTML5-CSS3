@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <title>border-collapse</title>
+<script type="text/javascript" src="css-beispiele.js"></script>
+<style type="text/css">
+/* <![CDATA[ */
+td { border:3px solid #999; }
+/* ]]> */
+</style>
+<link rel="stylesheet" href="cd_style.css" type="text/css" />
+<link rel="stylesheet" href="css-beispiele.css" type="text/css" />
+</head>
+<body>
+<h1>Tabellen-Properties: border-collapse</h1>
+<div id="edit">
+  
+  <p>Das <span class="beispiel">border-collapse</span>-Property bestimmt, ob Rahmen 
+    um Tabellenzellen (sofern diese definiert sind) zusammenfallen oder, was 
+    der Vorgabe entspricht, durch Abstände separiert dargestellt werden sollen. 
+  </p>
+  <p class="werte">Werte:<br/>
+	separate, collapse, inherit</p>
+<p class="beispiel">Beispiel:<br />
+table {border-collapse:separate}
+</p>	
+<form onsubmit="return false">
+<p><b>Ausprobieren:</b><br/>
+border-collapse:<select type="text" name="borderCollapse" onchange="editieren(this)">
+<option value="inherit">inherit</option>
+<option value="collapse">collapse</option>
+<option value="separate">separate</option>
+</select>
+</p>
+</form>
+
+
+
+
+</div>
+<div id="view">
+<p style="background-color:#ddd">Dieser Textabsatz ist ein Beispielabsatz. Er enthält keinen sinnvollen Inhalt, sondern dient lediglich dazu, dem folgenden Absatz voranzustehen. Er wird durch die CSS-Editierung nicht erfasst. Er hat eine hellgraue Hintergrundfarbe, um besser sichtbar zu sein.</p>
+<div style="font-size:0.8em">
+
+<table width="80%" border="0" id="ziel" cellspacing="0">
+  <tr>
+    <td>1</td>
+    <td>2</td>
+    <td>3</td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>5</td>
+    <td>6</td>
+  </tr>
+  <tr>
+    <td>7</td>
+    <td>8</td>
+    <td>9</td>
+  </tr>
+</table>
+
+
+
+</div>
+<p style="background-color:#ddd">Dieser Textabsatz ist ein Beispielabsatz. Er enthält keinen sinnvollen Inhalt, sondern dient lediglich dazu, dem editierbaren Absatz zu folgen. Er wird durch die CSS-Editierung nicht erfasst. Er hat ebenfalls eine hellgraue Hintergrundfarbe, um besser sichtbar zu sein.</p>
+</div>
+
+</body>
+</html>

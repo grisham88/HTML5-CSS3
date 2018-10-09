@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS3: Strukturelle Pseudoklassen</title>
+    <style>
+
+        /*
+        
+            :first-child, :last-child
+            :nth-child(), nth-last-child()
+            :only-child
+
+            z.B.: 
+            div#content article:nth-child(odd) h1 {}
+            div#content article:nth-child(even) h1 {}
+
+            :first-of-type, :last-of-type
+            :nth-of-type(), nth-last-of-type()
+            :only-of-type          
+        
+        */
+
+
+
+
+        ul#ul1 li {
+            background-color: transparent;
+        }
+        ul#ul1 li:first-child {
+            background-color: pink;
+        }
+        ul#ul1 li:last-child {
+            background-color: lightblue;
+        }  
+
+        ul#ul2 li {
+            background-color: transparent;
+        }
+        ul#ul2 li:nth-child(2) {
+            background-color: lightgreen;
+        }
+        ul#ul2 li:nth-last-child(2) {
+            background-color: lightblue;
+        }    
+
+        ul#ul3 li {
+            background-color: transparent;
+        }
+        ul#ul3 li:nth-child(even) {
+            background-color: pink;
+        }     
+        ul#ul3 li:nth-child(odd) {
+            background-color: red;
+        }   
+
+        ul#ul4 li {
+            background-color: transparent;
+        }
+        ul#ul4 li:nth-child(3n) {
+            background-color: pink;
+        }     
+        ul#ul4 li:nth-child(3n+1) {
+            background-color: red;
+        }     
+         ul#ul4 li:nth-child(3n+2) {
+            background-color: orange;
+        }          
+
+
+
+    </style>
+</head>
+<body>
+    <h3>Erste Liste</h3>
+    <!-- ul>li{Listitem $}*7 -->
+    <ul id="ul1">
+        <li>Listitem 1</li>
+        <li>Listitem 2</li>
+        <li>Listitem 3</li>
+        <li>Listitem 4</li>
+        <li>Listitem 5</li>
+    </ul>
+        <h3>Zweite Liste</h3>
+    <!-- ul>li{Listitem $}*7 -->
+    <ul id="ul2">
+        <li>Listitem 1</li>
+        <li>Listitem 2</li>
+        <li>Listitem 3</li>
+        <li>Listitem 4</li>
+    </ul>
+         <h3>Dritte Liste</h3>
+    <!-- ul>li{Listitem $}*7 -->
+    <ul id="ul3">
+        <li>Listitem 1</li>
+        <li>Listitem 2</li>
+        <li>Listitem 3</li>
+        <li>Listitem 4</li>
+        <li>Listitem 5</li>
+        <li>Listitem 6</li>
+    </ul>   
+          <h3>Vierte Liste</h3>
+    <!-- ul>li{Listitem $}*7 -->
+    <ul id="ul4">
+        <li>Listitem 1</li>
+        <li>Listitem 2</li>
+        <li>Listitem 3</li>
+        <li>Listitem 4</li>
+        <li>Listitem 5</li>
+        <li>Listitem 6</li>
+    </ul>     
+</body>
+</html>

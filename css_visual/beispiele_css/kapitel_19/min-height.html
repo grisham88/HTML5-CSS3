@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <title>min-height</title>
+<script type="text/javascript" src="css-beispiele.js"></script>
+<link rel="stylesheet" href="cd_style.css" type="text/css" />
+<link rel="stylesheet" href="css-beispiele.css" type="text/css" />
+</head>
+<body>
+<h1>Boxproperties: min-height</h1>
+<div id="edit">
+  <p>Das <span class="beispiel">min-height</span>-Property bestimmt die minimale 
+    Höhe, die der Innenbereich des Containers nicht unterschreiten darf. Es kann 
+    eine Längenangabe übergeben werden, oder ein Prozentwert, der sich auf die 
+    Höhe des Elternelements bezieht.</p>
+<p class="werte">Werte:<br/>
+	[laenge], [prozent], inherit</p>
+<p class="beispiel">Beispiel:<br/>
+p { min-height:250px; }<br/>
+p { min-height:60%; }<br/>
+p { min-height:inherit; }
+</p>	
+<form onsubmit="return false">
+<p><b>Ausprobieren:</b><br/>
+min-height:<input type="text" name="minHeight" onchange="editieren(this)"/><input type="button" class="button" value="Test"/>
+</p>
+</form>
+
+
+
+
+</div>
+<div id="view">
+<p style="background-color:#ddd">Dieser Textabsatz ist ein Beispielabsatz. Er enthält keinen sinnvollen Inhalt, sondern dient lediglich dazu, dem folgenden Absatz voranzustehen. Er wird durch die CSS-Editierung nicht erfasst. Er hat eine hellgraue Hintergrundfarbe, um besser sichtbar zu sein.</p>
+<p id="ziel" style="border:1px solid #bbb;">Dieser Absatz kann durch CSS-Formatierungen, die links im Editierbereich vorgenommen werden, in seiner Präsentation geändert werden. Sie können hierfür in den Feldern des Editierbereichs beliebige Eingaben machen, die sofort sichtbar umgesetzt werden (solange die Werte zulässig sind, selbstredend :-).</p>
+<p style="background-color:#ddd">Dieser Textabsatz ist ein Beispielabsatz. Er enthält keinen sinnvollen Inhalt, sondern dient lediglich dazu, dem editierbaren Absatz zu folgen. Er wird durch die CSS-Editierung nicht erfasst. Er hat ebenfalls eine hellgraue Hintergrundfarbe, um besser sichtbar zu sein.</p>
+</div>
+
+</body>
+</html>

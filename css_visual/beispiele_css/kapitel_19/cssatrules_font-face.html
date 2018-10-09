@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <title>@font-face</title>
+<script type="text/javascript" src="css-beispiele.js"></script>
+<link rel="stylesheet" href="cd_style.css" type="text/css" />
+<link rel="stylesheet" href="css-beispiele.css" type="text/css" />
+</head>
+<body>
+<h1>CSS At-Rules: @font-face</h1>
+<div id="edit">
+  <p>Mittels der Anweisung <span class="beispiel">@font-face</span> kann ein benötigter 
+    Fontsatz über deren <span class="beispiel">src</span>-Property direkt als 
+    Datei eingebunden werden. Die Spezifikation nennt hier eine Reihe verschiedener 
+    Typen, wobei man in der Praxis allerdings auf die Typen <span class="beispiel">.eot</span> 
+    (Embedded Open Type, Internet Explorer) und <span class="beispiel">.prf</span> 
+    (Portable Font Resource, Netscape 4.x) beschränkt ist. </p>
+<p class="beispiel">Beispiel:<br/>
+/* Import einer benötigten Schrift: */<br/>
+@font-face { <br/>
+            src: local("Eurostyle BK");   <br/>         
+            src: url("eurostyle.eot"), url("eurostyle.pfr"); <br/>
+            font-family: Eurostyle; <br/>
+}<br/>
+/* Anwendung der importierten Schrift: */<br/>
+p          {<br/>
+            font-family: Eurostyle; <br/>
+            font-size: 0.8em;<br/>
+}
+
+</p>  
+
+<p class="komp">Kompatibilität:<br/>
+    Das <span class="beispiel">@font-face</span>-Rule wird durch aktuelle Browser 
+    mit Ausnahme des Internet Explorers nicht unterstützt, der sich dabei auf 
+    das Format EOT (<i>embedded opentype</i>) beschränkt. Die Verwendung ist daher als 
+    problematisch einzustufen. In CSS 2.1 ist sie nicht mehr enthalten.</p>
+</div>
+<div id="view">
+
+</div>
+
+</body>
+</html>

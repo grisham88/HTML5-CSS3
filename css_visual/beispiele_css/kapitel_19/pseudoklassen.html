@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <title>Pseudoklassen</title>
+<script type="text/javascript" src="css-beispiele.js"></script>
+<link rel="stylesheet" href="cd_style.css" type="text/css" />
+<link rel="stylesheet" href="css-beispiele.css" type="text/css" />
+</head>
+<body>
+<h1>CSS Selektoren: Pseudoklassen</h1>
+<div id="edit">
+<p class="beispiel">Syntax:<br/>
+typ-selektor:pseudoklasse<br/>
+typ-selektor.klassenname:pseudoklasse
+</p>
+  <p>Die so genannten <b>Pseudoklassen</b> werden in Zusammenhang mit dem Stylen von 
+    Hyperlinks benötigt (theoretisch sind einige davon jedoch auf alle Elemente 
+    anwendbar) – sie beziehen sich im Gegensatz zu „echten“ Klassen nicht auf 
+    das mit dem vorausgehenden Typ-Selektor bezeichnete Element sondern dessen 
+    Zustand und werden daher (mit Ausnahme von <span class="beispiel">:lang</span>) 
+    auch oft auch als „dynamische Klassen“ bezeichnet. Pseudoklassen können mit normalen Klassen kombiniert werden, wobei die Pseudoklasse am Ende stehen muss (s.o.).</p> 
+	<p><b>Achtung bei Pseudoklassen und Links:</b><br/>
+Beim Zuweisen mehrerer Pseudoklassen an Links ist die Definitionsreihenfolge maßgeblich. Folgende Reihenfolge der Deklarationen sollte im Stylesheet unbedingt eingehalten werden:</p>
+  <p><span class="beispiel">a:link { ... }</span> <br/>
+    <span class="beispiel">a:visited  { ... }</span> <br/>
+    <span class="beispiel">a:hover  { ... }</span> <br/>
+    <span class="beispiel">a:active  { ... }</span></p>
+ 
+  <p>Will man gleichzeitig auch den Fokus-Zustand <span class="beispiel">:focus</span> 
+    erfassen, so muss dieser vor dem <span class="beispiel">:active</span>-Zustand 
+    definiert werden:</p>
+<p><span class="beispiel">a:link  { ... }<br/>
+a:visited  { ... }<br/>
+a:hover  { ... }<br/>
+<b>a:focus</b>  { ... }<br/>
+a:active  { ... }</span>
+</p> 
+<h2 id="active">:active</h2>
+  <p>Die Pseudoklasse <span class="beispiel">:active</span> stylt den Zustand 
+    aktiver Elemente, also solche, die durch den User angeklickt werden (<span class="beispiel">onmousedown</span>). 
+    Das Element bleibt für die Dauer des Klicks aktiv. Die Pseudoklasse wird zwar 
+    meist für Links verwendet, ist jedoch für alle klickbaren (aktivierbaren) 
+    Elemente gestattet. Dies ermöglicht es (in der Theorie), auch Formularfeldern, 
+    Tabellenzellen oder <span class="beispiel">&lt;div></span>-Bereichen aktive 
+    Zustände zuzuweisen.</p>
+	<p class="beispiel">Beispiel:<br/>
+	<b>a:active</b> {color:red;}<br/>
+a:link {text-decoration:none;}
+</p>
+<h2 id="focus">:focus </h2>
+  <p>Die Pseudoklasse <span class="beispiel">:focus</span> stylt den Fokus-Zustand 
+    von Elementen. Dies trifft auf Hyperlinks zu, die per Tabulator angewählt, 
+    aber <i>noch nicht</i> aktiviert sind, sowie auf Formulareingabefelder, die angeklickt 
+    wurden. Es kann jeweils nur ein einziges Element den Fokus besitzen. </p>
+	<p><b>Anmerkung:</b> <br/>
+    Internet Explorer kann <span class="beispiel">:focus</span> nicht auf Formularelemente 
+    anwenden und unterscheidet bei Links nicht zwischen <span class="beispiel">:focus</span> 
+    und <span class="beispiel">:active</span>. In anderen Browsern kann ein per 
+    Tab angewählter Link (Fokuszustand) dagegen gezielt gestylt werden. </p>
+<p class="beispiel">Beispiel:<br/>
+input:focus   { background-color:#DDDDDD; }
+</p>
+<h2 id="hover">:hover </h2>
+  <p>Die dynamische Pseudo-Klasse <span class="beispiel">:hover</span> bestimmt 
+    das Aussehen des Links (bzw. des gestylten Elements) im Zustand des MouseOvers. 
+    Prinzipiell kann <span class="beispiel">:hover</span> zwar auf alle Elemente 
+    angewendet werden, im Internet Explorer und älteren Opera-Browsern beschränkt 
+    sich der Einsatz jedoch auf Hyperlinks. </p>
+<p class="beispiel">Beispiel:<br/>
+a:link {text-decoration:none;}<br/>
+<b>a:hover</b> {text-decoration:underline;}
+</p>
+<h2 id="lang">:lang </h2>
+  <p>Die Pseudoklasse <span class="beispiel">:lang</span> formatiert ein Element 
+    in Abhängigkeit der eingestellten Sprache. Diese muss durch das <span class="beispiel">lang</span>-Attribut 
+    des Elements angegeben sein. </p>
+<p class="beispiel">Beispiel:<br/>
+p            { color:#999999; font-family:arial;}<br/>
+<b>p:lang(de)</b>   { color:#000000; }<br/>
+<b>p:lang(en)</b>   { color:#666666; font-weight:bold;}
+</p>	
+<h2 id="link">:link</h2>
+  <p>Die Pseudo-Klasse <span class="beispiel">:link</span> bestimmt die Darstellung 
+    nicht besuchter Hyperlinks, also die Ausgangspräsentation des Links.</p>
+<p class="beispiel">Beispiel:<br/>
+a:link {text-decoration:none;}
+</p>
+<h2 id="visited">:visited </h2>
+  <p>Die Pseudo-Klasse <span class="beispiel">:visited</span> bestimmt die Darstellung 
+    besuchter Hyperlinks. Auf diese Weise können besuchte von unbesuchten Links 
+    unterschieden werden, um dem Nutzer der Seite den Überblick zu erleichtern. 
+  </p>
+<p class="beispiel">Beispiel:<br/>
+a:visited {color:#666666;}
+</p>
+
+	
+</div>
+<div id="view">
+
+</div>
+
+</body>
+</html>

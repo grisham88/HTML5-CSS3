@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <title>@import</title>
+<script type="text/javascript" src="css-beispiele.js"></script>
+<link rel="stylesheet" href="cd_style.css" type="text/css" />
+<link rel="stylesheet" href="css-beispiele.css" type="text/css" />
+</head>
+<body>
+<h1>CSS At-Rules: @import</h1>
+<div id="edit">
+  <p>Die Anweisung <span class="beispiel">@import</span> dient dem Importieren 
+    externer Stylesheetdateien. Es wird ein URL einer externen Stylesheetdatei 
+    übergeben, die relativ zum Basis-URI der aufrufenden Datei ausgewertet wird. 
+    Neben dem URL kann auch ein bevorzugter Medientyp genannt werden, für den 
+    das importierte Stylesheet zu verwenden ist. Wird kein Medientyp angegeben, so ist die Reihenfolge der Importanweisungen für den Rang der importierten Regeln relevant – die Regeln der zuletzt importierten Datei besitzen Vorrang. </p>
+<p class="beispiel">Beispiel:<br/>
+/* in CSS 1: */<br/>
+@import url("screen.css"); <br/>
+@import url("print.css") print; <br/>
+@import url("mobile.css") handheld; <br/>
+ <br/>
+/* in CSS 2: */<br/>
+@import "screen.css";<br/>
+@import "print.css" print;<br/>
+@import "mobile.css" handheld;<br/>
+</p>  
+
+<p class="komp">Kompatibilität:<br/>
+    Das <span class="beispiel">@import</span>-Rule wird durch alle aktuellen Browser 
+    unterstützt. Der inzwischen historische Netscape 4.x kennt die Regel hingegen 
+    nicht, weshalb sie sich für diesen Browser als Stylesheetweiche einsetzen 
+    lässt.</p>
+</div>
+<div id="view">
+
+</div>
+
+</body>
+</html>

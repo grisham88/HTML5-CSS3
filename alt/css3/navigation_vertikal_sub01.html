@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vertikale Navigation mit Untermenüs</title>
+    <style>
+    
+    /* Hier die Selektoren für die Layoutbereiche */
+        div#nav {
+            float:left;
+            width:150px;
+            _border:1px solid green;
+        }
+        div#content {
+            _border:1px solid red;
+            margin-left:160px;
+        }
+
+    /* Inhalte Navigation #nav */
+
+    /* erste Ebene */
+        div#nav ul {
+            _border:1px solid red;
+            margin:0;               /* 1) Margin entfernen */
+            list-style-type:none;   /* 2) Bullets weg */
+            padding-left:0;         /* 3) Defaultpadding weg */
+        }
+        div#nav li {
+            _border:1px solid yellowgreen;
+            margin-bottom:5px;
+            position:relative;
+        }
+        div#nav a {
+            _border:1px solid blue;
+            /* ALLE Präsentation für's Menü hier! */
+            color:white;
+            background-color:#aaa;
+            padding: 10px;
+            text-decoration:none;   /* 4) Unterstrich weg */
+            display:block;          /* 5) als Block !! Muss!! */
+        }
+        div#nav a:hover {
+            background-color:#666;
+        }  
+    /* zweite Ebene */
+        div#nav ul ul { 
+            display:none;
+            position:absolute;
+            left:150px;
+            top:0;
+            /*optische Lücke:*/
+            padding-left:5px;
+            width:150px;
+        }
+        div#nav ul li:hover ul { 
+            display:block;
+        }
+        div#nav ul ul li {
+
+        }
+
+        div#nav ul ul a { 
+            background-color: yellow;
+            color:black;
+        }
+
+        div#nav ul ul a:hover { 
+            background-color: orange;
+            color:black;
+        }
+    /* Inhalte Content #content */
+    
+    </style>
+</head>
+<body>
+    <div id="nav">
+        <!-- hier immer eine UL-Liste -->
+        <!-- ul>li*7>a{Hauptmenü $} -->
+        <ul>
+            <li><a href="#">Hauptmenü 1</a></li>
+            <li><a href="#">Hauptmenü 2</a>
+                <ul>
+                    <li><a href="#">Untermenü 2-1</a></li>
+                    <li><a href="#">Untermenü 2-2</a></li>
+                    <li><a href="#">Untermenü 2-3</a></li>
+                </ul>
+            </li>
+            <li><a href="#">Hauptmenü 3</a></li>
+            <li><a href="#">Hauptmenü 4</a>
+                <ul>
+                    <li><a href="#">Untermenü 4-1</a></li>
+                    <li><a href="#">Untermenü 4-2</a></li>
+                    <li><a href="#">Untermenü 4-3</a></li>
+                </ul>            
+            </li>
+            <li><a href="#">Hauptmenü 5</a>
+                <ul>
+                    <li><a href="#">Untermenü 5-1</a></li>
+                    <li><a href="#">Untermenü 5-2</a></li>
+                    <li><a href="#">Untermenü 5-3</a></li>
+                </ul>            
+            </li>
+            <li><a href="#">Hauptmenü 6</a></li>
+        </ul>
+    </div>
+    <div id="content">
+        <h1>Vertikale Navigation mit Untermenüs</h1>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni, ipsam unde? Harum, aut voluptas veniam eaque at minima. Voluptates minus voluptate aliquam sed! Quod, molestiae. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni, ipsam unde? Harum, aut voluptas veniam eaque at minima. Voluptates minus voluptate aliquam sed! Quod, molestiae.</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni, ipsam unde? Harum, aut voluptas veniam eaque at minima. Voluptates minus voluptate aliquam sed! Quod, molestiae.</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni, ipsam unde? Harum, aut voluptas veniam eaque at minima. Voluptates minus voluptate aliquam sed! Quod, molestiae. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni, ipsam unde? Harum, aut voluptas veniam eaque at minima. Voluptates minus voluptate aliquam sed! Quod, molestiae.</p>
+    </div>
+</body>
+</html>

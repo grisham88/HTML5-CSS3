@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <title>Adjacent Sibling Selektor </title>
+<script type="text/javascript" src="css-beispiele.js"></script>
+<link rel="stylesheet" href="cd_style.css" type="text/css" />
+<link rel="stylesheet" href="css-beispiele.css" type="text/css" />
+</head>
+<body>
+<h1>CSS Selektoren: Adjacent Sibling Selektor  </h1>
+<div id="edit">
+<p class="beispiel">Syntax:<br/>
+vorgaenger + nachfolger
+</p>
+  <p>Dieser zusammengesetzte Selektor erfasst ein Element <span class="beispiel">nachfolger</span>, 
+    wenn ihm ein Element <span class="beispiel">vorgaenger</span> direkt <b>vorangeht</b> 
+    (hierunter versteht man, dass der andere Container des Vorgängers unmittelbar 
+    vor dem Starttag des Nachfolgers geschlossen wird). Zwischen den Einzelselektoren 
+    steht das Kombinatorsymbol <span class="beispiel">+</span>, optional umgeben 
+    von Leerzeichen.</p>  
+  <p class="beispiel">Beispiel:<br/>
+    /* erfasst &lt;b&gt; nach &lt;a&gt;: */<br />
+  a + b </p>  
+<p class="komp">Kompatibilität:<br/>
+   Der Adjacent-Sibling-Selektor wird von allen modernen Browsern unterstützt (Mozilla, Firefox, Safari, Opera; auch IE5/Mac). Der Internet Explorer für Windows hingegen kennt den Child-Selektor erst ab Version 7.0. </p>
+</div>
+<div id="view">
+
+</div>
+
+</body>
+</html>

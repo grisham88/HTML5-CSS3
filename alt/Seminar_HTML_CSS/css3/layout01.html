@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Float-Layout (3-spaltig)</title>
+    <style>
+
+        div#wrapper {
+            width:640px;
+            margin:0 auto;
+        }
+
+        div#header {
+            height:80px;
+            background-color: #ccc;
+        }
+
+        div#footer {
+            height:40px;
+            background-color: #ddd;
+            clear:both;
+        }   
+
+        div#contentwrap {
+            background-color: yellow;
+            _border:2px solid red;
+            float:left; /* oops... */
+        }    
+
+        div#spalte1 {
+            background-color: lightgreen;
+            width:calc(25% - 20px);
+            float:right;
+            padding:10px;
+        }
+        div#spalte2 {
+            background-color: lightblue;
+            width:calc(40% - 20px);
+            float:right;
+            padding:10px;
+        }
+        div#spalte3 {
+            background-color: pink;
+            width:calc(35% - 20px);
+            float:left;
+            padding:10px;
+        }   
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="header"></div>
+        <div id="contentwrap">
+            <div id="spalte1">Spalte 1: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, voluptas officiis sed at neque sit nostrum quisquam hic ipsa nulla.</div>
+            <div id="spalte2">Spalte 2: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel veritatis blanditiis, tenetur libero vero nihil numquam eveniet architecto ea et? Temporibus ea, officia blanditiis sed ipsam necessitatibus autem molestias, sint labore! Blanditiis nulla architecto consectetur ea, exercitationem, obcaecati facilis commodi.</div>
+            <div id="spalte3">Spalte 3: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur cumque id voluptate minima odio non!</div>
+        </div>
+        <div id="footer"></div>
+    </div>
+</body>
+</html>

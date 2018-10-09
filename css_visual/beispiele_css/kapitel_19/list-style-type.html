@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <title>list-style-type </title>
+<script type="text/javascript" src="css-beispiele.js"></script>
+<link rel="stylesheet" href="cd_style.css" type="text/css" />
+<link rel="stylesheet" href="css-beispiele.css" type="text/css" />
+</head>
+<body>
+<h1>Listenstyle Properties: list-style-type </h1>
+<div id="edit">
+  <p>Das <span class="beispiel">list-style-type</span>-Property bestimmt die Art 
+    des zu verwendenden Aufzählungszeichens. Der Defaultwert ist <span class="beispiel">disc</span>.</p>
+<p class="werte">Werte:<br/>
+	disc, circle, square, decimal, decimal-leading-zero, lower-roman, upper-roman, lower-greek, lower-latin, upper-latin, armenian, georgian, lower-alpha, upper-alpha, none, inherit</p>
+
+<p class="beispiel">Beispiel:<br/>
+&lt;div style="display:list-item; <br/>
+ list-style-type:circle">Tulpen&lt;/div>
+
+</p>
+
+<form onsubmit="return false">
+<p><b>Ausprobieren:</b><br/>list-style-type:<select name="listStyleType" onchange="editieren(this)">
+<option value="none">none</option>
+<option value="disc">disc</option>
+<option value="circle">circle</option>
+<option value="square">square</option>
+<option value="decimal">decimal</option>
+<option value="decimal-leading-zero">decimal-leading-zero</option>
+<option value="lower-roman">lower-roman</option>
+<option value="upper-roman">upper-roman</option>
+<option value="lower-greek">lower-greek</option>
+<option value="lower-latin">lower-latin</option>
+<option value="upper-latin">upper-latin</option>
+<option value="armenian">armenian</option>
+<option value="georgian">georgian</option>
+<option value="lower-alpha">lower-alpha</option>
+<option value="upper-alpha">upper-alpha</option>
+<option value="inherit">inherit</option>
+</select>
+</p>
+<p></p>
+</form>
+
+</div>
+<div id="view">
+<p style="background-color:#ddd">Dieser Textabsatz ist ein Beispielabsatz. Er enthält keinen sinnvollen Inhalt, sondern dient lediglich dazu, dem folgenden Absatz voranzustehen. Er wird durch die CSS-Editierung nicht erfasst. Er hat eine hellgraue Hintergrundfarbe, um besser sichtbar zu sein.</p>
+<p>Eine Liste:</p>
+<ul id="ziel" style="list-style:none; font-size:0.8em" >
+<li>Rosen</li>
+<li>Tulpen</li>
+<li>Nelken</li>
+</ul>
+
+<p style="background-color:#ddd">Dieser Textabsatz ist ein Beispielabsatz. Er enthält keinen sinnvollen Inhalt, sondern dient lediglich dazu, dem editierbaren Absatz zu folgen. Er wird durch die CSS-Editierung nicht erfasst. Er hat ebenfalls eine hellgraue Hintergrundfarbe, um besser sichtbar zu sein.</p>
+</div>
+
+</body>
+</html>

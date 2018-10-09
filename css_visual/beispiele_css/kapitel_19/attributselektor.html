@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <title>Attributabhängige Selektoren</title>
+<script type="text/javascript" src="css-beispiele.js"></script>
+<link rel="stylesheet" href="cd_style.css" type="text/css" />
+<link rel="stylesheet" href="css-beispiele.css" type="text/css" />
+</head>
+<body>
+<h1>CSS Selektoren: Attributabhängige Selektoren</h1>
+<div id="edit">
+  <p>Auch die Attributselektoren wählen <b>Elementcontainer</b> innerhalb des Dokuments aus, prüfen dabei jedoch deren <b>Attributkontext</b>. 
+Gewählt werden Elemente, die entweder ein bestimmtes Attribut besitzen, ohne dass dessen Wert eine Rolle spielt, Elemente deren genanntes Attribut gleichzeitig einen bestimmten Wert besitzt oder (im Rahmen einer Tokenliste) den entsprechenden Vergleichswert enthält.
+ </p> 
+<h2 id="existenz">Existenz eines Attributs</h2>
+<p class="beispiel">Syntax:<br/>
+[attributname]<br/>
+*[attributname]<br/>
+tagname[attributname]
+</p>
+<p>
+  Ein Attributselektor gilt für alle Elemente, für die ein Attribut mit entsprechendem Namen explizit gesetzt ist (d.h. im Quelltext <i>vorhanden</i> ist). Die Wirkung kann auf Elemente mit bestimmtem Namen beschränkt werden.</p> 
+  <p class="beispiel">Beispiel:<br/>
+*.wichtig { border:solid 2px red; }
+</p> 
+<h2 id="wert">Attribut mit bestimmtem Wert</h2>
+<p class="beispiel">Syntax:<br/>
+[attributname=attributwert]
+</p>
+  <p> Dies gilt für alle Elemente, die ein Attribut <span class="beispiel">attributname</span> 
+    besitzen, wenn dieses den Wert <span class="beispiel">attributwert</span> 
+    enthält. Der Wert wird als Zeichenkette <i>mit Begrenzern</i> übergeben und darf 
+    daher Leerzeichen enthalten.</p> 
+  <p class="beispiel">Beispiel:<br/>
+img[alt=""] { border:solid 2px red; }
+</p> 
+<h2 id="liste">Attribut mit Wert innerhalb einer Wertliste</h2>
+<p class="beispiel">Syntax:<br/>
+[att~=teilwert]
+</p>
+  <p> Ebenso können Elemente erfasst werden, die Attribute in Form eines Listentyps 
+    (z.B. <span class="beispiel">IDREFS</span>, <span class="beispiel">NMTOKENS</span>) 
+    besitzen, sofern ein Teilwert des Attributwertes dem hier übergebenen Wert 
+    entspricht. Der übergebene Wert darf keine Leerzeichen enthalten. </p> 
+
+<h2 id="lang">Attributselektoren für Sprachcodes</h2>
+<p class="beispiel">Syntax:<br/>
+[att|=val]
+</p>
+<p>Speziell für Elemente mit zugewiesenem Sprachcode ist diese Form des Attributselektors geeignet. Hierbei muss der Attributwert mit dem übergebenen Wert beginnen, wobei und unmittelbar ein Bindestrich folgen darf.</p> 
+  <p class="beispiel">Beispiel:<br/>
+  /* erfasst z.B. &lt;p lang="EN-us">: */
+[att|="EN"] { ... }
+</p> 
+<p class="komp">Kompatibilität:<br/>
+   Der Attribut-Selektor wird von allen modernen Browsern unterstützt (Mozilla, Firefox, Safari, Opera). Der Internet Explorer für Windows hingegen kennt den Attribut-Selektor erst ab Version 7.0. Der IE 5 für MacOS und der historische Netscape 4.x unterstützen diesen Selektor nicht.</p>
+</div>
+<div id="view">
+
+</div>
+
+</body>
+</html>

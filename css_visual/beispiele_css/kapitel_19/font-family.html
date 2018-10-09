@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <title>font-family</title>
+<script type="text/javascript" src="css-beispiele.js"></script>
+<link rel="stylesheet" href="cd_style.css" type="text/css" />
+<link rel="stylesheet" href="css-beispiele.css" type="text/css" />
+</head>
+<body>
+<h1>Fontproperties: font-family</h1>
+<div id="edit">
+  <p>Das Property <span class="beispiel">font-family</span> bestimmt die Schriftart 
+    (Font) in dem der Elementinhalt präsentiert werden soll. Es dürfen mehrere 
+    Fontnamen durch Komma getrennt übergeben werden. Als letzte Schriftfamilie 
+    sollte stets ein allgemeiner Bezeichner wie <span class="beispiel">sans-serif</span> 
+    (Serifenlose Schrift), <span class="beispiel">serif</span> (Serifenschrift), 
+    <span class="beispiel">fantasy</span> (Schmuck- oder Symbolschriften), <span class="beispiel">cursive</span> 
+    (Kursiv- bzw. Schreibschriften) oder <span class="beispiel">monospace</span> 
+    (Schrift konstanter Breite) übergeben werden. </p>
+<p class="werte">Werte:<br/>
+	schriftname [,schriftname, ...], inherit</p>
+
+<p class="beispiel">Beispiel:<br/>
+body {font-family: Arial, Helvetica, sans-serif}
+</p>
+
+<form onsubmit="return false">
+<p><b>Ausprobieren:</b><br/>font-family:<select name="fontFamily" onchange="editieren(this)">
+<optgroup label="Schriftnamen:">
+<option value="arial" selected="selected">arial</option>
+<option value="verdana">verdana</option>
+<option value="times new roman">times new roman</option>
+<option value="courier">courier</option>
+<option value="georgia">georgia</option>
+</optgroup>
+<optgroup label="Generisch:">
+<option value="serif">serif</option>
+<option value="sans-serif">sans-serif</option>
+<option value="cursive">cursive</option>
+<option value="monospace">monospace</option>
+<option value="fantasy">fantasy</option>
+</optgroup>
+</select></p>
+</form>
+
+</div>
+<div id="view">
+<p style="background-color:#ddd">Dieser Textabsatz ist ein Beispielabsatz. Er enthält keinen sinnvollen Inhalt, sondern dient lediglich dazu, dem folgenden Absatz voranzustehen. Er wird durch die CSS-Editierung nicht erfasst. Er hat eine hellgraue Hintergrundfarbe, um besser sichtbar zu sein.</p>
+<p id="ziel">Dieser Absatz kann durch CSS-Formatierungen, die links im Editierbereich vorgenommen werden, in seiner Präsentation geändert werden. Sie können hierfür in den Feldern des Editierbereichs beliebige Eingaben machen, die sofort sichtbar umgesetzt werden (solange die Werte zulässig sind, selbstredend :-).</p>
+<p style="background-color:#ddd">Dieser Textabsatz ist ein Beispielabsatz. Er enthält keinen sinnvollen Inhalt, sondern dient lediglich dazu, dem editierbaren Absatz zu folgen. Er wird durch die CSS-Editierung nicht erfasst. Er hat ebenfalls eine hellgraue Hintergrundfarbe, um besser sichtbar zu sein.</p>
+</div>
+
+</body>
+</html>

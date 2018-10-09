@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Animierte Panels</title>
+    <style>
+    
+    .panel {
+        width:250px;
+        height:250px;
+        border:1px solid #aaa;
+        border-top-width:25px;
+        overflow:hidden;
+        position:absolute;
+        top:20px;
+        left:150px;
+        /* verstecken */
+        _display:none;
+        visibility:hidden;
+    }
+
+    .panel:target {
+       /* zeigen */
+        _display:block;
+        visibility:visible;
+    }
+
+    .panel:hover {
+        width:250px;
+        height:250px;
+    } 
+
+    .panel-innen {
+        padding:10px;
+        width:230px;
+        height:230px;
+    }
+
+    
+    </style>
+</head>
+<body>
+
+    <ul>
+        <li><a href="#panel1">Panel 1</a></li>
+        <li><a href="#panel2">Panel 2</a></li>
+        <li><a href="#panel3">Panel 3</a></li>
+        <li><a href="#">Panels aus</a></li>
+    </ul>
+
+    <div class="panel" id="panel1">
+        <div class="panel-innen">
+            <h3>Panel 1</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam earum, laboriosam repudiandae eaque quidem atque cupiditate? Consequuntur cumque officiis rerum adipisci. Ducimus quis necessitatibus eligendi?</p>
+        </div>
+    </div>
+     <div class="panel" id="panel2">
+        <div class="panel-innen">
+            <h3>Panel 2</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam earum, laboriosam repudiandae eaque quidem atque cupiditate? Consequuntur cumque officiis rerum adipisci. Ducimus quis necessitatibus eligendi?</p>
+        </div>
+    </div>
+    <div class="panel"  id="panel3">
+            <div class="panel-innen">
+                <h3>Panel 3</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam earum, laboriosam repudiandae eaque quidem atque cupiditate? Consequuntur cumque officiis rerum adipisci. Ducimus quis necessitatibus eligendi?</p>
+            </div>
+        </div>  
+</body>
+</html>

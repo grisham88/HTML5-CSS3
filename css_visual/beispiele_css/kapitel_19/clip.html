@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <title>Positioning-Properties: clip</title>
+<script type="text/javascript" src="css-beispiele.js"></script>
+<link rel="stylesheet" href="cd_style.css" type="text/css" />
+<link rel="stylesheet" href="css-beispiele.css" type="text/css" />
+</head>
+<body>
+<h1>Positioning-Properties: clip</h1>
+<div id="edit">
+  <p>Das <span class="beispiel">clip</span>-Property beschneidet die Ansicht eines 
+    absolut positionierten Containers, ohne dessen Abmessungen dabei zu verändern. 
+    Es können ausschließlich rechteckige Ausschnitte festgelegt werden.</p>
+ <p class="werte">Werte:<br/>
+	rect([y-top x-re y-bot x-li]), auto, inherit</p>
+
+<form onsubmit="return false">
+<p><b>Ausprobieren:</b><br/>clip:<select name="clip" onchange="editieren(this)" >
+<option value="inherit">inherit</option>
+<option value="auto">auto</option>
+<option value="rect(10px, 150px, 110px, 10px)">rect(10px, 150px, 110px, 10px)</option>
+<option value="rect(20px, 130px, 90px, 20px)">rect(20px, 130px, 90px, 20px)</option>
+<option value="rect(30px, 110px, 70px, 30px)">rect(30px, 110px, 70px, 30px)</option>
+<option value="rect(40px, 90px, 65px, 60px)">rect(40px, 90px, 65px, 60px)</option>
+</select></p>
+</form>
+</div>
+<div id="view">
+<div style="border:thin solid; height:300px;background-color:#ddd;">
+&nbsp;
+    <p id="ziel" style="width:43%;border:thin solid; background-color:#fff;position:absolute;left:51%;">Wenden 
+      Sie <span class="beispiel">clip</span> auf diesen Container an.<br />
+<img src="cover_200.gif" alt="Buchcover" /></p>
+	&nbsp;
+</div>
+</div>
+
+</body>
+</html>

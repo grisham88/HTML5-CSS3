@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <title>list-style </title>
+<script type="text/javascript" src="css-beispiele.js"></script>
+<link rel="stylesheet" href="cd_style.css" type="text/css" />
+<link rel="stylesheet" href="css-beispiele.css" type="text/css" />
+</head>
+<body>
+<h1>Listenstyle Properties: list-style-image </h1>
+<div id="edit">
+  <p>Das <span class="beispiel">list-style-image</span>-Property legt eine Grafik 
+    fest, die als Aufzählungszeichen verwendet werden soll. Defaultwert ist <span class="beispiel">none</span> 
+    (keine Grafik) – in diesem Falle tritt das <span class="beispiel">list-style-type</span>-Property 
+    in Kraft.</p>
+<p class="werte">Werte:<br/>
+	url([pfad/dateiname]), none, inherit</p>
+
+<p class="beispiel">Beispiel:<br/>
+&lt;div style="display:list-item; <br/>
+ list-style-image:url('pfeil.gif')">Tulpen&lt;/div>
+ 
+</p>
+
+<form onsubmit="return false">
+<p><b>Ausprobieren:</b><br/>list-style-image:<select name="listStyleImage" onchange="editieren(this)">
+<option value="none">none</option>
+<option value="url('pfeil.gif')">url('pfeil.gif')</option>
+<option value="url('pfeil2.gif')">url('pfeil2.gif')</option>
+<option value="url('pfeil3.gif')">url('pfeil3.gif')</option>
+<option value="url('pfeil4.gif')">url('pfeil4.gif')</option>
+<option value="url('pfeil5.gif')">url('pfeil5.gif')</option>
+<option value="url('pfeil6.gif')">url('pfeil6.gif')</option>
+<option value="inherit">inherit</option>
+</select>
+</p>
+<p></p>
+</form>
+
+</div>
+<div id="view">
+<p style="background-color:#ddd">Dieser Textabsatz ist ein Beispielabsatz. Er enthält keinen sinnvollen Inhalt, sondern dient lediglich dazu, dem folgenden Absatz voranzustehen. Er wird durch die CSS-Editierung nicht erfasst. Er hat eine hellgraue Hintergrundfarbe, um besser sichtbar zu sein.</p>
+<p>Eine Liste:</p>
+<ul id="ziel" style="list-style:none; font-size:0.8em" >
+<li>Rosen</li>
+<li>Tulpen</li>
+<li>Nelken</li>
+</ul>
+
+<p style="background-color:#ddd">Dieser Textabsatz ist ein Beispielabsatz. Er enthält keinen sinnvollen Inhalt, sondern dient lediglich dazu, dem editierbaren Absatz zu folgen. Er wird durch die CSS-Editierung nicht erfasst. Er hat ebenfalls eine hellgraue Hintergrundfarbe, um besser sichtbar zu sein.</p>
+</div>
+
+</body>
+</html>

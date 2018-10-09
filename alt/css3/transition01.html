@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Transition</title>
+    <style>
+    
+        #box {
+            transition: all 1s;
+            background-color: red;
+            width: 50px;
+            height: 50px;
+            margin: 50px;
+        }
+
+        #box.aktiv {
+            background-color: yellow;
+            width: 100px;
+            height: 100px;           
+        }
+
+        #box:hover {
+            transition:width 1s, height 2s, background-color 3s;
+            background-color: yellow;
+            width: 100px;
+            height: 100px;           
+        }    
+
+
+    </style>
+</head>
+<body>
+    <p><button id="btn">Animieren</button></p>
+
+    <div id="box"></div>
+    <script>
+        var box = document.getElementById('box');
+
+        var btn = document.getElementById('btn');
+        btn.addEventListener('click',function(e){
+            if(box.className!="aktiv") {
+                box.className="aktiv";
+            } else {
+                box.className="";
+            }
+
+        });
+
+    </script>
+</body>
+</html>

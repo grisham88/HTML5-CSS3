@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Video mit dem Video-Element und eigenen Controls</title>
+</head>
+<body>
+    <h1>Videos einbetten - Source und Poster</h1>
+    <p><video id="myvid" 
+              poster="media/poster.jpg"
+              width="640" 
+              height="360">
+        <source src="media/trailer_test.ogg">    
+        <source src="media/trailer_test.mp4">
+        <source src="media/trailer_test.mov">             
+        Fallback: Ihr Browser kann das nicht!
+    </video></p>
+    <p><button id="start">Abspielen</button> 
+        <button id="stop">Anhalten</button></p>
+    <script>
+        var myvid = document.getElementById('myvid');
+        console.log(myvid);
+
+        var btnstart = document.getElementById('start');
+            btnstart.addEventListener('click', function(){
+                console.log("Starte Video!");
+                myvid.play();
+            });
+
+        var btnstop = document.getElementById('stop');
+            btnstop.addEventListener('click', function(){
+                console.log("Stoppe Video!");
+                myvid.pause();
+            });        
+    </script>
+</body>
+</html>

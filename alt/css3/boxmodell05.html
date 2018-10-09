@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Boxmodell</title>
+    <style>
+
+        body {
+            _margin:0; /* sollte man tun!! */
+        }
+        
+        p {
+            background-color: pink;
+            width:300px;
+            margin:30px;
+            padding:10px;
+            border:1px solid black;
+        }
+
+        #p1 {
+ 
+        }
+        #p2 {
+
+        } 
+        #p3 {
+            background-color: yellow;
+            _visibility: hidden; /* bleibt im Flow! */
+            _display:none;       /* nicht im Flow! */
+            opacity:0.5;           /* bleibt im Flow! */
+            box-shadow:5px 5px 3px #aaa;
+        }
+        #p4 {
+            background-color: rgba(255, 255, 0, 0.5);
+            box-shadow:5px 5px 3px #aaa;
+        }   
+
+        pre { 
+
+         }
+
+    </style>
+</head>
+<body>
+    <p id="p1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, iste deserunt exercitationem blanditiis.</p>
+
+    <p id="p2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, iste deserunt exercitationem blanditiis.</p>  
+
+    <p id="p3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, iste deserunt exercitationem blanditiis.</p>  
+
+    <p id="p4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, iste deserunt exercitationem blanditiis.</p>
+    <pre>
+
+
+    </pre>
+  
+</body>
+</html>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <title>Positioning-Properties: clear</title>
+<script type="text/javascript" src="css-beispiele.js"></script>
+<link rel="stylesheet" href="cd_style.css" type="text/css" />
+<link rel="stylesheet" href="css-beispiele.css" type="text/css" />
+</head>
+<body>
+<h1>Positioning-Properties: clear</h1>
+<div id="edit">
+  <p>Das <span class="beispiel">clear</span>-Property steht in Zusammenhang mit 
+    gefloateten Elementen. Es beendet für den formatierten Elementcontainer das 
+    Umfließen eines vorhergehenden, mittels des <span class="beispiel">float</span>-Properties 
+    nach links oder rechts gefloateten Containers zur angegebenen Seite hin.</p>
+ <p class="werte">Werte:<br/>
+	none, left, right, both, inherit</p>
+
+<form onsubmit="return false">
+<p><b>Ausprobieren:</b><br/>clear:<select name="clear" onchange="editieren(this)" >
+<option value="inherit">inherit</option>
+<option value="left">left</option>
+<option value="right">right</option>
+<option value="both">both</option>
+<option value="none">none</option>
+</select></p>
+</form>
+</div>
+<div id="view">
+<div style="border:thin solid; height:300px;">
+<img src="bild1.jpg" alt="Bild" style="float:right"/><img src="bild_klein.jpg" alt="Bild" style="float:left"/>
+    <span id="ziel" style="text-align:justify;font-size:0.8em;display:block"> Stylen Sie diesen Container mit dem <span class="beispiel">clear</span>-Property. 
+      Sie können das Umfließen der Bilder wahlweise links, rechts oder auf beiden 
+      Seiten beenden. Probieren Sie es, indem Sie den entsprechenden Wert für 
+      <span class="beispiel">clear</span> im linken Menü wählen. </span>
+</div>
+</div>
+
+</body>
+</html>

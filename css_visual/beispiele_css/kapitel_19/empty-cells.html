@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <title>empty-cells</title>
+<script type="text/javascript" src="css-beispiele.js"></script>
+<style type="text/css">
+/* <![CDATA[ */
+td { background:yellow }
+/* ]]> */
+</style>
+<link rel="stylesheet" href="cd_style.css" type="text/css" />
+<link rel="stylesheet" href="css-beispiele.css" type="text/css" />
+</head>
+<body>
+<h1>Tabellen-Properties: empty-cells</h1>
+<div id="edit">
+  
+  <p>Das <span class="beispiel">empty-cells</span>-Property bestimmt, ob für leere 
+    Tabellenzellen deren Rahmen, Hintergrundfarbe und -bild angezeigt oder versteckt 
+    werden soll. </p>
+  <p class="werte">Werte:<br/>
+	show, hide, inherit</p>
+<p class="beispiel">Beispiel:<br />
+table { empty-cells:hide; }
+</p>	
+<form onsubmit="return false">
+<p><b>Ausprobieren:</b><br/>
+empty-cells:<select type="text" name="emptyCells" onchange="editieren(this)">
+<option value="inherit">inherit</option>
+<option value="hide">hide</option>
+<option value="show">show</option>
+</select>
+</p>
+</form>
+
+
+
+
+</div>
+<div id="view">
+<p style="background-color:#ddd">Dieser Textabsatz ist ein Beispielabsatz. Er enthält keinen sinnvollen Inhalt, sondern dient lediglich dazu, dem folgenden Absatz voranzustehen. Er wird durch die CSS-Editierung nicht erfasst. Er hat eine hellgraue Hintergrundfarbe, um besser sichtbar zu sein.</p>
+<div style="font-size:0.8em">
+
+<table border="1" id="ziel" cellspacing="2" style="width:200px;">
+  <tr>
+    <td>1</td>
+    <td></td>
+    <td>3</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>5</td>
+    <td>6</td>
+  </tr>
+</table>
+
+
+
+</div>
+<p style="background-color:#ddd">Dieser Textabsatz ist ein Beispielabsatz. Er enthält keinen sinnvollen Inhalt, sondern dient lediglich dazu, dem editierbaren Absatz zu folgen. Er wird durch die CSS-Editierung nicht erfasst. Er hat ebenfalls eine hellgraue Hintergrundfarbe, um besser sichtbar zu sein.</p>
+</div>
+
+</body>
+</html>

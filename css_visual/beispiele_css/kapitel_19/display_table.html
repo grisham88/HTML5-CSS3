@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <title>display</title>
+<script type="text/javascript" src="css-beispiele.js"></script>
+<link rel="stylesheet" href="cd_style.css" type="text/css" />
+<link rel="stylesheet" href="css-beispiele.css" type="text/css" />
+</head>
+<body>
+<h1>Displayproperties: display:table</h1>
+<div id="edit">
+  
+  <p>Allen HTML-Elementen können seit CSS 2 über entsprechende <span class="beispiel">display</span>-Werte 
+    auch die Darstellungseigenschaften von Tabellenelementen zugeordnet werden. 
+    Hier muss darauf geachtet werden, dass mindestens die erforderlichen Rollen 
+    definiert werden. Ein Element muss daher die Rolle des <span class="beispiel">&lt;table></span>-Containers 
+    übernehmen (<span class="beispiel">display:table</span>), ein weiteres die 
+    Rolle der Tabellenzeile <span class="beispiel">&lt;tr></span>, bekommt also 
+    <span class="beispiel">display:table-row</span>. Ein Element schließlich stellt, 
+    mit <span class="beispiel">display:table-cell</span> die Tabellenzelle <span class="beispiel">&lt;td></span> 
+    dar. </p>
+<p class="beispiel">Beispiel:<br/>
+span { display:table; }
+</p>	
+<form onsubmit="return false">
+<p><b>Ausprobieren:</b><br/>
+display:<select type="text" name="display" onchange="table(this)">
+<option value="inline">inline</option>
+<option value="block">block</option>
+<option value="table">table</option>
+</select>
+</p>
+</form>
+<p class="beispiel">Beispiel:<br />
+&lt;div style="display:table;width:250px; border:1px dotted;  padding:5px; border-spacing:2px"><br />
+   &lt;div style="display:table-row;"><br />
+        &lt;span style="display:table-cell; border:1px solid;          padding:3px;">1&lt;/span><br />
+        &lt;span style="display:table-cell; border:1px solid;          padding:3px;">2&lt;/span><br />
+    &lt;/div><br />
+    &lt;div style="display:table-row;"><br />
+        &lt;span style="display:table-cell; border:1px solid;          padding:3px;">3&lt;/span><br />
+         &lt;span style="display:table-cell;border:1px solid;          padding:3px;">4&lt;/span><br />
+    &lt;/div><br />
+&lt;/div>
+</p>
+
+
+
+</div>
+<div id="view">
+<p style="background-color:#ddd">Dieser Textabsatz ist ein Beispielabsatz. Er enthält keinen sinnvollen Inhalt, sondern dient lediglich dazu, dem folgenden Absatz voranzustehen. Er wird durch die CSS-Editierung nicht erfasst. Er hat eine hellgraue Hintergrundfarbe, um besser sichtbar zu sein.</p>
+<div style="font-size:0.8em">
+<div id="ziel" style="width:250px; border:1px dotted; padding:5px; border-spacing:2px">
+    <div id="ziel2">
+        <span id="ziel4" style="border:1px solid; padding:3px;">1</span>
+        <span id="ziel5" style="border:1px solid; padding:3px;">2</span>
+    </div>
+    <div id="ziel3">
+        <span id="ziel6" style="border:1px solid;  padding:3px;">3</span>
+         <span id="ziel7" style="border:1px solid; padding:3px;">4</span>
+    </div>
+</div>
+
+
+</div>
+<p style="background-color:#ddd">Dieser Textabsatz ist ein Beispielabsatz. Er enthält keinen sinnvollen Inhalt, sondern dient lediglich dazu, dem editierbaren Absatz zu folgen. Er wird durch die CSS-Editierung nicht erfasst. Er hat ebenfalls eine hellgraue Hintergrundfarbe, um besser sichtbar zu sein.</p>
+</div>
+
+</body>
+</html>

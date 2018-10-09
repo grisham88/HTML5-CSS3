@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Animierte Panels (vertikal)</title>
+    <style>
+    
+    .panel {
+        transition:height 1s;
+        width:250px;
+        height:0;
+        border:1px solid #aaa;
+        border-top-width:25px;
+        overflow:hidden;
+        margin:50px;
+        float:left;
+        position:relative;
+    }
+
+    .panel:hover {
+        transition:height 1s;
+        width:250px;
+        height:250px;
+    } 
+
+    .panel-innen {
+        padding:10px;
+        width:230px;
+        height:230px;
+    }
+
+    .panel-schublade {
+        position:absolute;
+        bottom:0;
+    }
+    
+    </style>
+</head>
+<body>
+
+    <div class="panel">
+        <div class="panel-innen">
+            <h3>Die Jalousie</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam earum, laboriosam repudiandae eaque quidem atque cupiditate? Consequuntur cumque officiis rerum adipisci. Ducimus quis necessitatibus eligendi?</p>
+        </div>
+    </div>
+ 
+    <div class="panel">
+            <div class="panel-innen panel-schublade">
+                <h3>Die Schublade</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam earum, laboriosam repudiandae eaque quidem atque cupiditate? Consequuntur cumque officiis rerum adipisci. Ducimus quis necessitatibus eligendi?</p>
+            </div>
+        </div>    
+</body>
+</html>

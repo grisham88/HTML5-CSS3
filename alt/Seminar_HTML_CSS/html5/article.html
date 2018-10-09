@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Der Article</title>
+    <style>
+    
+        h1 {
+            color: red;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Das ARTICLE-Element</h1>
+    <p>Article sind autark!</p>
+    <article class="myArticle">
+        <style scoped> 
+            .myArticle h1 { color: green }
+        </style>
+        <header>Header des Article</header>
+        <!-- Der Inhalt der Section -->
+        <h1>Überschrift, dritte Ebene</h1>
+        <p>Textabsatz dritte Ebene...</p> 
+        <!-- Kontext zum Inhalt -->
+        <aside>Kontextinhalt</aside> 
+        <footer>Footer</footer>
+    </article>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <title>Klassenselektor</title>
+<script type="text/javascript" src="css-beispiele.js"></script>
+<link rel="stylesheet" href="cd_style.css" type="text/css" />
+<link rel="stylesheet" href="css-beispiele.css" type="text/css" />
+</head>
+<body>
+<h1>CSS Selektoren: Klassenselektor</h1>
+<div id="edit">
+<p class="beispiel">Syntax:<br/>
+.klassenname
+</p>
+  <p>Definiert eine <b>CSS-Klasse</b>, die einem Element über das Attribut <span class="beispiel">class</span> 
+    zugewiesen werden kann. </p>
+<p class="beispiel">Beispiel:<br/>
+.wichtig {border:solid 2px red;}
+</p>  
+<h2 id="frei">Freie Klassen</h2>
+<p>
+  Eine Klasse <i>ohne</i> vorangestellten Typ-Selektor wirkt auf jedes Element mit entsprechendem 
+  <span class="beispiel">class</span>-Attributwert. Einer solchen „freien“ Klasse 
+  ist also quasi der universelle Selektor vorangestellt, der in diesem Zusammenhang 
+  jedoch entfallen kann.</p> 
+  <p class="beispiel">Beispiel:<br/>
+*.wichtig { border:solid 2px red; }
+</p> 
+<h2 id="geb">Gebundene Klassen</h2>
+<p>  Wird dem Klassenselektor ein Typ-Selektor vorangestellt, so wird die Wirkung der Klasse auf Elemente dieses Typs <i>begrenzt</i> (typgebunden). </p> 
+  <p class="beispiel">Beispiel:<br/>
+p.wichtig { border:solid 2px red; }
+</p>  
+<p class="komp">Kompatibilität:<br/>
+   Der Gruppenselektor wird von allen Browsern unterstützt.</p>
+</div>
+<div id="view">
+
+</div>
+
+</body>
+</html>

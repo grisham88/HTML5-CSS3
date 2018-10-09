@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <title>font-weight</title>
+<script type="text/javascript" src="css-beispiele.js"></script>
+<link rel="stylesheet" href="cd_style.css" type="text/css" />
+<link rel="stylesheet" href="css-beispiele.css" type="text/css" />
+</head>
+<body>
+<h1>Fontproperties: font-weight</h1>
+<div id="edit">
+  <p>Das <span class="beispiel">font-weight</span>-Property bestimmt den Fettegrad 
+    (weight) der Schrift des erfassten Containers. In der Theorie kann zwar ein 
+    abgestufter Fettegrad angegeben werden, in der Praxis liegen (bei Bildschirmausgabe) 
+    dem Browser für die meisten Schriften jedoch nur zwei alternative Schriftschnitte 
+    (normal und fett) vor. </p>
+<p class="werte">Werte:<br/>
+	normal, bold, bolder, lighter, 
+100, 200, 300, 400, 500, 600, 700, 800, 900, inherit
+</p>
+<form onsubmit="return false">
+<p><b>Ausprobieren:</b><br/>font-weight:<select name="fontWeight" onchange="editieren(this)">
+<option value="normal">normal</option>
+<option value="bold">bold</option>
+<option value="bolder">bolder</option>
+<option value="lighter">lighter</option>
+<option value="inherit">inherit</option>
+</select></p>
+</form>
+<p class="beispiel">Beispiel:<br/>
+     /* entspricht "400":        */<br/>p { font-weight: normal }<br/> 
+ /* entspricht "bold":       */<br/>h1 { font-weight: 700 }<br/>       
+ /* keine sichtbare Wirkung: */<br/>body { font-weight: 400 }<br/>     
+ /* wird nicht "fetter":     */<br/>strong { font-weight: bolder }<br/>
+</p>
+
+
+
+</div>
+<div id="view">
+<p style="background-color:#ddd">Dieser Textabsatz ist ein Beispielabsatz. Er enthält keinen sinnvollen Inhalt, sondern dient lediglich dazu, dem folgenden Absatz voranzustehen. Er wird durch die CSS-Editierung nicht erfasst. Er hat eine hellgraue Hintergrundfarbe, um besser sichtbar zu sein.</p>
+<p id="ziel">Dieser Absatz kann durch CSS-Formatierungen, die links im Editierbereich vorgenommen werden, in seiner Präsentation geändert werden. Sie können hierfür in den Feldern des Editierbereichs beliebige Eingaben machen, die sofort sichtbar umgesetzt werden (solange die Werte zulässig sind, selbstredend :-).</p>
+<p style="background-color:#ddd">Dieser Textabsatz ist ein Beispielabsatz. Er enthält keinen sinnvollen Inhalt, sondern dient lediglich dazu, dem editierbaren Absatz zu folgen. Er wird durch die CSS-Editierung nicht erfasst. Er hat ebenfalls eine hellgraue Hintergrundfarbe, um besser sichtbar zu sein.</p>
+</div>
+
+</body>
+</html>

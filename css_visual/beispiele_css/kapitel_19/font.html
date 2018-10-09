@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <title>font</title>
+<script type="text/javascript" src="css-beispiele.js"></script>
+<link rel="stylesheet" href="cd_style.css" type="text/css" />
+<link rel="stylesheet" href="css-beispiele.css" type="text/css" />
+</head>
+<body>
+<h1>Fontproperties: font</h1>
+<div id="edit">
+  <p>Das Sammelproperty <span class="beispiel">font</span> 
+    bietet die Möglichkeit, alle sechs zur Schriftpräsentation dienenden Properties 
+    gemeinsam festzulegen. Es sind, getrennt durch Leerzeichen, die Werte für 
+    die Subproperties <span class="beispiel">font-style</span>, <span class="beispiel">font-variant</span>, 
+    <span class="beispiel">font-weight</span>, <span class="beispiel">font-size/line-height</span> 
+    und <span class="beispiel">font-family</span> anzugeben. Soll eines der Subproperties 
+    nicht näher bestimmt werden, so kann an Stelle eines Wertes das Schlüsselwort 
+    <span class="beispiel">inherit</span> übergeben werden. Ein Wert für <span class="beispiel">line-height</span> 
+    ist stets zusammen mit <span class="beispiel">font-size</span> anzugeben, 
+    wobei zwischen beiden ein trennender Slash stehen muss: <span class="beispiel">font-size/line-height</span>. 
+  </p>
+<p class="werte">Werte:<br/>
+	[font-style] [font-variant] [font-weight] [font-size(/line-height)?] [font-family]</p>
+
+<p class="beispiel">Beispiel:<br/>
+p {font: 12pt/14pt sans-serif}<br/>
+p {font: 80% sans-serif}<br/>
+p {font: x-large/110% "Times New Roman", serif}<br/>
+
+
+</p>
+
+<form onsubmit="return false">
+<p><b>Ausprobieren:</b><br/>font:<input type="text" size="45" name="font" value=""  onchange="editieren(this)"/><input type="button" class="button" value="Test"/></p>
+<p></p>
+</form>
+
+</div>
+<div id="view">
+<p style="background-color:#ddd">Dieser Textabsatz ist ein Beispielabsatz. Er enthält keinen sinnvollen Inhalt, sondern dient lediglich dazu, dem folgenden Absatz voranzustehen. Er wird durch die CSS-Editierung nicht erfasst. Er hat eine hellgraue Hintergrundfarbe, um besser sichtbar zu sein.</p>
+<p id="ziel">Dieser Absatz kann durch CSS-Formatierungen, die links im Editierbereich vorgenommen werden, in seiner Präsentation geändert werden. Sie können hierfür in den Feldern des Editierbereichs beliebige Eingaben machen, die sofort sichtbar umgesetzt werden (solange die Werte zulässig sind, selbstredend :-).</p>
+<p style="background-color:#ddd">Dieser Textabsatz ist ein Beispielabsatz. Er enthält keinen sinnvollen Inhalt, sondern dient lediglich dazu, dem editierbaren Absatz zu folgen. Er wird durch die CSS-Editierung nicht erfasst. Er hat ebenfalls eine hellgraue Hintergrundfarbe, um besser sichtbar zu sein.</p>
+</div>
+
+</body>
+</html>

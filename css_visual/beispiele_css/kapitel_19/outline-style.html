@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <title>outline-style</title>
+<script type="text/javascript" src="css-beispiele.js"></script>
+<link rel="stylesheet" href="cd_style.css" type="text/css" />
+<link rel="stylesheet" href="css-beispiele.css" type="text/css" />
+</head>
+<body>
+<h1>Konturproperties: outline-style</h1>
+<div id="edit">
+  <p>Das <span class="beispiel">outline-style</span>-Property bestimmt das Aussehen 
+    der Umrisslinie. Es können, aus einer Reihe vordefinierter Schlüsselwörter, 
+    bis zu vier Werte übergeben werden. </p>
+<p class="werte">Werte:<br/>
+	none, solid, dotted, dashed, double, groove, ridge, inset, outset, inherit</p>
+<p class="beispiel">Beispiel:<br/>
+p { outline-style:dotted; border-width:3px;}<br/>
+p { outline-style:dashed; border-width:3px; }<br/>
+p { outline-style:double; border-width:3px;
+ }
+</p>	
+<form onsubmit="return false">
+<p><b>Ausprobieren:</b><br/>
+outline-style:<select name="outlineStyle" onchange="editieren(this)">
+<option value="none">none</option>
+<option value="solid">solid</option>
+<option value="dotted">dotted</option>
+<option value="dashed">dashed</option>
+<option value="double">double</option>
+<option value="groove">groove</option>
+<option value="ridge">ridge</option>
+<option value="inset">inset</option>
+<option value="outset">outset</option>
+<option value="fantasy">inherit</option>
+</select>
+</p>
+</form>
+
+
+
+
+</div>
+<div id="view">
+<p style="background-color:#ddd">Dieser Textabsatz ist ein Beispielabsatz. Er enthält keinen sinnvollen Inhalt, sondern dient lediglich dazu, dem folgenden Absatz voranzustehen. Er wird durch die CSS-Editierung nicht erfasst. Er hat eine hellgraue Hintergrundfarbe, um besser sichtbar zu sein.</p>
+<p id="ziel" style="outline-width:3px;padding:3px">Dieser Absatz kann durch CSS-Formatierungen, die links im Editierbereich vorgenommen werden, in seiner Präsentation geändert werden. Sie können hierfür in den Feldern des Editierbereichs beliebige Eingaben machen, die sofort sichtbar umgesetzt werden (solange die Werte zulässig sind, selbstredend :-).</p>
+<p style="background-color:#ddd">Dieser Textabsatz ist ein Beispielabsatz. Er enthält keinen sinnvollen Inhalt, sondern dient lediglich dazu, dem editierbaren Absatz zu folgen. Er wird durch die CSS-Editierung nicht erfasst. Er hat ebenfalls eine hellgraue Hintergrundfarbe, um besser sichtbar zu sein.</p>
+</div>
+
+</body>
+</html>

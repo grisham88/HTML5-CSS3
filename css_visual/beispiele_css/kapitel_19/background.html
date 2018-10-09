@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <title>background</title>
+<script type="text/javascript" src="css-beispiele.js"></script>
+<link rel="stylesheet" href="cd_style.css" type="text/css" />
+<link rel="stylesheet" href="css-beispiele.css" type="text/css" />
+</head>
+<body>
+<h1>Farben und Hintergründe: background</h1>
+<div id="edit">
+  <p>Das Property <span class="beispiel">background</span> dient als Sammelproperty 
+    für die Bestimmung der Eigenschaften des Hintergrunds eines Containers. Mittels 
+    <span class="beispiel">background</span> können Hintergrundfarbe (<a href="background-color.html" class="beispiel">background-color</a>), 
+    Hintergrundbild (<a href="background-image.html" class="beispiel">background-image</a>) 
+    und dessen Eigenschaften festgelegt werden. In diesem Zusammenhang kann angegeben 
+    werden, ob das Hintergrundbild gegenüber dem Browserfenster fixiert werden 
+    soll (<a href="background-attachment.html" class="beispiel">background-attachment</a>), 
+    ob und in welchen Richtungen es gekachelt werden soll (<a href="background-repeat.html" class="beispiel">background-repeat</a>) 
+    und wo es positioniert wird (<a href="background-position.html" class="beispiel">background-position</a>). 
+  </p>
+
+<p class="werte">Werte:<br/>
+	[background-color] [background-image] [background-attachment] [background-repeat] [background-position]</p>
+
+<p class="beispiel">Beispiel:<br/>
+/* Hintergrundfarbe rot: */<br/>
+p { background: red }<br/>
+/* Hintergrundfarbe teilw. sichtbar: */<br/>
+p { background:#ff9999 url('bg.gif') repeat-y;}<br/>
+/* posit. Hintergrundbild; s. re: */
+p { background:url('bg.gif') 100px 25px no-repeat;}
+
+
+</p>
+
+<form onsubmit="return false">
+<p><b>Ausprobieren:</b><br/>background:<input name="background" size="40" onchange="editieren(this)"/><input type="button" class="button" value="Test"/></p>
+</form>
+</div>
+<div id="view">
+<p style="background-color:#ddd">Dieser Textabsatz ist ein Beispielabsatz. Er enthält keinen sinnvollen Inhalt, sondern dient lediglich dazu, dem folgenden Absatz voranzustehen. Er wird durch die CSS-Editierung nicht erfasst. Er hat eine hellgraue Hintergrundfarbe, um besser sichtbar zu sein.</p>
+<p id="ziel" style="background:url('bg.gif') 100px 25px no-repeat;">Dieser Absatz kann durch 
+      CSS-Formatierungen, die links im Editierbereich vorgenommen werden, 
+in seiner Präsentation geändert werden. Sie können hierfür in den Feldern 
+	des Editierbereichs beliebige Eingaben machen, die sofort sichtbar umgesetzt werden 
+    ( solange die Werte zulässig sind, selbstredend :-). 
+ </p>
+<p style="background-color:#ddd">Dieser Textabsatz ist ein Beispielabsatz. Er enthält keinen sinnvollen Inhalt, sondern dient lediglich dazu, dem editierbaren Absatz zu folgen. Er wird durch die CSS-Editierung nicht erfasst. Er hat ebenfalls eine hellgraue Hintergrundfarbe, um besser sichtbar zu sein.</p>
+</div>
+
+</body>
+</html>

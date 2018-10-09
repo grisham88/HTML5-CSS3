@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <title>Positioning-Properties: left</title>
+<script type="text/javascript" src="css-beispiele.js"></script>
+<link rel="stylesheet" href="cd_style.css" type="text/css" />
+<link rel="stylesheet" href="css-beispiele.css" type="text/css" />
+</head>
+<body>
+<h1>Positioning-Properties: right</h1>
+<div id="edit">
+  <p>Die Wirkung des <span class="beispiel">right</span>-Properties ist abhängig 
+    sowohl von der <span class="beispiel">position</span>-Eigenschaft des positionierten 
+    Containers als auch der seines Elterncontainers.</p>
+ <p class="werte">Werte:<br/>
+	[laenge], [prozent], auto, inherit</p>
+
+<p class="beispiel">Beispiel:<br/>
+&lt;div style="border:thin solid; height:85px;"><br/>
+<br/>
+  &lt;div style="border:thin solid; width:80%; <br/>
+    position:relative; top:10px; left:10px"><br/>
+        Lorem ipsum ...<br/>
+  &lt;/div><br/>
+<br/>
+&lt;/div>
+
+
+</p>
+
+<form onsubmit="return false">
+<p><b>Ausprobieren:</b><br/>right:<input name="right" onchange="editieren(this)" /><input type="button" class="button" value="Test"/></p>
+</form>
+<form onsubmit="return false">
+<p><b>Ausprobieren:</b><br/>position:<select name="position" onchange="editieren(this)" >
+<option value="static">static</option>
+<option value="relative">relative</option>
+<option value="absolute">absolute</option>
+<option value="fixed">fixed</option>
+</select></p>
+</form>
+</div>
+<div id="view"><p style="background-color:#ddd">Dieser Textabsatz ist ein Beispielabsatz. Er enthält keinen sinnvollen Inhalt, sondern dient lediglich dazu, dem folgenden Absatz voranzustehen. Er wird durch die CSS-Editierung nicht erfasst. Er hat eine hellgraue Hintergrundfarbe, um besser sichtbar zu sein.</p>
+<div style="border:thin solid; height:85px;">
+    <div id="ziel" style="border:thin solid; width:80%;position:relative;  top:10px"> 
+      Positionieren Sie diesen Container mit dem <span class="beispiel">right</span>-Property. 
+    </div>
+</div>
+
+
+<p style="background-color:#ddd">Dieser Textabsatz ist ein Beispielabsatz. Er enthält keinen sinnvollen Inhalt, sondern dient lediglich dazu, dem editierbaren Absatz zu folgen. Er wird durch die CSS-Editierung nicht erfasst. Er hat ebenfalls eine hellgraue Hintergrundfarbe, um besser sichtbar zu sein.</p></div>
+
+</body>
+</html>

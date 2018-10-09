@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <title>color</title>
+<script type="text/javascript" src="css-beispiele.js"></script>
+<link rel="stylesheet" href="cd_style.css" type="text/css" />
+<link rel="stylesheet" href="css-beispiele.css" type="text/css" />
+</head>
+<body>
+<h1>Farben und Hintergründe: color</h1>
+<div id="edit">
+  <p>Das <span class="beispiel">color</span>-Property bestimmt die Vordergrundfarbe 
+    des Containerinhalts, mit anderen Worten die Textfarbe. Als Wert kann ein 
+    Farbname oder ein Farbwert in der für CSS üblichen Notierung eingesetzt werden. 
+  </p>
+<p class="werte">Werte:<br/>
+	[farbname], [farbwert], inherit</p>
+<form onsubmit="return false">
+<p><b>Ausprobieren:</b><br/>color:<input type="text" name="color" onchange="editieren(this)"/><input type="button" class="button" value="Test"/></p>
+</form>
+<form onsubmit="return false">
+<p><b>Ausprobieren:</b><br/>color:<select name="color" onchange="editieren(this)">
+<option value="red">red</option>
+<option value="blue">blue</option>
+<option value="green">green</option>
+<option value="#33dd99">#33dd99</option>
+<option value="#595">#595</option>
+<option value="rgb(60%, 80%, 0%)">rgb(60%, 80%, 0%)</option>
+<option value="rgb(150, 100, 200)">rgb(150, 100, 200)</option>
+<option value="inherit">inherit</option>
+</select></p>
+</form>
+
+<p class="beispiel">Beispiel:<br/>
+/* "rot" (Hexwert):  */<br/>
+h1  { color: #ff0000; } <br/>
+/* "rot" (Farbname): */ <br/>    
+span.rot  { color: red }<br/>
+/* "rot" (RGB-Wert): */   <br/>  
+em  { color: rgb(255,0,0) }<br/>
+body { background: red; color: white; }
+
+</p>
+
+</div>
+<div id="view">
+<p style="background-color:#ddd">Dieser Textabsatz ist ein Beispielabsatz. Er enthält keinen sinnvollen Inhalt, sondern dient lediglich dazu, dem folgenden Absatz voranzustehen. Er wird durch die CSS-Editierung nicht erfasst. Er hat eine hellgraue Hintergrundfarbe, um besser sichtbar zu sein.</p>
+<p id="ziel">Dieser Absatz kann durch CSS-Formatierungen, die links im Editierbereich vorgenommen werden, in seiner Präsentation geändert werden. Sie können hierfür in den Feldern des Editierbereichs beliebige Eingaben machen, die sofort sichtbar umgesetzt werden (solange die Werte zulässig sind, selbstredend :-).</p>
+<p style="background-color:#ddd">Dieser Textabsatz ist ein Beispielabsatz. Er enthält keinen sinnvollen Inhalt, sondern dient lediglich dazu, dem editierbaren Absatz zu folgen. Er wird durch die CSS-Editierung nicht erfasst. Er hat ebenfalls eine hellgraue Hintergrundfarbe, um besser sichtbar zu sein.</p>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <title>Der Rumpf eines XHTML-Dokuments mit Script</title>
+<script type="text/javascript" src="css-beispiele.js"></script>
+<link rel="stylesheet" href="cd_style.css" type="text/css" />
+<link rel="stylesheet" href="css-beispiele.css" type="text/css" />
+</head>
+<body>
+<div id="edit">
+<form onsubmit="return false">
+<p>color:<input type="text" name="color" onchange="editieren(this)"/></p>
+
+<p>font-weight:<select name="fontWeight" onchange="editieren(this)">
+<option>normal</option>
+<option>bold</option>
+<option>bolder</option>
+<option>lighter</option>
+<option>inherit</option>
+</select></p>
+
+<p>font-variant:<select name="fontVariant" onchange="editieren(this)">
+<option>normal</option>
+<option>small-caps</option>
+<option>inherit</option>
+</select></p>
+
+<p>font-style:<select name="fontStyle" onchange="editieren(this)">
+<option>normal</option>
+<option>italic</option>
+<option>oblique</option>
+<option>inherit</option>
+</select></p>
+
+<p>font-size:<input type="text" name="fontSize" onchange="editieren(this)"/></p>
+
+<p>font-family:<select name="fontFamily" onchange="editieren(this)">
+<optgroup label="Schriftnamen:">
+<option selected="selected">arial</option>
+<option>verdana</option>
+<option>times new roman</option>
+<option>courier</option>
+<option>georgia</option>
+</optgroup>
+<optgroup label="Generisch:">
+<option>serif</option>
+<option>sans-serif</option>
+<option>cursive</option>
+<option>monospace</option>
+<option>fantasy</option>
+</optgroup>
+</select></p>
+
+<p>display:<select name="display" onchange="editieren(this)">
+<option>inline</option>
+<option>block</option>
+<option>run-in</option>
+<option>inline-block</option>
+<option>none</option>
+<option>list-item</option>
+<option>inherit</option>
+</select></p>
+
+<p>line-height:<input type="text" name="lineHeight" onchange="editieren(this)"/></p>
+
+<p>background-color:<input type="text" name="backgroundColor" onchange="editieren(this)"/></p>
+<p>border:<input type="text" name="border" onchange="editieren(this)"/></p>
+<p>padding:<input type="text" name="padding" onchange="editieren(this)"/></p>
+<p>margin:<input type="text" name="margin" onchange="editieren(this)"/></p>
+
+<p>text-indent:<input type="text" name="textIndent" onchange="editieren(this)"/></p>
+
+<p>text-align:<select name="textAlign" onchange="editieren(this)">
+<option>left</option>
+<option>right</option>
+<option>center</option>
+<option>justify</option>
+<option>inherit</option>
+</select></p>
+
+<p>text-decoration:<select name="textDecoration" onchange="editieren(this)">
+<option>none</option>
+<option>underline</option>
+<option>line-through</option>
+<option>overline</option>
+<option value="line-through underline">line-through UND underline</option>
+<option value="overline underline">overline UND underline</option>
+<option value="blink">blink (nicht IE)</option>
+<option>inherit</option>
+</select></p>
+</form>
+</div>
+<div id="view">
+<p style="background-color:#ddd">Dieser Textabsatz ist ein Beispielabsatz. Er enthält keinen sinnvollen Inhalt, sondern dient lediglich dazu, dem folgenden Absatz voranzustehen. Er wird durch die CSS-Editierung nicht erfasst. Er hat eine hellgraue Hintergrundfarbe, um besser sichtbar zu sein.</p>
+<p id="ziel">Dieser Absatz kann durch CSS-Formatierungen, die links im Editierbereich vorgenommen werden, in seiner Präsentation geändert werden. Sie können hierfür in den Feldern des Editierbereichs beliebige Eingaben machen, die sofort sichtbar umgesetzt werden (solange die Werte zulässig sind, selbstredend :-).</p>
+<p style="background-color:#ddd">Dieser Textabsatz ist ein Beispielabsatz. Er enthält keinen sinnvollen Inhalt, sondern dient lediglich dazu, dem editierbaren Absatz zu folgen. Er wird durch die CSS-Editierung nicht erfasst. Er hat ebenfalls eine hellgraue Hintergrundfarbe, um besser sichtbar zu sein.</p>
+</div>
+
+</body>
+</html>

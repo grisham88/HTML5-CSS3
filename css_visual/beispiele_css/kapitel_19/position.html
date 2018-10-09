@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <title>Positioning-Properties: position</title>
+<script type="text/javascript" src="css-beispiele.js"></script>
+<link rel="stylesheet" href="cd_style.css" type="text/css" />
+<link rel="stylesheet" href="css-beispiele.css" type="text/css" />
+</head>
+<body>
+<h1>Positioning-Properties: position</h1>
+<div id="edit">
+  <p>Das <span class="beispiel">position</span>-Property bestimmt die Art, in 
+    der Positionsangaben bezüglich des positionierten Elements interpretiert werden.</p>
+ <p class="werte">Werte:<br/>
+	static, absolute, relative, fixed, inherit</p>
+
+
+<form onsubmit="return false">
+<p><b>Ausprobieren:</b><br/>position:<select name="position" onchange="editieren(this)" >
+<option value="inherit">inherit</option>
+<option value="static">static</option>
+<option value="relative">relative</option>
+<option value="absolute">absolute</option>
+<option value="fixed">fixed</option>
+</select></p>
+</form>
+
+<h2 id="static">position: static (Default)</h2>
+  <p>Die Art der Positionierung entspricht der des Elements im normalen Dokumentfluss. 
+    Etwaige Angaben zur Positionierung (<span class="beispiel">left</span>, <span class="beispiel">top</span>, 
+    <span class="beispiel">bottom</span>, <span class="beispiel">right</span>) 
+    werden <i>ignoriert</i>.</p>
+<h2 id="relative">position: relative</h2>
+  <p>Die Positionierung bezieht sich auf die Position des Elements im normalen 
+    Dokumentfluss. Etwaige Angaben zur Positionierung (<span class="beispiel">left</span>, 
+    <span class="beispiel">top</span>, <span class="beispiel">bottom</span>, <span class="beispiel">right</span>) 
+    beziehen sich auf diese <i>Ursprungsposition</i>.</p>
+<h2 id="absolute">position: absolute</h2>
+  <p>Die Positionierung mit <span class="beispiel">left</span>, <span class="beispiel">top</span>, 
+    <span class="beispiel">right</span> und <span class="beispiel">bottom</span> 
+    bezieht sich auf einen absoluten Koordinatenursprung, der entweder durch die 
+    obere linke Ecke des Browserfensters (d.i. des <span class="beispiel">&lt;body></span>-Elements) 
+    gebildet wird, oder durch die obere linke Ecke des übergeordneten Elementcontainers, 
+    sofern dieser ebenfalls absolut oder fixiert (<span class="beispiel">fixed</span>) 
+    positioniert ist.</p>
+<h2 id="fixed">position: fixed</h2>
+  <p>Der Elementcontainer bleibt beim Scrollen relativ zu seinem Ursprung fixiert. 
+    Die Positionierung mit <span class="beispiel">left</span>, <span class="beispiel">top</span>, 
+    <span class="beispiel">right</span> und <span class="beispiel">bottom</span> 
+    bezieht sich auf einen absoluten Koordinatenursprung, der durch die obere 
+    linke Ecke des Browserfensters (oder Frames) gebildet wird.</p>
+
+
+</div>
+<div id="view">
+<div style="border:thin solid; height:250px;">
+    <p id="ziel" style="border:thin solid; width:49%;top:20px;left:49%;background:white"> 
+      Positionieren Sie diesen Container mit dem <span class="beispiel">postion</span>-Property. Seine Positionsangaben sind top:20px und left:50%. 
+    </p>
+</div>
+</div>
+
+</body>
+</html>

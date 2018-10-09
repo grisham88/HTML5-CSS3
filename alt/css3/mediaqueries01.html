@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Responsive Layout - Media Queries</title>
+    <style>
+
+        /* Feature vorhanden? */
+    @media screen and (color){   
+        h1 {
+            color:red;
+        }
+    }
+    /* Featurewert? */
+    @media screen and (device-aspect-ratio:16/9){   
+        h1 {
+            background-color: yellow;
+        }
+    }
+    /* Schwellenwert? */
+    @media screen and (min-width: 500px){   
+        h1 {
+            background-color: lightgreen;
+            border:2px solid black;
+        }
+    }    
+    @media screen and (min-width: 600px){   
+        h1 {
+            background-color: lightblue;
+        }
+    }      
+    @media print {
+        h1 {
+            color:#666;
+            background-color: #ddd;
+        } 
+    }
+        
+      
+    
+    </style>
+</head>
+<body>
+    <h1>Responsive Design</h1>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Flexlayout</title>
+    <style>
+        #wrapper {
+            width:720px;
+            margin:auto;
+        }
+
+        #header {
+            height: 100px;
+            background-color: #aaa;
+        }
+
+        #footer {
+            height: 60px;
+            background-color: #aaa;
+        }
+
+        #contentwrapper {
+            background-color: yellow;
+            display:flex;
+            flex-direction:row;
+            align-items:stretch;
+        }
+
+        #spalte1 {
+            background-color: lightgreen;
+            width:25%;
+            padding:10px;
+            _flex:1.5;
+        }
+
+        #spalte2 {
+            background-color: lightblue;
+            width:40%;
+            padding:10px;
+            order:-1;
+        }
+
+        #spalte3 {
+            background-color: pink;
+            width:35%;
+            padding:10px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="header">
+            <h3>Flexlayout</h3>
+        </div>
+        <div id="contentwrapper">
+            <div id="spalte1">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non debitis assumenda quibusdam mollitia voluptate. Fugiat... Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta vero voluptate cum officia dignissimos. Aut mollitia quisquam repellendus eveniet exercitationem deleniti at aperiam quia ut rerum odit sed, tenetur atque.</div>
+            <div id="spalte2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque provident temporibus debitis, quod similique quas, consequatur accusantium ab non, facilis consectetur pariatur veniam nemo corrupti.</div>
+            <div id="spalte3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis sit assumenda neque quae odio eum modi voluptates dolore architecto, esse, accusantium maxime, veritatis repudiandae praesentium recusandae ab.</div>
+        </div>
+        <div id="footer"></div>
+    </div>
+</body>
+</html>

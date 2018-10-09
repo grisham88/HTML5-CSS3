@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Formulare</title>
+</head>
+<body>
+    <h1>Formulare</h1>
+    <form action="#">
+        <p>Der range-Typ</p>
+        <label for="range">25 bis 75:</label>
+        <input id="range"
+               onchange="document.getElementById('out').innerHTML=this.value" 
+               step="5"
+               value="25"
+               min="25"
+               max="75"
+               type="range" 
+               name="range">
+        <!-- neu: -->
+        <output id="out" name="out"></output>
+        <input type="submit" value="Abschicken">
+    </form>
+</body>
+</html>

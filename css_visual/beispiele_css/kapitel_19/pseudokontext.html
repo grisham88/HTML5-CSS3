@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <title>Pseudo-Kontextselektoren</title>
+<script type="text/javascript" src="css-beispiele.js"></script>
+<link rel="stylesheet" href="cd_style.css" type="text/css" />
+<link rel="stylesheet" href="css-beispiele.css" type="text/css" />
+</head>
+<body>
+<h1>CSS Selektoren: Pseudo-Kontextselektoren</h1>
+<div id="edit">
+  <p>Auch in Zusammenhang mit Kontextselektoren spricht man von einem „Pseudoselektor“, sofern dieser einen künstlich beschränkten Bereich erfasst.</p>
+<h2 id="child">:first-child</h2>
+  <p>Spricht innerhalb der Dokumentstruktur ein Element an, wenn es das erste 
+    Kind seines Elternelements ist. In einer <span class="beispiel">&lt;ul></span>-Liste 
+    ist der erste <span class="beispiel">&lt;li></span>-Eintrag das erste Kind 
+    von <span class="beispiel">&lt;ul></span> und kann mit <span class="beispiel">li:first-child</span> 
+    anders formatiert werden. </p>
+	<p><b>Achtung: </b><br />
+Nicht das Elternelement ist hier ausschlaggebend, sondern lediglich, dass das Zielelement ein „erstes Kindelement“ ist, egal von welchem Elternelement. </p>
+ 
+<p class="beispiel">Beispiel:<br/>
+li:first-child { font-weight:bold; }<br/><br/>
+/* ist gleichbedeutend mit: */<br/>
+* li:first-child { font-weight:bold; }<br/><br/>
+/* erste Zeile oder Spalte einer Tabelle: */<br/>
+tr:first-child { background-color:#dddddd; }<br/>
+td:first-child { background-color:#dddddd; }
+
+</p>
+	
+</div>
+<div id="view">
+
+</div>
+
+</body>
+</html>

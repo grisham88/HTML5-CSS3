@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <title>Pseudoelemente</title>
+<script type="text/javascript" src="css-beispiele.js"></script>
+<link rel="stylesheet" href="cd_style.css" type="text/css" />
+<link rel="stylesheet" href="css-beispiele.css" type="text/css" />
+</head>
+<body>
+<h1>CSS Selektoren: Pseudoelemente</h1>
+<div id="edit">
+  <p>CSS-Pseudoelemente dienen zum Stylen von Bereichen innerhalb eines Elements oder zum Stylen von generiertem Content, zielen also, im Gegensatz zu einem Typ-Selektor oder anderen „normalen“ Selektoren nicht auf ein real existierendes Element. 
+ </p> 
+<h2 id="after">:after und :before </h2>
+<p class="beispiel">Syntax:<br/>
+selektor:after<br/>
+selektor:before
+</p>
+  <p>Die Pseudoelement <span class="beispiel">:after</span> und <span class="beispiel">:before</span> 
+    dienen zum Einfügen von beliebigem Inhalt nach bzw. vor dem eigentlichen Inhalt 
+    des über den Selektor gewählten Elements. Der einzufügende Inhalt wird mit 
+    dem Property <span class="beispiel">content</span> angegeben und kann mit 
+    weiteren Properties beliebig gestylt werden.</p> 
+  <p class="beispiel">Beispiel:<br/>
+div#eins:before {content:url('pfeil.gif'); }<br/><br/>
+div#zwei:after {content:url('pfeil.gif'); }<br/><br/>
+div#drei:before {content:'Blindtext: '; font-weight:bold;}<br/><br/>
+div#vier:before {content: open-quote; }<br/><br/>
+div#vier:after {content: close-quote; }
+</p> 
+<h2 id="letter">:first-letter </h2>
+<p class="beispiel">Syntax:<br/>
+selektor:first-letter
+</p>
+  <p>Das Pseudoelement <span class="beispiel">:first-letter</span> stylt das erste 
+    Zeichen des Inhalts des mittels des Selektors gewählten Elements. Es kann 
+    beispielsweise zur Erzeugung eines Initials verwendet werden. </p> 
+  <p class="beispiel">Beispiel:<br/>
+p              { font-family:arial, sans-serif;<br/> 
+                 font-size:0.8em;<br/>}<br/>
+p:first-letter { font-size:3em; <br/>
+                 font-weight:bold; float:left;<br/> }
+</p> 
+<h2 id="line">:first-line </h2>
+<p class="beispiel">Syntax:<br/>
+selektor:first-line
+</p>
+  <p>Das Pseudoelement <span class="beispiel">:first-line</span> stylt die erste 
+    Zeile des Inhalts des mittels des Selektors gewählten Elements. Der Inhalt 
+    (bzw. die Länge) der Zeile hängt vom verfügbaren Platz ab, ist also unter 
+    Umständen veränderlich.</p> 
+  <p class="beispiel">Beispiel:<br/>
+p             {font-family:arial, sans-serif; <br/>
+               font-size:0.8em;<br/>}<br/>
+p:first-line  {font-weight:bold;<br/>}
+
+</p> 
+
+</div>
+<div id="view">
+
+</div>
+
+</body>
+</html>

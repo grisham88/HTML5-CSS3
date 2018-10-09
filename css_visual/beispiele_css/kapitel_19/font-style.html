@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <title>font-style</title>
+<script type="text/javascript" src="css-beispiele.js"></script>
+<link rel="stylesheet" href="cd_style.css" type="text/css" />
+<link rel="stylesheet" href="css-beispiele.css" type="text/css" />
+</head>
+<body>
+<h1>Fontproperties: font-style</h1>
+<div id="edit">
+  <p>Das <span class="beispiel">font-style</span>-Property bestimmt den Darstellungsstil 
+    der Schrift als <span class="beispiel">italic</span> (kursiv) oder <span class="beispiel">oblique</span> 
+    (künstlich kursiv, "schief", slanted). Ebenso kann ein ererbter kursiver Darstellungsstil 
+    auf <span class="beispiel">normal</span> zurückgesetzt werden. </p>
+<p class="werte">Werte:<br/>
+	normal, italic, oblique, inherit</p>
+
+<p class="beispiel">Beispiel:<br/>
+h1, h2, h3 { font-style: italic }
+</p>
+
+<form onsubmit="return false">
+<p><b>Ausprobieren:</b><br/>font-style:<select name="fontStyle" onchange="editieren(this)">
+<option value="normal">normal</option>
+<option value="italic">italic</option>
+<option value="oblique">oblique</option>
+<option value="inherit">inherit</option>
+</select></p>
+</form>
+
+</div>
+<div id="view">
+<p style="background-color:#ddd">Dieser Textabsatz ist ein Beispielabsatz. Er enthält keinen sinnvollen Inhalt, sondern dient lediglich dazu, dem folgenden Absatz voranzustehen. Er wird durch die CSS-Editierung nicht erfasst. Er hat eine hellgraue Hintergrundfarbe, um besser sichtbar zu sein.</p>
+<p id="ziel">Dieser Absatz kann durch CSS-Formatierungen, die links im Editierbereich vorgenommen werden, in seiner Präsentation geändert werden. Sie können hierfür in den Feldern des Editierbereichs beliebige Eingaben machen, die sofort sichtbar umgesetzt werden (solange die Werte zulässig sind, selbstredend :-).</p>
+<p style="background-color:#ddd">Dieser Textabsatz ist ein Beispielabsatz. Er enthält keinen sinnvollen Inhalt, sondern dient lediglich dazu, dem editierbaren Absatz zu folgen. Er wird durch die CSS-Editierung nicht erfasst. Er hat ebenfalls eine hellgraue Hintergrundfarbe, um besser sichtbar zu sein.</p>
+</div>
+
+</body>
+</html>

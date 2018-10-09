@@ -1,0 +1,306 @@
+<html>
+<head><title>B</title>
+<base target="rechts">
+<script type="text/javascript">
+<!--
+
+if(self.location==top.location)
+self.location.href='../index.html';
+
+var id_links = new Array();
+
+function init()
+{
+	alle_links = document.getElementsByTagName('a');
+	
+	var j = 0;
+	
+	for (i=0; i< alle_links.length; i++) {
+
+		if(alle_links[i].id) { 
+
+			 id_links[j] = alle_links[i] ;
+			 j++;
+			}
+
+	}
+}
+
+
+function alle(toggle) {
+
+
+	for (i=0; i< id_links.length; i++) {
+
+
+			schalten (id_links[i].id, toggle) ;
+
+
+	}
+}
+
+
+function schalten(id, toggle) {
+
+	schalter = document.getElementById(id);
+
+	bild=schalter.getElementsByTagName('img')[0];
+
+	if(toggle) { 
+	schalter.zustand = toggle;
+	}
+
+	if (schalter.zustand != 'on') {
+		
+   		schalter.zustand="on";
+		bild.src="on.gif";
+		sub = document.getElementById(id +'u');
+		sub.style.display = "block";
+
+	}  else  {
+
+		schalter.zustand="off";
+		bild.src="off.gif";
+		sub = document.getElementById(id +'u');
+		sub.style.display = "none";
+	}
+}
+
+
+
+
+//-->
+</script>
+<link rel="stylesheet" type="text/css" href="kapitel_19/cd_style.css" >
+<style type="text/css">
+<!--
+
+a {text-decoration:none;}
+
+/* a:hover {text-decoration:underline;} */
+
+
+
+ 
+ ul 		{list-style-type:none;padding:0;font-size:0.8em;padding:0;margin:0;}
+
+.hauptmenu	{padding-top:3px;padding-bottom:3px;margin-left:0;}
+
+.hauptmenu img 	{border:0;vertical-align:middle;margin:0px 0.5em;}
+
+.submenu li 	{list-style:none;padding-top:3px;padding-bottom:3px;margin-left:1.5em;}
+
+.submenu a	{font-size:1.2em;}
+
+.subsubmenu li 	{list-style:none;padding-top:3px;padding-bottom:3px;margin-left:2.5em;}
+
+.subsubmenu a	{font-size:1.2em}
+
+li:hover {background-color:#f0f0f0;padding-top:2px;padding-bottom:2px; border-top:1px dotted #ccd;border-bottom:1px dotted #ccd;}
+
+li:hover li:hover {background-color:#e5e5ea;padding-top:3px;padding-bottom:3px; border:0;}
+
+li:hover li:hover li:hover {background-color:#d5d5da;}
+
+-->
+</style>
+</head>
+<body onload="init()">
+<p style="padding-left:4px;background-color:#f0f0f0;border:1px dotted #ccd;">
+<b>Menü: </b>
+<a href="javascript:;" onclick="alle('off')"><img src="off.gif" alt="" border="0" hspace="3">alle auf</a> | 
+<a href="javascript:;" onclick="alle('on');"><img src="on.gif" alt="" border="0" hspace="3">alle zu</a></p>
+<ul>
+<li class="hauptmenu"><a href="javascript:;" id="h1" onclick="window.focus(); schalten(this.id)"><img src="off.gif" alt=""></a><a  href="kapitel_19/textproperties.html" onclick="window.focus(); schalten('h1')">Textproperties</a>
+<ul id="h1u" class="submenu" style="display:none">
+<li><img src="nosub.gif" alt=""><a href="kapitel_19/direction.html">direction</a></li>
+<li><img src="nosub.gif" alt=""><a href="kapitel_19/letter-spacing.html">letter-spacing</a></li>
+<li><img src="nosub.gif" alt=""><a href="kapitel_19/line-height.html">line-height</a></li>
+<li><img src="nosub.gif" alt=""><a href="kapitel_19/text-align.html">text-align</a></li>
+<li><img src="nosub.gif" alt=""><a href="kapitel_19/text-decoration.html">text-decoration</a></li>
+<li><img src="nosub.gif" alt=""><a href="kapitel_19/text-indent.html">text-indent</a></li>
+<li><img src="nosub.gif" alt=""><a href="kapitel_19/text-transform.html">text-transform</a></li>
+<li><img src="nosub.gif" alt=""><a href="kapitel_19/unicode-bidi.html">unicode-bidi</a></li>
+<li><img src="nosub.gif" alt=""><a href="kapitel_19/vertical-align.html">vertical-align</a></li>
+<li><img src="nosub.gif" alt=""><a href="kapitel_19/white-space.html">white-space</a></li>
+<li><img src="nosub.gif" alt=""><a href="kapitel_19/word-spacing.html">word-spacing</a></li>
+</ul>
+</li>
+<li class="hauptmenu"><a href="javascript:;" id="h2" onclick="window.focus();schalten(this.id)"><img src="off.gif" alt=""></a><a href="kapitel_19/fontproperties.html" onclick="window.focus(); schalten('h2')">Fontproperties</a>
+<ul id="h2u" class="submenu" style="display:none">
+<li><a href="javascript:;" id="h2u1" onclick="window.focus(); schalten(this.id)"><img src="off.gif" alt=""></a><a href="kapitel_19/font.html" onclick="window.focus(); schalten('h2u1')">font</a>
+<ul id="h2u1u" class="subsubmenu" style="display:none">
+<li><a href="kapitel_19/font-family.html">font-family</a></li>
+<li><a href="kapitel_19/font-size.html">font-size</a></li>
+<li><a href="kapitel_19/font-style.html">font-style</a></li>
+<li><a href="kapitel_19/font-variant.html">font-variant</a></li>
+<li><a href="kapitel_19/font-weight.html">font-weight</a></li>
+</ul></li>
+<li><img src="nosub.gif" alt=""><a href="kapitel_19/font-size-adjust.html">font-size-adjust</a> (CSS2)</li>
+<li><img src="nosub.gif" alt=""><a href="kapitel_19/font-stretch.html">font-stretch</a> (CSS2)</li>
+</ul>
+</li>
+<li class="hauptmenu"><a href="javascript:;" id="h3" onclick="window.focus();schalten(this.id)"><img src="off.gif" alt=""></a><a href="kapitel_19/farben_und_hintergruende.html" onclick="window.focus(); schalten('h3')">Farben und Hintergründe</a>
+<ul id="h3u" class="submenu" style="display:none">
+<li><a href="javascript:;" id="h3u1" onclick="window.focus(); schalten(this.id)"><img src="off.gif" alt=""></a><a href="kapitel_19/background.html" onclick="window.focus(); schalten('h3u1')">background</a>
+<ul id="h3u1u" class="subsubmenu" style="display:none">
+<li><a href="kapitel_19/background-attachment.html">background-attachment</a></li>
+<li><a href="kapitel_19/background-color.html">background-color</a></li>
+<li><a href="kapitel_19/background-image.html">background-image</a></li>
+<li><a href="kapitel_19/background-position.html">background-position</a></li>
+<li><a href="kapitel_19/background-repeat.html">background-repeat</a></li>
+</ul></li>
+<li><img src="nosub.gif" alt=""><a href="kapitel_19/color.html">color</a></li>
+</ul>
+</li>
+<li class="hauptmenu"><a href="javascript:;" id="h4" onclick="window.focus();schalten(this.id)"><img src="off.gif" alt=""></a><a href="kapitel_19/boxproperties.html" onclick="window.focus(); schalten('h4')">Boxproperties</a>
+<ul id="h4u" class="submenu" style="display:none">
+<li><img src="nosub.gif" alt=""><a href="kapitel_19/padding.html">padding</a></li>
+<li><img src="nosub.gif" alt=""><a href="kapitel_19/margin.html">margin</a></li>
+<li><a href="javascript:;" id="h4u3" onclick="window.focus(); schalten(this.id)"><img src="off.gif" alt=""></a><a href="kapitel_19/border.html" onclick="window.focus(); schalten('h4u3')">border</a>
+<ul id="h4u3u" class="subsubmenu" style="display:none">
+<li><a href="kapitel_19/border-color.html">border-color</a></li>
+<li><a href="kapitel_19/border-style.html">border-style</a></li>
+<li><a href="kapitel_19/border-width.html">border-width</a></li>
+</ul></li>
+<li><img src="nosub.gif" alt=""><a href="kapitel_19/height.html">height</a></li>
+<li><img src="nosub.gif" alt=""><a href="kapitel_19/width.html">width</a></li>
+<li><img src="nosub.gif" alt=""><a href="kapitel_19/max-height.html">max-height</a></li>
+<li><img src="nosub.gif" alt=""><a href="kapitel_19/max-width.html">max-width</a></li>
+<li><img src="nosub.gif" alt=""><a href="kapitel_19/min-height.html">min-height</a></li>
+<li><img src="nosub.gif" alt=""><a href="kapitel_19/min-width.html">min-width</a></li>
+</ul>
+</li>
+<li class="hauptmenu"><a href="javascript:;" id="h5" onclick="window.focus();schalten(this.id)"><img src="off.gif" alt=""></a><a href="kapitel_19/konturproperties.html" onclick="window.focus(); schalten('h5')">Konturproperties</a>
+<ul id="h5u" class="submenu" style="display:none">
+<li><a href="javascript:;" id="h5u1" onclick="window.focus(); schalten(this.id)"><img src="off.gif" alt=""></a><a href="kapitel_19/outline.html" onclick="window.focus(); schalten('h5u1')">outline</a>
+<ul id="h5u1u" class="subsubmenu" style="display:none">
+<li><a href="kapitel_19/outline-color.html">outline-color</a></li>
+<li><a href="kapitel_19/outline-style.html">outline-style</a></li>
+<li><a href="kapitel_19/outline-width.html">outline-width</a></li>
+</ul></li>
+</ul>
+</li>
+<li class="hauptmenu"><a href="javascript:;" id="h6" onclick="window.focus();schalten(this.id)"><img src="off.gif" alt=""></a><a href="kapitel_19/positioningproperties.html" onclick="window.focus(); schalten('h6')">Positioning-Properties</a>
+<ul id="h6u" class="submenu" style="display:none">
+<li><img src="nosub.gif" alt=""><a href="kapitel_19/bottom.html">bottom</a></li>
+<li><img src="nosub.gif" alt=""><a href="kapitel_19/clear.html">clear</a></li>
+<li><img src="nosub.gif" alt=""><a href="kapitel_19/clip.html">clip</a></li>
+<li><img src="nosub.gif" alt=""><a href="kapitel_19/float.html">float</a></li>
+<li><img src="nosub.gif" alt=""><a href="kapitel_19/left.html">left</a></li>
+<li><img src="nosub.gif" alt=""><a href="kapitel_19/overflow.html">overflow</a></li>
+<li><a href="javascript:;" id="h6u7" onclick="window.focus(); schalten(this.id)"><img src="off.gif" alt=""></a><a href="kapitel_19/position.html" onclick="window.focus(); schalten('h6u7')">position</a>
+<ul id="h6u7u" class="subsubmenu" style="display:none">
+<li><a href="kapitel_19/position.html#static">static</a></li>
+<li><a href="kapitel_19/position.html#relative">relative</a></li>
+<li><a href="kapitel_19/position.html#absolute">absolute</a></li>
+<li><a href="kapitel_19/position.html#fixed">fixed</a></li>
+</ul></li>
+<li><img src="nosub.gif" alt=""><a href="kapitel_19/right.html">right</a></li>
+<li><img src="nosub.gif" alt=""><a href="kapitel_19/top.html">top</a></li>
+<li><img src="nosub.gif" alt=""><a href="kapitel_19/visibility.html">visibility</a></li>
+<li><img src="nosub.gif" alt=""><a href="kapitel_19/z-index.html">z-index</a></li>
+</ul>
+</li>
+<li class="hauptmenu"><a href="kapitel_19/displayproperties.html" id="h7" onclick="window.focus();schalten(this.id)"><img src="off.gif" alt=""></a><a href="kapitel_19/displayproperties.html" onclick="window.focus(); schalten('h7')">Display-Properties</a>
+<ul id="h7u" class="submenu" style="display:none">
+<li><a href="javascript:;" id="h7u1" onclick="window.focus(); schalten(this.id)"><img src="off.gif" alt=""></a><a href="kapitel_19/display.html" onclick="window.focus(); schalten('h7u1')">display</a>
+<ul id="h7u1u" class="subsubmenu" style="display:none">
+<li><a href="kapitel_19/display_none.html">none</a></li>
+<li><a href="kapitel_19/display_block.html">block</a></li>
+<li><a href="kapitel_19/display_inline.html">inline</a></li>
+<li><a href="kapitel_19/display_inline-block.html">inline-block</a></li>
+<li><a href="kapitel_19/display_run-in.html">run-in</a></li>
+<li><a href="kapitel_19/display_list-item.html">list-item</a></li>
+<li><a href="kapitel_19/display_table.html">table</a></li>
+<li><a href="kapitel_19/display_table.html">table-row</a></li>
+<li><a href="kapitel_19/display_table.html">table-cell</a></li>
+<li><a href="kapitel_19/display_table.html">table-caption</a></li>
+<li><a href="kapitel_19/display_table.html">table-column</a></li>
+<li><a href="kapitel_19/display_table.html">table-column-group</a></li>
+<li><a href="kapitel_19/display_table.html">table-footer-group</a></li>
+<li><a href="kapitel_19/display_table.html">table-header-group</a></li>
+<li><a href="kapitel_19/display_inline-table.html">inline-table</a></li>
+</ul></li>
+</ul>
+</li>
+<li class="hauptmenu"><a href="javascript:;" id="h8" onclick="window.focus();schalten(this.id)"><img src="off.gif" alt=""></a><a href="kapitel_19/listenstyleproperties.html" onclick="window.focus(); schalten('h8')">Listenstyle-Properties</a>
+<ul id="h8u" class="submenu" style="display:none">
+<li><a href="javascript:;" id="h8u1" onclick="window.focus(); schalten(this.id)"><img src="off.gif" alt=""></a><a href="kapitel_19/list-style.html" onclick="window.focus(); schalten('h8u1')">list-style</a>
+<ul id="h8u1u" class="subsubmenu" style="display:none">
+<li><a href="kapitel_19/list-style-type.html">list-style-type</a></li>
+<li><a href="kapitel_19/list-style-image.html">list-style-image</a></li>
+<li><a href="kapitel_19/list-style-position.html">list-style-position</a></li>
+</ul></li>
+</ul>
+</li>
+<li class="hauptmenu"><a href="javascript:;" id="h9" onclick="window.focus();schalten(this.id)"><img src="off.gif" alt=""></a><a href="kapitel_19/tabellenproperties.html" onclick="window.focus(); schalten('h9')">Tabellen-Properties</a>
+<ul id="h9u" class="submenu" style="display:none">
+<li><img src="nosub.gif" alt=""><a href="kapitel_19/border-collapse.html">border-collapse</a></li>
+<li><img src="nosub.gif" alt=""><a href="kapitel_19/border-spacing.html">border-spacing</a></li>
+<li><img src="nosub.gif" alt=""><a href="kapitel_19/caption-side.html">caption-side</a></li>
+<li><img src="nosub.gif" alt=""><a href="kapitel_19/empty-cells.html">empty-cells</a></li>
+<li><img src="nosub.gif" alt=""><a href="kapitel_19/table-layout.html">table-layout</a></li>
+</ul>
+</li>
+<li class="hauptmenu"><a href="javascript:;" id="h10" onclick="window.focus();schalten(this.id)"><img src="off.gif" alt=""></a><a href="kapitel_19/sonstigeproperties.html" onclick="window.focus(); schalten('h10')">Sonstige Properties</a>
+<ul id="h10u" class="submenu" style="display:none">
+<li><img src="nosub.gif" alt=""><a href="kapitel_19/cursor.html">cursor</a></li>
+</ul>
+</li>
+<li class="hauptmenu"><a href="javascript:;" id="h12" onclick="window.focus();schalten(this.id)"><img src="off.gif" alt=""></a><a href="kapitel_19/cssselektoren.html" onclick="window.focus(); schalten('h12')">CSS Selektoren</a>
+<ul id="h12u" class="submenu" style="display:none">
+<li><img src="nosub.gif" alt=""><a href="kapitel_19/universeller_selektor.html">Universeller Selektor</a></li>
+<li><img src="nosub.gif" alt=""><a href="kapitel_19/typselektor.html">Typselektor</a></li>
+<li><img src="nosub.gif" alt=""><a href="kapitel_19/gruppenselektor.html">Gruppenselektor</a></li>
+<li><a href="javascript:;" id="h12u4" onclick="window.focus(); schalten(this.id)"><img src="off.gif" alt=""></a><a href="kapitel_19/klassenselektoren.html" onclick="window.focus(); schalten('h12u4')">Klassenselektor</a>
+<ul id="h12u4u" class="subsubmenu" style="display:none">
+<li><a href="kapitel_19/klassenselektoren.html#frei">freie Klassen</a></li>
+<li><a href="kapitel_19/klassenselektoren.html#geb">gebundene Klassen</a></li>
+</ul>
+</li>
+<li><img src="nosub.gif" alt=""><a href="kapitel_19/id-selektor.html">ID-Selektor</a></li>
+<li><img src="nosub.gif" alt=""><a href="kapitel_19/descendant-selektor.html">Descendant-Selektor</a></li>
+<li><img src="nosub.gif" alt=""><a href="kapitel_19/child-selektor.html">Child-Selektor</a></li>
+<li><img src="nosub.gif" alt=""><a href="kapitel_19/adjacent-sibling-selektor.html">Adjacent-Sibling-Sel.</a></li>
+<li><a href="javascript:;" id="h12u9" onclick="window.focus(); schalten(this.id)"><img src="off.gif" alt=""></a><a href="kapitel_19/attributselektor.html" onclick="window.focus(); schalten('h12u9')">Attributabhängige Sel.</a>
+<ul id="h12u9u" class="subsubmenu" style="display:none">
+<li><a href="kapitel_19/attributselektor.html#existenz">Existenz</a></li>
+<li><a href="kapitel_19/attributselektor.html#wert">Wert</a></li>
+<li><a href="kapitel_19/attributselektor.html#liste">Wert aus Liste</a></li>
+<li><a href="kapitel_19/attributselektor.html#lang">Sprache</a></li>
+</ul></li>
+<li><a href="javascript:;" id="h12u10" onclick="window.focus(); schalten(this.id)"><img src="off.gif" alt=""></a><a href="kapitel_19/pseudoelemente.html" onclick="window.focus(); schalten('h12u10')">Pseudoelemente</a>
+<ul id="h12u10u" class="subsubmenu" style="display:none">
+<li><a href="kapitel_19/pseudoelemente.html#after">:after, :before</a></li>
+<li><a href="kapitel_19/pseudoelemente.html#letter">:first-letter</a></li>
+<li><a href="kapitel_19/pseudoelemente.html#line">:first-line</a></li>
+</ul></li>
+<li><a href="javascript:;" id="h12u11" onclick="window.focus(); schalten(this.id)"><img src="off.gif" alt=""></a><a href="kapitel_19/pseudoklassen.html" onclick="window.focus(); schalten('h12u11')">Pseudoklassen</a>
+<ul id="h12u11u" class="subsubmenu" style="display:none">
+<li><a href="kapitel_19/pseudoklassen.html#active">:active</a></li>
+<li><a href="kapitel_19/pseudoklassen.html#focus">:focus</a></li>
+<li><a href="kapitel_19/pseudoklassen.html#hover">:hover</a></li>
+<li><a href="kapitel_19/pseudoklassen.html#lang">:lang</a></li>
+<li><a href="kapitel_19/pseudoklassen.html#link">:link</a></li>
+<li><a href="kapitel_19/pseudoklassen.html#visited">:visited</a></li>
+</ul></li>
+<li><a href="javascript:;" id="h12u12" onclick="window.focus(); schalten(this.id)"><img src="off.gif" alt=""></a><a href="kapitel_19/pseudokontext.html" onclick="window.focus(); schalten('h12u12')">Pseudo-Kontextsel.</a>
+<ul id="h12u12u" class="subsubmenu" style="display:none">
+<li><a href="kapitel_19/pseudokontext.html#child">:first-child</a></li>
+</ul></li>
+</ul>
+</li>
+<li class="hauptmenu"><a href="javascript:;" id="h13" onclick="window.focus();schalten(this.id)"><img src="off.gif" alt=""></a><a href="kapitel_19/cssatrules.html" onclick="window.focus(); schalten('h13')">CSS At-Rules</a>
+<ul id="h13u" class="submenu" style="display:none">
+<li><img src="nosub.gif" alt=""><a href="kapitel_19/cssatrules_charset.html">@charset</a></li>
+<li><img src="nosub.gif" alt=""><a href="kapitel_19/cssatrules_font-face.html">@font-face</a></li>
+<li><img src="nosub.gif" alt=""><a href="kapitel_19/cssatrules_import.html">@import</a></li>
+<li><img src="nosub.gif" alt=""><a href="kapitel_19/cssatrules_media.html">@media</a></li>
+      <li><img src="nosub.gif" alt=""><a href="kapitel_19/cssatrules_page.html">@page</a></li>
+</ul>
+</li>
+<li class="hauptmenu"><br/><img src="nosub.gif" alt=""><a href="kapitel_19/buch.html" onclick="window.focus(); schalten('h14')">Über dieses Buch</a><li>
+</ul>
+</body>
+</html>

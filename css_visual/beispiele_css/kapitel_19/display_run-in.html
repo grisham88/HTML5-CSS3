@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <title>display</title>
+<script type="text/javascript" src="css-beispiele.js"></script>
+<link rel="stylesheet" href="cd_style.css" type="text/css" />
+<link rel="stylesheet" href="css-beispiele.css" type="text/css" />
+</head>
+<body>
+<h1>Displayproperties: display:run-in</h1>
+<div id="edit">
+  <p>Das Element bricht nach dem vorangehenden Inhalt um, verhält sich jedoch gegenüber seinem Nachfolgerelements, entsprechend dessen Eigenschaften, unterschiedlich: Ist der Nachfolger ein Blockelement, so läuft das Run-in-Element als Inlineelement in dessen erste Zeile hinein. Handelt es sich um ein gefloatetes Element, so verhält das Run-in-Element sich hingegen wie ein Blockelement und bricht vor den Nachfolger um.. (Derzeit nur in Opera)</p>
+<p class="beispiel">Beispiel:<br/>
+span { display:run-in; }
+</p>	
+<form onsubmit="return false">
+<p><b>Ausprobieren:</b><br/>
+display:<select type="text" name="display" onchange="editieren(this)">
+<option value="inline">inline</option>
+<option value="run-in">run-in</option>
+</select>
+</p>
+</form>
+
+
+
+
+</div>
+<div id="view">
+<p style="background-color:#ddd">Dieser Textabsatz ist ein Beispielabsatz. Er enthält keinen sinnvollen Inhalt, sondern dient lediglich dazu, dem folgenden Absatz voranzustehen. Er wird durch die CSS-Editierung nicht erfasst. Er hat eine hellgraue Hintergrundfarbe, um besser sichtbar zu sein.</p>
+<div style="font-size:0.8em"><span>Dieser Satz steht in einem &lt;span&gt;-Container. </span><span id="ziel">Dieser Inlinecontainer wird erfasst.</span><p style="font-size:1.0em">Dieser Blockcontainer steht nach dem erfassten Inlinecontainer.</p></div>
+<p style="background-color:#ddd">Dieser Textabsatz ist ein Beispielabsatz. Er enthält keinen sinnvollen Inhalt, sondern dient lediglich dazu, dem editierbaren Absatz zu folgen. Er wird durch die CSS-Editierung nicht erfasst. Er hat ebenfalls eine hellgraue Hintergrundfarbe, um besser sichtbar zu sein.</p>
+</div>
+
+</body>
+</html>

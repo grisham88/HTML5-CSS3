@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS Selektoren</title>
+    <style>
+        /* CSS Kommentar */
+
+        /*
+Selektor        | ID | Class | Type
+                    Pseudoklasse
+                    Attribut
+* (Universal)   | 0  |  0    | 0 
+p               | 0  |  0    | 1
+.lightblue      | 0  |  1    | 0
+#div1           | 1  |  0    | 0
+p.yellow        | 0  |  1    | 0
+a:hover         | 0  |  1    | 1
+[title='.']     | 0  |  1    | 0
+[title]         | 0  |  1    | 0
+div#div1 p      | 1  |  0    | 2
+div#div1 > p    | 1  |  0    | 2
+*/
+
+/*
+Selektoren
+*           Universeller Selektor
+p           Typselektor
+.test       Klasse
+#p1         ID
+:hover      Pseudoklasse Zustand
+:firstline  Pseudoklasse Struktur
+[title]     Attribut
+div p       Descendant
+div > p     Child
+h1 + p      Adjacent Sibling
+*/
+
+        /* Selektoren */
+
+        /* freie Klasse*/
+        .lightblue {
+            background-color: lightblue;
+        }
+
+        /* typgebundene Klasse */
+        p.yellow {
+            background-color: yellow;
+        }
+
+        /* Typselektor */
+        p {
+            color: green;
+        }
+
+        p {
+            /* letzter Aufruf gewint wenn Selektor genau gleich */
+            background-color: rgb(145, 195, 241);
+        }
+
+
+        /* ID-Selektor */
+        #div1 {
+            border: 1px solid black;
+            /* bei gleicher Eigenschaft gewinnt #(ID) gegenüber .(Klasse) */
+
+            background-color: goldenrod;
+        }
+
+        /* Attributselektor */
+        /* Merke: erst allgemein, DANN speziell !!! */
+        [title] {
+            border: 1px dotted black;
+        }
+
+        /* Attributselektor mit bestimmten Wert 
+        -> !!!ACHTUNG!!!
+        Attribut selektoren mit genauem Wert müssen am Ende stehen, wenn es nochmals einen allgemeineren Aufruf gibt */
+        [title='Textabsatz vier'] {
+            border: 2px dashed red;
+        }
+
+        input[type='submit'] {}
+
+        /* allgemeiner Selektor */
+        a {
+            background-color: transparent;
+        }
+
+        /* Pseudoklasse mit : */
+        a:hover {
+            background-color: pink;
+        }
+
+        /* Merke erst statisch, dann dynamisch */
+        a.extern {
+            background-color: lightgrey;
+        }
+
+        /* Pseudoklasse mit extern Klasse . : */
+        a.extern:hover {
+            background-color: greenyellow;
+        }
+
+        /* Descendant-Selektor */
+        div#div1 p {
+            color: blue;
+        }
+
+        /* Child-Selektor */
+        div#div1>p {
+            background-color: aliceblue
+        }
+
+        div#nav {}
+
+        div#nav ul {}
+
+        div#nav ul li {}
+
+        div#nav ul li a {
+            background-color: transparent;
+        }
+
+        div#nav ul li a:hover {
+            background-color: pink;
+        }
+
+        div#main a {}
+    </style>
+</head>
+
+<body>
+    <h1 class="lightblue">Selektoren</h1>
+    <p>Textabsatz, der gestylt wird.</p>
+    <p>Textabsatz, der gestylt wird.</p>
+    <p title="Textabsatz drei">Textabsatz mit Attribut, der gestylt wird.</p>
+    <p title="Textabsatz vier">Textabsatz mit Attribut, der gestylt wird.</p>
+    <p>Ein Text mit einem <a href="#" class="extern">externen Link</a>, der gestylt wird.</p>
+    <div id="div1">
+        <p>Textabsatz mit ID des div, der gestylt wird.</p>
+    </div>
+    <p class="yellow">Textabsatz mit Klasse, der gestylt wird.</p>
+    <div>
+        <p>Textabsatz, der gestylt wird.</p>
+        <p class="lightblue">Textabsatz mit Klasse, der gestylt wird.</p>
+    </div>
+    <!-- HTML Kommentar -->
+</body>
+
+</html>

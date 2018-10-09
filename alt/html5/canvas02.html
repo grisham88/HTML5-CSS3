@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    
+    canvas  {
+        border:1px dotted #aaa;
+    }
+
+    </style>
+</head>
+<body>
+    <h1>Canvas</h1>
+    <p><canvas width="300" height="200" id="cvs"></canvas></p>
+    <script>
+
+    // Die Canvas:
+    var cvs = document.getElementById('cvs');
+    //... deren Kontext:
+    var ctx = cvs.getContext('2d');
+   
+    var welt = new Image();
+    welt.src = "media/welt.jpg";
+    welt.onload = function(){
+        console.log("Bild geladen!");
+        // jetzt auf die Canvas damit
+        ctx.drawImage(welt, 20, 20, 120, 80);
+        ctx.rotate(0.5);
+        ctx.drawImage(welt, 40, 40, 150, 100);
+        ctx.rotate(-0.5);
+        // Text
+        ctx.font = "bold 30px sans-serif";
+        ctx.fillText("Echt jetzt?", 20, cvs.height/2 )
+    }
+
+
+    
+    </script>
+</body>
+</html>

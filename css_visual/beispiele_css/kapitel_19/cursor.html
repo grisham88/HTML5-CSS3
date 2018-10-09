@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <title>cursor </title>
+<script type="text/javascript" src="css-beispiele.js"></script>
+<link rel="stylesheet" href="cd_style.css" type="text/css" />
+<link rel="stylesheet" href="css-beispiele.css" type="text/css" />
+</head>
+<body>
+<h1>Sonstige Properties: cursor </h1>
+<div id="edit">
+  <p>Das <span class="beispiel">cursor</span>-Property bestimmt das Aussehen des 
+    Mauszeigers beim Überfahren des Elementcontainers mit der Maus. Der Defaultwert 
+    ist <span class="beispiel">auto</span>, d. h. der Cursor nimmt die Form an, 
+    die durch das jeweilige Element vorgegeben ist (beispielsweise <span class="beispiel">pointer</span> 
+    für Links oder <span class="beispiel">text</span> für Eingabefelder). </p>
+<p class="werte">Werte:<br/>
+url(), auto, crosshair, default, pointer, move, e-resize, ne-resize, nw-resize, n-resize, se-resize, sw-resize, s-resize, w-resize, text, wait, help, inherit</p>
+<form onsubmit="return false">
+<p><b>Ausprobieren:</b><br/>cursor:<select name="cursor" onchange="editieren(this)">
+<option value="auto">auto</option>
+<option value="crosshair">crosshair</option>
+<option value="default">default</option>
+<option value="pointer">pointer</option>
+<option value="move">move</option>
+<option value="e-resize">e-resize</option>
+<option value="ne-resize">ne-resize</option>
+<option value="nw-resize">nw-resize</option>
+<option value="n-resize">n-resize</option>
+<option value="se-resize">se-resize</option>
+<option value="sw-resize">sw-resize</option>
+<option value="s-resize">s-resize</option>
+<option value="w-resize">w-resize</option>
+<option value="text">text</option>
+<option value="wait">wait</option>
+<option value="help">help</option>
+<option value="url('cur1.cur')">url('cur1.cur')</option>
+<option value="url('cur2.cur')">url('cur2.cur')</option>
+<option value="url('cur3.cur')">url('cur3.cur')</option>
+<option value="inherit">inherit</option>
+</select>
+</p>
+<p></p>
+</form>
+
+</div>
+<div id="view">
+<p style="background-color:#ddd">Dieser Textabsatz ist ein Beispielabsatz. Er enthält keinen sinnvollen Inhalt, sondern dient lediglich dazu, dem folgenden Absatz voranzustehen. Er wird durch die CSS-Editierung nicht erfasst. Er hat eine hellgraue Hintergrundfarbe, um besser sichtbar zu sein.</p>
+
+<p id="ziel" style="height:100px;border:1px solid #aaa;padding:5px">Probieren Sie in diesem Feld die links eingestellte Cursorform.</p>
+
+<p style="background-color:#ddd">Dieser Textabsatz ist ein Beispielabsatz. Er enthält keinen sinnvollen Inhalt, sondern dient lediglich dazu, dem editierbaren Absatz zu folgen. Er wird durch die CSS-Editierung nicht erfasst. Er hat ebenfalls eine hellgraue Hintergrundfarbe, um besser sichtbar zu sein.</p>
+</div>
+
+</body>
+</html>

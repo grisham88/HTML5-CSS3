@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ein- und Ausblenden mit :target</title>
+    <style>
+        .panel {
+            border: 2px solid #aaa;
+            width: 150px;
+            height: 150px;
+            padding: 10;
+            position: absolute;
+            left: 150px;
+            top: 20px;
+            transition: all 1s;
+            /* Alle verstecken*/
+            opacity: 0;
+        }
+
+
+
+
+
+        #panel1:target {
+            border: 2px solid red;
+            /*Dieses Panel anzeigen*/
+            width: 150px;
+            height: 150px;
+            transition: all 2s;
+            opacity: 1;
+        }
+
+
+
+
+
+
+        #panel2:target {
+            border: 2px solid green;
+            /*Dieses Panel anzeigen*/
+            width: 150px;
+            height: 150px;
+            transition: all 2s;
+            opacity: 1;
+        }
+
+
+
+
+
+        #panel3:target {
+            border: 2px solid blueviolet;
+            /*Dieses Panel anzeigen*/
+            width: 150px;
+            height: 150px;
+            transition: all 2s;
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <!--Menü-->
+    <ul>
+        <li><a href="#panel1">Panel 1</a></li>
+        <li><a href="#panel2">Panel 2</a></li>
+        <li><a href="#panel3">Panel 3</a></li>
+        <li><a href="#">Alles gut</a></li>
+    </ul>
+
+    <!--Panels-->
+    <div class="panel" id="panel1">
+        <h3>Panel 1</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+    </div>
+    <div class="panel" id="panel2">
+        <h3>Panel 2</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+    </div>
+    <div class="panel" id="panel3">
+        <h3>Panel 3</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+    </div>
+
+</body>
+
+</html>

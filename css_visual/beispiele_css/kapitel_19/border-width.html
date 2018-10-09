@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <title>border-width</title>
+<script type="text/javascript" src="css-beispiele.js"></script>
+<link rel="stylesheet" href="cd_style.css" type="text/css" />
+<link rel="stylesheet" href="css-beispiele.css" type="text/css" />
+</head>
+<body>
+<h1>Boxproperties: border-width</h1>
+<div id="edit">
+  <p>Das <span class="beispiel">border-width</span>-Property bestimmt die Breite 
+    der Rahmenlinie. Es können bis zu vier Werte in Form von Längenabgaben oder 
+    dreier vordefinierter Schlüsselwörter in beliebiger Kombination übergeben 
+    werden.</p>
+<p class="werte">Werte:<br/>
+	[laenge], thin, medium, thick, inherit</p>
+<p class="beispiel">Beispiel:<br/>
+p { border-width:2px 6px 12px;}<br/>
+p { border-width:1px 24px 12px 4px;  }<br/>
+p { border-width:thin medium;  }
+</p>	
+<form onsubmit="return false">
+<p><b>Ausprobieren:</b><br/>
+border-width:<select name="borderWidth" onchange="editieren(this)">
+<option value="inherit">inherit</option>
+<option value="thin">thin</option>
+<option value="medium">medium</option>
+<option value="thick">thick</option>
+<option value="thick thin">thick thin</option>
+<option value="thin thick">thin thick</option>
+<option value="12px">12px</option>
+<option value="6px 12px">6px 12px</option>
+<option value="2px 6px 12px">2px 6px 12px</option>
+<option value="1px 24px 12px 4px">1px 24px 12px 4px</option><br/>
+</option>
+</select><br/>
+...oder für jede Seite einzeln:<br/>
+border-top-width:<select name="borderTopWidth" onchange="editieren(this)">
+<option value="inherit">inherit</option>
+<option value="thin">thin</option>
+<option value="medium">medium</option>
+<option value="thick">thick</option>
+<option value="12px">12px</option>
+<option value="6px">6px</option>
+<option value="3px">3px</option>
+<option value="1px">1px</option>
+<option value="0">0</option>
+</select><br/>
+border-right-width:<select name="borderRightWidth" onchange="editieren(this)">
+<option value="inherit">inherit</option>
+<option value="thin">thin</option>
+<option value="medium">medium</option>
+<option value="thick">thick</option>
+<option value="12px">12px</option>
+<option value="6px">6px</option>
+<option value="3px">3px</option>
+<option value="1px">1px</option>
+<option value="0">0</option>
+</select><br/>
+border-bottom-width:<select name="borderBottomWidth" onchange="editieren(this)">
+<option value="inherit">inherit</option>
+<option value="thin">thin</option>
+<option value="medium">medium</option>
+<option value="thick">thick</option>
+<option value="12px">12px</option>
+<option value="6px">6px</option>
+<option value="3px">3px</option>
+<option value="1px">1px</option>
+<option value="0">0</option>
+</select><br/>
+border-left-width:<select name="borderLeftWidth" onchange="editieren(this)">
+<option value="inherit">inherit</option>
+<option value="thin">thin</option>
+<option value="medium">medium</option>
+<option value="thick">thick</option>
+<option value="12px">12px</option>
+<option value="6px">6px</option>
+<option value="3px">3px</option>
+<option value="1px">1px</option>
+<option value="0">0</option>
+</select>
+</p>
+</form>
+
+
+
+
+</div>
+<div id="view">
+<p style="background-color:#ddd">Dieser Textabsatz ist ein Beispielabsatz. Er enthält keinen sinnvollen Inhalt, sondern dient lediglich dazu, dem folgenden Absatz voranzustehen. Er wird durch die CSS-Editierung nicht erfasst. Er hat eine hellgraue Hintergrundfarbe, um besser sichtbar zu sein.</p>
+<p id="ziel" style="border-style:solid;border-width:0;padding:3px">Dieser Absatz kann durch CSS-Formatierungen, die links im Editierbereich vorgenommen werden, in seiner Präsentation geändert werden. Sie können hierfür in den Feldern des Editierbereichs beliebige Eingaben machen, die sofort sichtbar umgesetzt werden (solange die Werte zulässig sind, selbstredend :-).</p>
+<p style="background-color:#ddd">Dieser Textabsatz ist ein Beispielabsatz. Er enthält keinen sinnvollen Inhalt, sondern dient lediglich dazu, dem editierbaren Absatz zu folgen. Er wird durch die CSS-Editierung nicht erfasst. Er hat ebenfalls eine hellgraue Hintergrundfarbe, um besser sichtbar zu sein.</p>
+</div>
+
+</body>
+</html>

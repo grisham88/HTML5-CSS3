@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Positionlayout</title>
+    <style>
+        #wrapper {
+            width:720px;
+            margin:auto;
+        }
+
+        #header {
+            height: 100px;
+            background-color: #aaa;
+        }
+
+        #footer {
+            height: 60px;
+            background-color: #aaa;
+        }
+
+        #contentwrapper {
+            background-color: yellow;
+            /* Yep: */
+            position:relative;
+        }
+
+        #spalte1 {
+            background-color: lightgreen;
+            width:calc(25% - 20px);
+            padding:10px;
+            position:absolute;
+            top:0;
+            bottom:0;
+        }
+
+        #spalte2 {
+            background-color: lightblue;
+            width:calc(40% - 20px);
+            padding:10px;
+            margin-left:25%;
+            /* Platz schaffen: */
+            min-height:250px;
+        }
+
+        #spalte3 {
+            background-color: pink;
+            width:calc(35% - 20px);
+            padding:10px;
+            position:absolute;
+            top:0;
+            right:0;
+            bottom:0;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="header"></div>
+        <div id="contentwrapper">
+            <div id="spalte1">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta vero voluptate cum officia dignissimos. Aut mollitia quisquam repellendus eveniet exercitationem deleniti at aperiam quia ut rerum odit sed, tenetur atque.</div>
+            <div id="spalte2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Atque provident temporibus debitis, quod similique quas, consequatur accusantium ab non, facilis consectetur pariatur veniam nemo corrupti.</div>
+            <div id="spalte3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis sit assumenda neque quae odio eum modi voluptates dolore architecto, esse, accusantium maxime, veritatis repudiandae praesentium recusandae ab.</div>
+        </div>
+        <div id="footer"></div>
+    </div>
+</body>
+</html>

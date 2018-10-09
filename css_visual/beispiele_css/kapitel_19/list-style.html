@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <title>list-style </title>
+<script type="text/javascript" src="css-beispiele.js"></script>
+<link rel="stylesheet" href="cd_style.css" type="text/css" />
+<link rel="stylesheet" href="css-beispiele.css" type="text/css" />
+</head>
+<body>
+<h1>Listenstyle Properties: list-style </h1>
+<div id="edit">
+  <p>Das <span class="beispiel">list-style</span>-Property ist ein Sammelproperty 
+    für die drei grundlegenden Listenelementeigenschaften <span class="beispiel">list-style-type</span>, 
+    <span class="beispiel">list-style-image</span> und <span class="beispiel">list-style-position</span>, 
+    die hier einzeln oder gemeinsam zugeordnet werden können. Wird ein Einzelproperty 
+    nicht übergeben, so gilt dessen Defaultwert. </p>
+	<p><b>Anmerkung:</b> <br />
+    Der Listentyp <span class="beispiel">list-style-type</span> und die Listengrafik 
+    <span class="beispiel">list-style-image</span> können nicht gleichzeitig eingesetzt 
+    werden.</p>
+<p class="werte">Werte:<br/>
+	[list-style-type]? [list-style-image]? [list-style-position]?</p>
+
+<p class="beispiel">Beispiel:<br/>
+li { list-style:url('pfeil.gif') inside; } <br/>
+li { list-style:decimal-leading-zero; } <br/>
+li { list-style:url('pfeil.gif') inside; } 
+</p>
+
+<form onsubmit="return false">
+<p><b>Ausprobieren:</b><br/>list-style:<select name="listStyle" onchange="editieren(this)">
+<option value="none">none</option>
+<option value="square url('')">square</option>
+<option value="url('pfeil.gif') inside">url('pfeil.gif') inside</option>
+<option value="url('pfeil.gif') outside">url('pfeil.gif') outside</option>
+<option value="url('') decimal-leading-zero">decimal-leading-zero</option>
+<option value="disc url('') outside">disc outside</option>
+<option value="circle url('') inside">circle inside</option>
+</select>
+</p>
+<p></p>
+</form>
+
+</div>
+<div id="view">
+<p style="background-color:#ddd">Dieser Textabsatz ist ein Beispielabsatz. Er enthält keinen sinnvollen Inhalt, sondern dient lediglich dazu, dem folgenden Absatz voranzustehen. Er wird durch die CSS-Editierung nicht erfasst. Er hat eine hellgraue Hintergrundfarbe, um besser sichtbar zu sein.</p>
+<p>Eine Liste:</p>
+<ul id="ziel" style="list-style:none; font-size:0.8em" >
+<li>Rosen</li>
+<li>Tulpen</li>
+<li>Nelken</li>
+</ul>
+
+<p style="background-color:#ddd">Dieser Textabsatz ist ein Beispielabsatz. Er enthält keinen sinnvollen Inhalt, sondern dient lediglich dazu, dem editierbaren Absatz zu folgen. Er wird durch die CSS-Editierung nicht erfasst. Er hat ebenfalls eine hellgraue Hintergrundfarbe, um besser sichtbar zu sein.</p>
+</div>
+
+</body>
+</html>

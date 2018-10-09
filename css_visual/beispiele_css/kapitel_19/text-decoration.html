@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <title>text-decoration</title>
+<script type="text/javascript" src="css-beispiele.js"></script>
+<link rel="stylesheet" href="cd_style.css" type="text/css" />
+<link rel="stylesheet" href="css-beispiele.css" type="text/css" />
+</head>
+<body>
+<h1>Textproperties: text-decoration</h1>
+<div id="edit">
+  <p>Das <span class="beispiel">text-decoration</span>-Property legt die Präsentation 
+    des Textinhalts des Containers als durchgestrichen, unter- oder überstrichen 
+    sowie blinkend fest. Der Wert <span class="beispiel">none</span> entfernt 
+    jegliche Defaultpräsentation, wird also eingesetzt, um die Unterstreichung 
+    von Hyperlinktext zu unterbinden. Es können auch, durch Leerzeichen getrennt, 
+    mehrere Präsentationsvorschriften gleichzeitig angeordnet werden. </p>
+
+<p class="werte">Werte:<br/>
+	none, blink, underline, overline, line-through, inherit</p>
+
+<p class="beispiel">Beispiel:<br/>
+a[href] { text-decoration: underline }<br/>
+
+&lt;p style="text-decoration:overline underline"><br/>Lorem...&lt;/p><br/>
+&lt;p style="text-decoration:line-through underline"> ...&lt;/p><br/>
+
+</p>
+<form onsubmit="return false">
+<p><b>Ausprobieren:</b><br/>text-decoration:<select name="textDecoration" onchange="editieren(this)">
+<option value="none">none</option>
+<option value="underline">underline</option>
+<option value="line-through">line-through</option>
+<option value="overline">overline</option>
+<option value="line-through underline">line-through underline</option>
+<option value="overline underline">overline underline</option>
+<option value="blink">blink</option>
+<option value="inherit">inherit</option>
+</select></p>
+</form>
+</div>
+<div id="view">
+<p style="background-color:#ddd">Dieser Textabsatz ist ein Beispielabsatz. Er enthält keinen sinnvollen Inhalt, sondern dient lediglich dazu, dem folgenden Absatz voranzustehen. Er wird durch die CSS-Editierung nicht erfasst. Er hat eine hellgraue Hintergrundfarbe, um besser sichtbar zu sein.</p>
+<p id="ziel">Dieser Absatz kann durch CSS-Formatierungen, die links im Editierbereich vorgenommen werden, in seiner Präsentation geändert werden. Sie können hierfür in den Feldern des Editierbereichs beliebige Eingaben machen, die sofort sichtbar umgesetzt werden (solange die Werte zulässig sind, selbstredend :-).</p>
+<p style="background-color:#ddd">Dieser Textabsatz ist ein Beispielabsatz. Er enthält keinen sinnvollen Inhalt, sondern dient lediglich dazu, dem editierbaren Absatz zu folgen. Er wird durch die CSS-Editierung nicht erfasst. Er hat ebenfalls eine hellgraue Hintergrundfarbe, um besser sichtbar zu sein.</p>
+</div>
+
+</body>
+</html>

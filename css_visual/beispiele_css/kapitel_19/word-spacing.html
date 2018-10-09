@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <title>word-spacing</title>
+<script type="text/javascript" src="css-beispiele.js"></script>
+<link rel="stylesheet" href="cd_style.css" type="text/css" />
+<link rel="stylesheet" href="css-beispiele.css" type="text/css" />
+</head>
+<body>
+<h1>Textproperties: word-spacing</h1>
+<div id="edit">
+  <p>Das <span class="beispiel">word-spacing</span>-Property legt den Wortabstand 
+    zwischen einzelnen Worten eines Elementinhalts fest. Der Wert <span class="beispiel">normal</span> 
+    präsentiert den Elementinhalt mit unverändertem Wortabstand, eine Längenangabe 
+    erzwingt einen bestimmten Abstand zwischen einzelnen Worten, wobei jedoch 
+    der durch das trennende Leerzeichen festgelegte Mindestabstand (offiziell) 
+    nicht unterschritten werden kann. </p>
+
+<p class="werte">Werte:<br/>
+	normal, [laenge], inherit</p>
+
+<p class="beispiel">Beispiel:<br/>
+h1 { word-spacing: 0.5em } <br/>
+p  { word-spacing:0.2em; }
+
+</p>
+
+<form onsubmit="return false">
+<p><b>Ausprobieren:</b><br/>word-spacing:<input type="text" value="normal" name="wordSpacing" onchange="editieren(this)"/><input type="button" class="button" value="Test"/></p>
+
+</form>
+</div>
+<div id="view">
+<p style="background-color:#ddd">Dieser Textabsatz ist ein Beispielabsatz. Er enthält keinen sinnvollen Inhalt, sondern dient lediglich dazu, dem folgenden Absatz voranzustehen. Er wird durch die CSS-Editierung nicht erfasst. Er hat eine hellgraue Hintergrundfarbe, um besser sichtbar zu sein.</p>
+<p id="ziel">Dieser Absatz kann durch CSS-Formatierungen, die links im Editierbereich vorgenommen werden, in seiner Präsentation geändert werden. Sie können hierfür in den Feldern des Editierbereichs beliebige Eingaben machen, die sofort sichtbar umgesetzt werden (solange die Werte zulässig sind, selbstredend :-). </p>
+<p style="background-color:#ddd">Dieser Textabsatz ist ein Beispielabsatz. Er enthält keinen sinnvollen Inhalt, sondern dient lediglich dazu, dem editierbaren Absatz zu folgen. Er wird durch die CSS-Editierung nicht erfasst. Er hat ebenfalls eine hellgraue Hintergrundfarbe, um besser sichtbar zu sein.</p>
+</div>
+
+</body>
+</html>

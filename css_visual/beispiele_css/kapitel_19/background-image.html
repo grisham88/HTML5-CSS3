@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <title>background-image</title>
+<script type="text/javascript" src="css-beispiele.js"></script>
+<link rel="stylesheet" href="cd_style.css" type="text/css" />
+<link rel="stylesheet" href="css-beispiele.css" type="text/css" />
+</head>
+<body>
+<h1>Farben und Hintergründe: background-image</h1>
+<div id="edit">
+  <p>Das <span class="beispiel">background-image</span>-Property weist den Hintergrundbereich 
+    eines Elementcontainers (Textbereich, Innenabstand und Rahmenbereich) ein 
+    Hintergrundbild zu. </p>
+
+<p class="werte">Werte:<br/>
+	url([pfad/dateiname]), none, inherit</p>
+
+<p class="beispiel">Beispiel:<br/>
+body { background-image: url('bg.gif'); }
+</p>
+
+<form onsubmit="return false">
+<p><b>Ausprobieren:</b><br/>background-image:<select name="backgroundImage" onchange="backgrounds(this)">
+<option value="url('hg1.jpg')">url('hg1.jpg')</option>
+<option value="url('hg2.jpg')">url('hg2.jpg')</option>
+<option value="url('hg3.jpg')">url('hg3.jpg')</option>
+<option value="url('hg4.jpg')">url('hg4.jpg')</option>
+<option value="url('hg5.jpg')">url('hg5.jpg')</option>
+<option value="none">none</option>
+<option value="inherit">inherit</option>
+</select></p></p>
+</form>
+</div>
+<div id="view">
+<iframe id="bgdemo" name="bgdemo" src="background_demo.html" width="100%" height="250"></iframe>
+</div>
+
+</body>
+</html>

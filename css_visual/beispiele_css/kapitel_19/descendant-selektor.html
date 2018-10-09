@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <title>Descendant Selektor</title>
+<script type="text/javascript" src="css-beispiele.js"></script>
+<link rel="stylesheet" href="cd_style.css" type="text/css" />
+<link rel="stylesheet" href="css-beispiele.css" type="text/css" />
+</head>
+<body>
+<h1>CSS Selektoren: Descendant Selektor</h1>
+<div id="edit">
+<p class="beispiel">Syntax:<br/>
+vorfahre abkoemmling
+</p>
+  <p>Dieser zusammengesetzte Selektor erfasst alle Elemente vom Typ <span class="beispiel">abkoemmling</span>, 
+    die (<i>irgendwo</i> oberhalb in der Hierarchie) einen Vorfahren vom Typ <span class="beispiel">vorfahre</span> 
+    besitzen. Die Einzelselektoren werden durch mindestens ein Leerzeichen getrennt.</p>  
+  <p class="beispiel">Beispiel:<br/>
+    /* erfasst &lt;b&gt; in &lt;a&gt;: */<br />
+    a b </p>  
+<p class="komp">Kompatibilität:<br/>
+   Der Descendant-Selektor wird von allen Browsern mit Ausnahme des historischen Netscape 4.x unterstützt.</p>
+</div>
+<div id="view">
+
+</div>
+
+</body>
+</html>

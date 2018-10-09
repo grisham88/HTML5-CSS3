@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Tabellen-Layout (3-spaltig)</title>
+    <style>
+
+        div#wrapper {
+            width:640px;
+            margin:0 auto;
+        }
+
+        div#header {
+            height:80px;
+            background-color: #ccc;
+        }
+
+        div#footer {
+            height:40px;
+            background-color: #ddd;
+        }   
+
+        div#contentwrap {
+            display:table;
+            border-spacing:5px;
+        }    
+
+        div#spalte1 {
+            background-color: lightgreen;
+            width:25%;
+            display:table-cell;
+            padding:10px;
+        }
+        div#spalte2 {
+            background-color: lightblue;
+            width:40%;
+            display:table-cell;
+            padding:10px;
+        }
+        div#spalte3 {
+            background-color: pink;
+            width:35%;
+            display:table-cell;
+            padding:10px;
+        }   
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="header"></div>
+        <div id="contentwrap">
+          <!-- tr -->
+            <div id="spalte1">Spalte 1: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore, voluptas officiis sed at neque sit nostrum quisquam hic ipsa nulla.</div>
+
+            <div id="spalte2">Spalte 2: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel veritatis blanditiis, tenetur libero vero nihil numquam eveniet architecto ea et? Temporibus ea, officia blanditiis sed ipsam necessitatibus autem molestias, sint labore! Blanditiis nulla architecto consectetur ea, exercitationem, obcaecati facilis commodi.</div>
+
+            <div id="spalte3">Spalte 3: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur cumque id voluptate minima odio non!</div>
+          <!-- /tr -->   
+        </div>
+        <div id="footer"></div>
+    </div>
+</body>
+</html>

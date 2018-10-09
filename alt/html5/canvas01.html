@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+    
+    canvas  {
+        border:1px dotted #aaa;
+    }
+
+    </style>
+</head>
+<body>
+    <h1>Canvas</h1>
+    <p><canvas width="300" height="200" id="cvs"></canvas></p>
+    <script>
+
+    // Die Canvas:
+    var cvs = document.getElementById('cvs');
+    //... deren Kontext:
+    var ctx = cvs.getContext('2d');
+    // Stift ansetzen:
+    ctx.moveTo(20,20);
+    // ... Pfad ziehen:
+    ctx.lineTo(cvs.width-20,20);
+    ctx.lineTo(cvs.width-20,cvs.height-20);
+    ctx.closePath()
+    // Pfad ausführen
+        // Umriss
+    ctx.stroke();
+        // Füllung
+    ctx.fillStyle = "yellow";    
+    ctx.fill();
+
+    // Farbe des Strokes:
+    ctx.strokeStyle = "red";
+    // neuer Pfad ab jetzt:
+    ctx.beginPath(); // !
+    ctx.moveTo(20,40);
+    ctx.lineTo(cvs.width-60,cvs.height-20);
+    ctx.lineTo(20,cvs.height-20);
+    ctx.closePath()
+    ctx.stroke();
+
+
+    
+    </script>
+</body>
+</html>

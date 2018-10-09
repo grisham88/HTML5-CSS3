@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <title>Positioning-Properties: float</title>
+<script type="text/javascript" src="css-beispiele.js"></script>
+<link rel="stylesheet" href="cd_style.css" type="text/css" />
+<link rel="stylesheet" href="css-beispiele.css" type="text/css" />
+</head>
+<body>
+<h1>Positioning-Properties: float</h1>
+<div id="edit">
+  <p>Das <span class="beispiel">float</span>-Property bewirkt das Umfließen eines Elements durch Folgeelemente und nimmt das gefloatete Objekt dabei aus dem Zeilenkontext. Das gefloatete Element wird auf seiner gesamten Höhe von Folgeinhalten umflossen, sofern keiner der Folgecontainer vor Ende des Floatobjekts ein <span class="beispiel">clear</span>-Property nach der entsprechenden Seite besitzt.</p>
+ <p class="werte">Werte:<br/>
+	left, right, none, inherit</p>
+
+<form onsubmit="return false">
+<p><b>Ausprobieren:</b><br/>float:<select name="cssFloat" onchange="editieren(this)" >
+<option value="inherit">inherit</option>
+<option value="left">left</option>
+<option value="right">right</option>
+<option value="none">none</option>
+</select></p>
+</form>
+  <p><span class="rot"><b>Achtung:</b></span><br/>
+    Der Name des Scripting-Properties lautet <span class="beispiel">cssFloat</span>. (Au&szlig;er im Internet Explorer - dort hei&szlig;t es <span class="beispiel">styleFloat</span>.)</p>
+</div>
+<div id="view">
+<div style="border:thin solid; height:270px;padding:5px">
+
+    <p><img src="bild1.jpg" id="ziel"alt="Bild"/>Wenden Sie auf das vorangehende Bild das <span class="beispiel">float</span>-Property an. Dieser Text umfließt das Bild, sobald es gefloatet ist. </p>
+</div>
+</div>
+
+</body>
+</html>

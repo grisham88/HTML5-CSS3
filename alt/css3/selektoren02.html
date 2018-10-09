@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Strukturelle Pseudoklassen</title>
+    <style>
+    
+    #ul1 li:first-child {
+        background-color: pink;
+    }
+    #ul1 li:last-child {
+        background-color: lightblue;
+    }   
+
+    #ul2 li:nth-child(3) {
+        background-color: lightgreen;
+    }
+    #ul2 li:nth-last-child(2) {
+        background-color: lightblue;
+    }   
+    
+    #ul3 li:nth-child(3n) {
+        background-color: orange;
+    }
+    #ul3 li:nth-child(3n+1) {
+        background-color: pink;
+    }
+    #ul3 li:nth-child(3n+2) {
+        background-color: red;
+    }    
+
+    #ul4 li:nth-child(even) {
+        background-color: lightgreen;
+    }
+    #ul4 li:nth-child(odd) {
+        background-color: lightblue;
+    }   
+
+    .myArticle p:first-of-type {
+        font-weight:bold;
+    }
+
+    </style>
+</head>
+<body>
+    <h3>Liste 1</h3>
+    <ul id="ul1">
+        <li>Listitem 1</li>
+        <li>Listitem 2</li>
+        <li>Listitem 3</li>
+    </ul>
+    <h3>Liste 2</h3>
+    <ul id="ul2">
+        <li>Listitem 1</li>
+        <li>Listitem 2</li>
+        <li>Listitem 3</li>
+        <li>Listitem 4</li>
+        <li>Listitem 5</li>
+    </ul>   
+    <h3>Liste 3</h3>
+    <ul id="ul3">
+        <li>Listitem 1</li>
+        <li>Listitem 2</li>
+        <li>Listitem 3</li>
+        <li>Listitem 4</li>
+        <li>Listitem 5</li>
+    </ul> 
+    <h3>Liste 4</h3>
+    <ul id="ul4">
+        <li>Listitem 1</li>
+        <li>Listitem 2</li>
+        <li>Listitem 3</li>
+        <li>Listitem 4</li>
+        <li>Listitem 5</li>
+    </ul>           
+</body>
+</html>

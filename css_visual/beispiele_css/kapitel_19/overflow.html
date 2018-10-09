@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <title>Positioning-Properties: overflow</title>
+<script type="text/javascript" src="css-beispiele.js"></script>
+<link rel="stylesheet" href="cd_style.css" type="text/css" />
+<link rel="stylesheet" href="css-beispiele.css" type="text/css" />
+</head>
+<body>
+<h1>Positioning-Properties: overflow</h1>
+<div id="edit">
+  <p>Das <span class="beispiel">overflow</span>-Property legt das Verhalten dimensionierter 
+    Container ihrem Inhalt gegenüber fest, falls dessen Abmessungen die vorgesehenen 
+    Innenabmessungen des Elements sprengen.</p>
+ <p class="werte">Werte:<br/>
+	visible, hidden, scroll ,auto, inherit</p>
+
+<form onsubmit="return false">
+<p><b>Ausprobieren:</b><br/>overflow:<select name="overflow" onchange="editieren(this)" >
+<option value="inherit">inherit</option>
+<option value="visible">visible</option>
+<option value="hidden">hidden</option>
+<option value="scroll">scroll</option>
+<option value="auto">auto</option>
+</select></p>
+</form>
+</div>
+<div id="view">
+  <p id="ziel" style="border:thin solid; height:150px;padding:5px"> Wenden Sie 
+    auf diesen Container das <span class="beispiel">overflow</span>-Property an. 
+    Seine Höhe ist auf 150 Pixel begrenzt. Hier folgt noch etwas Text: Nullam 
+    massa lorem, dignissim ac, tristique sit amet, posuere quis, velit. Donec 
+    et justo ut lacus sagittis dignissim. Integer faucibus quam at neque. Fusce 
+    lacus velit, lacinia et, sollicitudin vitae, dapibus egestas, justo. Phasellus 
+    tincidunt, augue vitae faucibus blandit, felis mi faucibus ligula, a congue 
+    lectus ante quis nisl. Duis commodo sapien varius lectus. Fusce fermentum 
+    congue turpis. Maecenas metus magna, convallis et, blandit nec, feugiat ut, 
+    tellus. Morbi a risus sit amet dolor vestibulum nonummy. Quisque vehicula 
+    lacus et pede. Fusce vel urna eget mauris sollicitudin fringilla. Nullam porta, sapien vel luctus imperdiet, sapien eros porttitor augue, vitae semper lorem lectus vitae justo. Curabitur dignissim nibh a nulla. Morbi magna.</p>
+</div>
+
+</body>
+</html>

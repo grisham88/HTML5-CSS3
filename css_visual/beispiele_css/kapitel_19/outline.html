@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+   <title>outline</title>
+<script type="text/javascript" src="css-beispiele.js"></script>
+<link rel="stylesheet" href="cd_style.css" type="text/css" />
+<link rel="stylesheet" href="css-beispiele.css" type="text/css" />
+</head>
+<body>
+<h1>Konturproperties: outline</h1>
+<div id="edit">
+  <p>Das <span class="beispiel">outline</span>-Property zeichnet einen Rahmen 
+    um den Inhaltsbereich eines Containers, also innerhalb des Außenabstandes. 
+    Die Umrisslinie trägt daher, im Gegensatz zum Rahmen, wie er mit <span class="beispiel">border</span> 
+    erzeugt wird, nicht zu den Abmessungen bei. Outlines können auch Inlineelementen 
+    zugewiesen werden. </p>
+<p class="werte">Werte:<br/>
+	[outline-width] [outline-style] [outline-color]</p>
+<p class="beispiel">Beispiel:<br/>
+p { outline: 3px solid black; }
+</p>	
+<form onsubmit="return false">
+<p><b>Ausprobieren:</b><br/>
+outline:<input type="text" name="outline" onchange="editieren(this)"/><input type="button" class="button" value="Test"/>
+</p>
+</form>
+
+
+
+
+</div>
+<div id="view">
+<p style="background-color:#ddd">Dieser Textabsatz ist ein Beispielabsatz. Er enthält keinen sinnvollen Inhalt, sondern dient lediglich dazu, dem folgenden Absatz voranzustehen. Er wird durch die CSS-Editierung nicht erfasst. Er hat eine hellgraue Hintergrundfarbe, um besser sichtbar zu sein.</p>
+<p id="ziel">Dieser Absatz kann durch CSS-Formatierungen, die links im Editierbereich vorgenommen werden, in seiner Präsentation geändert werden. Sie können hierfür in den Feldern des Editierbereichs beliebige Eingaben machen, die sofort sichtbar umgesetzt werden (solange die Werte zulässig sind, selbstredend :-).</p>
+<p style="background-color:#ddd">Dieser Textabsatz ist ein Beispielabsatz. Er enthält keinen sinnvollen Inhalt, sondern dient lediglich dazu, dem editierbaren Absatz zu folgen. Er wird durch die CSS-Editierung nicht erfasst. Er hat ebenfalls eine hellgraue Hintergrundfarbe, um besser sichtbar zu sein.</p>
+</div>
+
+</body>
+</html>
