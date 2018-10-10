@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Flex-Layout</title>
+    <style>
+        /* Layout */
+        #wrapper {
+            width: 640px;
+        }
+
+        #header {
+            background-color: #ddd;
+            height: 80px;
+        }
+
+        #footer {
+            background-color: #ddd;
+            height: 60px;
+        }
+
+        #contentwrap {
+            display:flex;
+            flex-direction:row;
+            align-items: stretch; /* center| flex-end |flex-start | stretch (Default) */
+            justify-content: flex-start;
+        }
+
+        #spalte1 {
+            background-color: lightblue;
+            _width: 35%;
+            _width:100px;
+            padding: 5px;
+            /* Flex-Item kann UMGRUPPIERT werden */
+            order: 2;
+            flex:1;
+        }
+
+        #spalte2 {
+            background-color: lightgreen;
+            _width: 40%;
+            width:100px;
+            padding: 5px;
+            order:1;
+        } 
+
+        #spalte3 {
+            background-color: pink;
+            _width:25%;
+            _width:100px;
+            padding: 5px;
+            order:3;
+            flex:1.3;
+        }  
+
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="header">Header</div>
+        <!-- Flex-Container: -->
+        <div id="contentwrap">  
+
+                <!-- Flex-Item: -->
+                <div id="spalte1">
+                    <h3>Spalte 1</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit ipsam dignissimos molestias libero explicabo distinctio?</p>
+                </div>
+
+                <!-- Flex-Item: -->
+                <div id="spalte2">
+                    <h3>Spalte 2</h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste animi minus nisi dolor et explicabo, rem modi quisquam, quis rerum exercitationem architecto cupiditate nobis officia?</p>
+                </div>
+        
+                <!-- Flex-Item: -->
+                <div id="spalte3">
+                    <h3>Spalte 3</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis, alias rerum sequi odit quod id voluptates distinctio!</p>
+                </div>
+                
+        </div>
+        <div id="footer">Footer</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Boxmodell und "runde" Ecken</title>
+    <style>
+
+
+        body {
+            margin: 8px; 
+        }
+
+
+        p {
+            border: 1px solid black;
+            padding: 10px;
+            margin: 16px; /* 16px rundherum */
+        }
+
+        #p1 {
+            border-radius: 10px 20px 0;
+        }    
+
+        #p2 {
+            background-color: #ddd;
+            border:0;
+            border-radius: 30px 20px/10px 40px;
+        } 
+        #p3 {
+            height:60px;
+            _padding: 10px;
+            border-radius: 40px;
+  
+            padding: 0;
+            overflow: hidden;
+        } 
+
+        #p4 {
+            height:40px;
+            /* Text geht raus? Overflow! */
+            overflow: auto; /* visible | hidden | scroll | auto */
+        }         
+    </style>
+</head>
+<body>
+    <h1>Border-Radius</h1>
+    <p id="p1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga debitis, rem incidunt ex autem rerum corrupti eius? Enim, suscipit dolores.</p>
+    <p id="p2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum ullam facere architecto, quis quos et odio quam delectus?</p>
+    <p id="p3">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae provident, expedita neque fugit officia doloribus!</p>
+    <p id="p4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae est neque natus dolor officia ipsam, numquam laudantium omnis quam, nulla id? Eius, placeat? Nesciunt, mollitia nam?</p>
+</body>
+</html>

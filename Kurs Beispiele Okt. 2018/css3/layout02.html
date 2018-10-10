@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Position-Layout</title>
+    <style>
+        /* Layout */
+        #wrapper {
+            width: 640px;
+            
+        }
+        #contentwrap {
+            position:relative;
+            border: 2px solid red;
+        }
+
+        #header {
+            background-color: #ddd;
+            height: 80px;
+        }
+
+        #footer {
+            background-color: #ddd;
+            height: 60px;
+        }
+
+        #spalte1 {
+            background-color: lightblue;
+            width: calc(35% - 10px);
+            padding: 5px;
+            position:absolute;
+            left:40%;
+            top:0;
+            bottom:0;
+        }
+
+        #spalte2 {
+            background-color: lightgreen;
+            width: calc(40% - 10px);
+            padding: 5px;
+            _margin-left:35%;
+            min-height:300px;
+            /* eine Spalte MUSS im Flow bleiben! */
+            _position:absolute;
+        } 
+
+        #spalte3 {
+            background-color: pink;
+            width:calc(25% - 10px);
+            position:absolute;
+            top:0;
+            right:0;
+            bottom:0;
+            padding: 5px;
+            overflow:auto;
+        }  
+
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="header">
+            Position-Layout
+        </div>
+        <div id="contentwrap">
+            <div id="spalte1">
+                <h3>Spalte 1</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit ipsam dignissimos molestias libero explicabo distinctio?</p>
+            </div>
+            <div id="spalte2">
+                <h3>Spalte 2</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. </p>
+            </div>
+            <div id="spalte3">
+                <h3>Spalte 3</h3>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis, alias rerum sequi odit quod id voluptates distinctio!</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium quisquam aspernatur porro officia libero nemo cumque, in similique, nostrum temporibus eos iusto consequatur ducimus voluptatum suscipit, corporis quis quaerat! Iste nesciunt ad, omnis harum incidunt consectetur doloribus praesentium, animi beatae quo velit illum excepturi ullam fuga id distinctio saepe nemo sequi dolore. Inventore.</p>
+            </div>
+        </div>
+        <div id="footer">Footer</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Jalousie und Schublade</title>
+    <style>
+    
+
+    /*  hmmm... interessant ....
+        .panel > * {
+            position:absolute;
+        }
+    */ 
+
+    .panel {
+        background-color: #ddd;
+        width: 150px;
+        transition: height 1s;
+        overflow:hidden;
+        height: 0px;
+        border: 1px solid #999;
+        border-top-width: 20px;
+        position:relative;
+        float:left;
+        margin-right: 20px;
+    } 
+    .panelinnen {
+        width: 140px;
+        height:140px;
+        padding: 5px;
+    }
+    .panelinnen2 {
+        width: 140px;
+        height:140px;
+        padding: 5px;
+  
+        /* so: */
+        position:absolute;
+        bottom:0;
+
+    }
+    .panel:hover {
+        width: 150px;
+        height:150px;
+        transition: height 1s ease-in-out;
+    }
+    </style>
+</head>
+<body>
+    <!-- außen: wird animiert -->
+    <div class="panel" id="panel1">
+        <!-- innen: stabilisiert Layout -->
+        <div class="panelinnen">
+            <h3>Jalousie</h3>
+            <p>Lorem ipsum dolor adipisicing elit. Non provident culpa autem!</p>
+        </div>
+    </div>
+
+    <p></p>
+
+    <div class="panel" id="panel2">
+            <!-- innen: stabilisiert Layout -->
+            <div class="panelinnen2">
+                <h3>Schublade</h3>
+                <p>Lorem ipsum dolor adipisicing elit. Non provident culpa autem!</p>
+            </div>
+        </div>
+</body>
+</html>

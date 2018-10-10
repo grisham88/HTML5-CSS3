@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Flex Table</title>
+    <style>
+
+    .fixedtable {
+        width:70%;
+        table-layout:fixed;
+        border-spacing: 5px;
+        border: 1px solid #ccc;
+    }
+    .fixedtable td {
+        padding: 5px;
+        background-color: #ddd;
+        border: 1px solid #ccc;
+        width: calc(50% - 75px);
+    }
+    .fixedtable td:first-child {
+        padding: 5px;
+        background-color: #eee;
+        width: 140px;
+    }    
+
+
+    .flextable {
+        width: 70%;
+        min-width: 450px;
+        border: 1px solid #ccc;
+        border-spacing: 5px;
+        _padding: 5px;
+    }
+
+    .flextable tr {
+        display:flex;
+        margin-bottom: 5px;
+    }
+    .flextable tr:last-child {
+        margin-bottom: 0;
+    }    
+    .flextable td {
+        border: 1px solid #ccc;
+        padding: 5px;
+    }
+    .flextable td:not(:first-child) {
+        flex:1;
+        background-color: #ddd;  
+        margin-left: 5px; 
+
+    }
+    .flextable td:first-child {
+        /* 150px: Inhalt + Padding */
+        width: 140px;
+        background-color: #eee;
+    }
+
+    .gridtable {
+        width: 70%;
+        min-width: 450px;
+        border: 1px solid #ccc;
+        display:grid;
+        /* 150px: Gridbreite + Padding - Margin */
+        grid-template-columns: 160px 1fr 1fr;
+        _grid-gap: 10px;
+        padding-bottom: 5px;
+    }
+    .gridtable .first {
+        border: 1px solid #ccc;
+        background-color: #eee;
+        padding: 5px;
+        margin: 5px 5px 0 5px;
+    }
+    .gridtable .second,
+    .gridtable .third {
+        border: 1px solid #ccc;
+        background-color: #ddd;
+        padding: 5px;
+        margin: 5px 5px 0 0;
+    }
+
+
+    </style>
+</head>
+<body>
+    <h1>Table mit table-layout:fixed</h1>
+    <table class="fixedtable">
+
+        <tr>
+            <td>150 Pixel fest</td>
+            <td>Flexibel</td>
+            <td>Flexibel</td>
+        </tr>
+        <tr>
+            <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, quisquam adipisci. Laborum.</td>
+            <td>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dicta earum minima similique? Inventore veritatis hic fugiat omnis obcaecati soluta eveniet, aspernatur accusamus magnam? Quae, quasi!</td>
+            <td>ABC</td>
+        </tr>
+        <tr>
+            <td>ABC</td>
+            <td>Das ist die Hälfte vom Rest. Immer gleich breit, wie die Spalte rechts daneben.</td>
+            <td>Das ist die Hälfte vom Rest. Immer gleich breit, wie die Spalte links daneben.</td>
+        </tr>
+    </table>
+    <h1>Flex-Tabelle</h1>
+    <table class="flextable">
+        <tr>
+            <td>150 Pixel fest</td>
+            <td>Flexibel</td>
+            <td>Flexibel</td>
+        </tr>
+        <tr>
+            <td>Das sind 150px in der Breite, komme was wolle...</td>
+            <td>Das ist die Hälfte vom Rest. Immer gleich breit, wie die Spalte rechts daneben.</td>
+ 
+            <td>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga voluptatum architecto labore est error autem amet, impedit quaerat sunt voluptatem?</td>
+        </tr>
+        <tr>
+            <td>ABC</td>
+            <td>ABC</td>
+            <td>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Molestias ab eaque corporis voluptatem id tempore tenetur et minus recusandae mollitia libero ipsum, omnis dicta dignissimos.</td>
+        </tr>
+    </table>
+    <h1>Grid Tabelle (mit Divs)</h1>
+    <div class="gridtable">
+
+        <div class="first">150 Pixel breit</div>
+        <div class="second">Flexibel</div>
+        <div class="third">Flexibel</div>
+
+        <div class="first">Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora culpa suscipit perferendis similique!</div>
+        <div class="second">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque, excepturi. Rerum omnis aperiam dolore atque earum itaque possimus eos corrupti.</div>
+        <div class="third">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti laborum quod voluptatum commodi magni unde.</div>
+        
+        <div class="first">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+        <div class="second">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ratione ut earum quos quidem! Sunt molestiae maxime architecto delectus, quo distinctio.</div>
+        <div class="third">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis impedit est aut vitae? Accusantium officia doloribus atque.</div>
+    
+    </div>
+</body>
+</html>

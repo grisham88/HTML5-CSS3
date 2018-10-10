@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Boxmodell und Flowlayout</title>
+    <style>
+
+
+        body {
+            margin: 8px; 
+        }
+
+
+        p {
+            border: 1px solid black;
+            padding: 10px;
+            margin: 16px; /* 16px rundherum */
+        }
+
+        #p1 {
+            background-color: #eee;
+            padding-top:    15px;
+            padding-right:  45px;
+            padding-bottom: 20px;
+            padding-left:   30px;
+        }    
+
+        #p2 {
+            background-color: #ddd;
+            padding: 15px 45px 20px 30px;
+            border: 2px solid red;
+        } 
+        #p3 {
+            background-color: #ccc;
+            padding: 15px 45px 20px 30px;
+
+           /* border: 2px solid red; */
+
+            border-width: 2px 4px; 
+            border-style: dashed dotted; 
+            border-color: red green;
+        } 
+
+        #p4 {
+            background-color: #ccc;
+            padding: 15px 45px 20px 30px;
+
+           /* border: 2px solid red; */
+           border-top: 2px solid red;
+           border-right: 2px solid red;
+           border-bottom: 6px double blue;
+           border-left: 2px solid red;
+        }         
+    </style>
+</head>
+<body>
+    <p id="p1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga debitis, rem incidunt ex autem rerum corrupti eius? Enim, suscipit dolores.</p>
+    <p id="p2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum ullam facere architecto, quis quos et odio quam delectus?</p>
+    <p id="p3">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae provident, expedita neque fugit officia doloribus!</p>
+    <p id="p4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae est neque natus dolor officia ipsam, numquam laudantium omnis quam, nulla id? Eius, placeat? Nesciunt, mollitia nam?</p>
+</body>
+</html>

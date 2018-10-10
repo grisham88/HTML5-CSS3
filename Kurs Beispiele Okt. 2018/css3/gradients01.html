@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Gradients</title>
+    <style>
+
+
+        body {
+            margin: 8px; 
+        }
+
+
+        p {
+            padding: 5px;
+            margin:30px;
+        }
+
+        #p1 {
+            background-color: #ddd;
+        }    
+
+        #p2 {
+            /* ein Gradient IST ein Bild!! */
+            /* background-image: linear-gradient(#ddd, #999); */
+            background-image: linear-gradient(to bottom, #ddd 0%, #999 100%);
+        } 
+        #p3 {
+            background-image: linear-gradient(to right, #eee 30%, #555 70%);
+        } 
+
+        #p4 {
+            background-image: linear-gradient(to right, #eee 40%, #555 40%);
+        }  
+        #p5 {
+            background-image: linear-gradient(155deg, lightblue 30%, blue 70%);
+        }  
+        #p6 {
+            background-image: linear-gradient(155deg, red 30%, blue 30%, blue 70%, green 70%)
+        }
+        #p7 {
+            background-image: linear-gradient(135deg, #eee 50%, #999 50%);
+            background-size: 14px 14px;
+            background-repeat: repeat;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Gradients: Farbverlauf</h1>
+    <p id="p1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga debitis, rem incidunt ex autem rerum corrupti eius? Enim, suscipit dolores.</p>
+    <p id="p2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum ullam facere architecto, quis quos et odio quam delectus?</p>
+    <p id="p3">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae provident, expedita neque fugit officia doloribus!</p>
+    <p id="p4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae est neque natus dolor officia ipsam, numquam laudantium omnis quam, nulla id? Eius, placeat? Nesciunt, mollitia nam?</p>
+    <p id="p5">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae provident, expedita neque fugit officia doloribus!</p>
+    <p id="p6">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae provident, expedita neque fugit officia doloribus!</p>
+    <p id="p7">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae provident, expedita neque fugit officia doloribus!</p>
+</body>
+</html>

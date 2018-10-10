@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Boxmodell und "runde" Ecken</title>
+    <style>
+
+
+        body {
+            margin: 8px; 
+            _background-color: orange;
+        }
+
+
+        p {
+            padding: 5px;
+            margin:30px;
+        }
+
+        #p1 {
+            background-color: yellow;
+            box-shadow: 15px 15px 10px darkgrey;
+        }    
+
+        #p2 {
+            background-color: pink;
+            border-radius:20px;
+            box-shadow: 15px 15px 10px rgba(0, 0, 0, 0.5);
+        } 
+        #p3 {
+            box-shadow: inset 0 0 10px red;
+        } 
+
+        #p4 {
+            box-shadow: -10px -10px 10px red,
+                         10px  10px 10px green;
+        }  
+        #p5 {
+            box-shadow:  inset 0 0 10px red,
+                         0px  0px 0px 4px green,
+                         0px  0px 0px 8px red;
+        }             
+    </style>
+</head>
+<body>
+    <h1>Box-Shadow</h1>
+    <p id="p1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga debitis, rem incidunt ex autem rerum corrupti eius? Enim, suscipit dolores.</p>
+    <p id="p2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum ullam facere architecto, quis quos et odio quam delectus?</p>
+    <p id="p3">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae provident, expedita neque fugit officia doloribus!</p>
+    <p id="p4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae est neque natus dolor officia ipsam, numquam laudantium omnis quam, nulla id? Eius, placeat? Nesciunt, mollitia nam?</p>
+    <p id="p5">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae provident, expedita neque fugit officia doloribus!</p>
+
+</body>
+</html>

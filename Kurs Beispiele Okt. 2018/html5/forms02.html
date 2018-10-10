@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Formulare</title>
+</head>
+<body>
+    <h1>Der Range-Regler</h1>
+    <form action="#">
+        <label for="z">Zufriedenheit (1 bis 100)</label>
+        <input type="range" 
+               value="0"
+               step="20"
+               min="-100"
+               max="100"
+               oninput="this.form.out.value=this.value"
+               name="zufrieden" id="z">
+        <output id="out">0</output>
+        <input type="submit" value="Abschicken">
+    </form>
+</body>
+</html>

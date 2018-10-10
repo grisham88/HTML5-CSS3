@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Video einbetten</title>
+</head>
+<body>
+    <h1>Video einbetten</h1>
+    <p>
+        <video id="vid"
+               poster="media/poster.jpg"
+               width="480" 
+               height="270">
+            <source src="media/trailer_test.ogg">
+            <source src="media/trailer_test.mp4">
+            <source src="media/trailer_test.mov">
+            Fallbackinhalt
+        </video>
+    </p>
+    <p>
+        <button id="start">Start</button>
+        <button id="stop">Stop</button>
+    </p>
+    <script>
+    
+    // vid-Element holen:
+    var vid = document.getElementById('vid');
+    // vid.play(); // los gehts!
+    var start = document.getElementById('start');
+    start.addEventListener('click', function() {
+        vid.play();
+    });
+
+    var stop = document.getElementById('stop');
+    stop.addEventListener('click', function() {
+        vid.pause(); 
+    });
+    
+    </script>
+</body>
+</html>

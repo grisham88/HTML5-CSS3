@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Formulare</title>
+</head>
+<body>
+    <h1>Datalist</h1>
+    <form action="#">
+        <label for="blumen">Blumen</label>
+        <input type="text" name="blumen" id="blumen" list="blumenliste"> 
+        <input type="submit" value="Abschicken">
+    </form>
+
+
+    <datalist id="blumenliste">
+            <option value="Rosen">Rosen</option>
+            <option value="Nelken">Nelken</option>
+            <option value="Tulpen">Tulpen</option>
+    </datalist>
+</body>
+</html>

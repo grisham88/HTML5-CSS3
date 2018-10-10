@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Formulare</title>
+</head>
+<body>
+    <h1>Formulare in HTML5</h1>
+    <form action="#" method="GET">
+        <div>
+                <label for="nn">Nachname: </label> 
+                <!-- Attribute: required, placeholder -->
+                <input tabindex="1" type="text" name="nachname" id="nn" 
+                        
+                        placeholder="Ihr Nachname hier"
+                        aria-required="true">
+        </div>
+        <div>
+            <label for="plz">PLZ</label>
+            <!-- Attribute: pattern -->
+            <input type="text" name="plz" id="plz" 
+                   title="Eine PLZ besteht aus 5 Ziffern"
+                   pattern="[0-9]{5}">
+        </div>
+        <div>
+            <label for="em">E-Mail:</label>
+            <!-- neuer Typ email -->
+            <input type="email" name="email" id="em">
+        </div>
+        <input type="submit" value="Abschicken">
+
+    </form>
+</body>
+</html>

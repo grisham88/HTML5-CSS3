@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS: Selektoren</title>
+    <style>
+        /* Selektoren und Spezifizität::after
+        
+            Selektor        ID                Class                Typ
+                                            Pseudoklasse
+                                              Attribut
+            ----------------------------------------------------------------
+            *               0                   0                   0
+            p               0                   0                   1
+            .lightblue      0                   1                   0
+            #div1           1                   0                   0
+            p.yellow        0                   1                   1
+            a:hover         0                   1                   1
+            [title]         0                   1                   0
+            [title='...']   0                   1                   0
+            div#div1 p      1                   0                   2
+            div#div1 > p    1                   0                   2
+
+
+        */
+
+        /* ID-Selektor */
+        #div1 {
+            border: 1px solid black;
+        }       
+
+        /* Class-Selektor */
+        .lightblue { /* freie Klasse */
+            background-color: lightblue;
+        }
+        p.yellow {  /* typgebundene Klasse */
+            background-color: yellow;
+        }
+
+        /* Typselektor */
+        p {
+            color: green;
+            background-color: pink;
+        }
+        p {
+            background-color: rgb(209, 241, 165);
+        }
+
+        /* Attributselektor */
+        /* Merke: erst allgemein, DANN speziell!! */
+            [title] {
+                border: 2px dotted black;
+            }
+
+            [title='Textabsatz vier'] {
+                border: 2px dashed red;
+            }
+
+        input[type='submit'] {}
+
+        a {
+            background-color: transparent;
+        }
+    /* Merke: erst statisch, DANN dynamisch!! */
+
+        a.extern {
+            background-color: lightgrey;
+        }    
+        a:hover {
+            background-color: pink;
+        }  
+
+
+
+        /* Descendant-Selektor */
+        div#div1 p { 
+            background-color: pink;
+        }
+
+        /* Child-Selektor */
+        div#div1 > p { 
+            background-color: aliceblue;
+        }
+
+        /* Navigation: */
+        div#nav {
+
+        }
+        div#nav ul {
+
+        }       
+        div#nav ul li {
+
+        }
+        div#nav ul li a {
+            background-color: transparent;
+        } 
+        div#nav ul li a:hover {
+            background-color: pink;
+        } 
+        div#main a {}
+
+
+
+    </style>
+</head>
+<body>
+    <h1 class="yellow">Selektoren</h1>
+    <p>Textabsatz, der gestylt wird.</p>
+    <p>Textabsatz, der gestylt wird.</p>
+    <p title="Textabsatz drei">Textabsatz mit Title, der gestylt wird.</p>
+    <p title="Textabsatz vier">Textabsatz, der gestylt wird.</p>
+    <p class="lightblue">Textabsatz mit Klasse, der gestylt wird.</p>
+    <p class="yellow">Textabsatz mit Klasse, der gestylt wird.</p>
+    <p>Ein Text mit einem 
+        <a href="#" class="extern">externen Link</a>, 
+       der gestylt wird...</p>
+    <div id="div1">
+        <!-- Child von #div1 -->
+        <p>Textabsatz, der gestylt wird.</p>
+        <div>
+            <!-- Descendant von #div1 -->
+            <p>Textabsatz, der gestylt wird.</p>
+        </div>    
+    </div>
+
+    <!-- HTML-Kommentar -->
+</body>
+</html>

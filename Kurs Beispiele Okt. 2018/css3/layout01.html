@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Float-Layout</title>
+    <style>
+        /* Layout */
+        #wrapper {
+            width: 640px;
+        }
+
+        #header {
+            background-color: #ddd;
+            height: 80px;
+        }
+
+        #footer {
+            background-color: #ddd;
+            height: 60px;
+            clear:both;
+        }
+
+        #spalte1 {
+            background-color: lightblue;
+            width: calc(35% - 10px);
+            float:right;
+            padding: 5px;
+        }
+
+        #spalte2 {
+            background-color: lightgreen;
+            width: calc(40% - 10px);
+            float:left;
+            padding: 5px;
+        } 
+
+        #spalte3 {
+            background-color: pink;
+            width:calc(25% - 10px);
+            float:left;
+            padding: 5px;
+        }  
+
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="header">Header</div>
+
+        <div id="spalte1">
+            <h3>Spalte 1</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit ipsam dignissimos molestias libero explicabo distinctio?</p>
+        </div>
+        <div id="spalte2">
+            <h3>Spalte 2</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iste animi minus nisi dolor et explicabo, rem modi quisquam, quis rerum exercitationem architecto cupiditate nobis officia?</p>
+        </div>
+        <div id="spalte3">
+            <h3>Spalte 3</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis, alias rerum sequi odit quod id voluptates distinctio!</p>
+        </div>
+
+        <div id="footer">Footer</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Contentpanels und :target</title>
+    <style>
+    
+        .panel {
+            background-color: #ddd;
+              position:absolute;
+            top: -200px;
+            left: 150px;
+
+            width: 150px;
+            height: 150px;
+            padding: 5px;
+            border: 1px solid #000;
+            transition: top 1s;
+        }
+        .panel:target {
+            top:20px;
+            transition: top 1s 0.5s;
+        }
+
+
+    </style>
+</head>
+<body>
+    <!-- ul>li*3>a{Panel} -->
+    <ul>
+        <li><a href="#panel1">Panel 1</a></li>
+        <li><a href="#panel2">Panel 2</a></li>
+        <li><a href="#panel3">Panel 3</a></li>
+    </ul>
+    <!-- .panel#panel$*3>(h3{Panel $}+p{lorem12}) -->
+    <div class="panel" id="panel1">
+        <h3>Panel 1</h3>
+        <p>Lorem ipsum dolor adipisicing elit. Non provident culpa autem!</p>
+    </div>
+    <div class="panel" id="panel2">
+        <h3>Panel 2</h3>
+        <p>Lorem consectetur adipisicing elit. Voluptatibus quo nobis officia!</p>
+    </div>
+    <div class="panel" id="panel3">
+        <h3>Panel 3</h3>
+        <p>Lorem ipsum elit. Veniam saepe dolor voluptatem?</p>
+    </div>
+</body>
+</html>

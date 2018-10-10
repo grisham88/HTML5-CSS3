@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Grid-Layout</title>
+    <style>
+        /* Layout */
+        #wrapper {
+            width: 640px;
+            border: 4px solid blue;
+            /* jetzt geht's los...*/
+            display:grid;
+            grid-template-columns: 25% 40% 35%;
+            grid-template-rows: 80px auto 60px;
+        }
+
+        #header {
+            background-color: #ddd;
+            _height: 80px;
+            /* Position im GRID */
+            grid-column: 1/4;
+        }
+
+        #footer {
+            background-color: #ddd;
+            _height: 60px;
+            grid-column: 1/4;
+        }
+
+        #spalte1 {
+            background-color: lightblue;
+            _width: 35%;
+            padding: 5px;
+            grid-column: 2/3;
+            grid-row:2/3;
+        }
+
+        #spalte2 {
+            background-color: lightgreen;
+            _width: 40%;
+            padding: 5px;
+            grid-column: 3/4;
+            grid-row:2/3;
+        } 
+
+        #spalte3 {
+            background-color: pink;
+            _width:25%;
+            padding: 5px;
+            grid-column: 1/2;
+            grid-row:2/3;
+        }  
+
+    </style>
+</head>
+<body>
+    <div id="wrapper">
+        <div id="header">Header</div>
+        <div id="spalte1">
+            <h3>Spalte 1</h3>
+        </div>
+
+
+        <div id="spalte2">
+            <h3>Spalte 2</h3>
+        </div>
+
+
+        <div id="spalte3">
+            <h3>Spalte 3</h3>
+        </div>
+        <div id="footer">Footer</div>
+    </div>
+</body>
+</html>

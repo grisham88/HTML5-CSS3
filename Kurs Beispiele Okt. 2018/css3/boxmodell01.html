@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Boxmodell und Flowlayout</title>
+    <style>
+
+    /* Elemente haben Defaultmargins */
+        body {
+            margin: 8px; /* 8px rundherum */
+        }
+
+    /* Im Flow COLLAPSEN die Margins => 16px + 16px -> 16px Abstand !! */
+        p {
+            border: 1px solid black;
+            padding: 10px;
+            margin: 16px; /* 16px rundherum */
+        }
+
+    /* Hier: Topmargin von BODY collapst in Topmargin des ersten P !! */    
+    </style>
+</head>
+<body>
+    <p id="p1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga debitis, rem incidunt ex autem rerum corrupti eius? Enim, suscipit dolores.</p>
+    <p id="p2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum ullam facere architecto, quis quos et odio quam delectus?</p>
+    <p id="p3">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quae provident, expedita neque fugit officia doloribus!</p>
+    <p id="p4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae est neque natus dolor officia ipsam, numquam laudantium omnis quam, nulla id? Eius, placeat? Nesciunt, mollitia nam?</p>
+</body>
+</html>
