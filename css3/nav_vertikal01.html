@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Navigation, vertikal</title>
+    <style>
+        #nav {
+            float: left;
+            width: 140px;
+        }
+
+        #nav ul {
+            _outline: 1px solid red;
+            /* 1) Bullets entfernen */
+            list-style: none;
+            /* 2) Margins entfernen*/
+            margin: 0;
+            /* 3) Padding entfernen*/
+            /* Default: 2em | 40px */
+            padding: 0;
+        }
+
+        #nav li {
+            _outline: 1px solid green;
+            margin-bottom: 4px;
+        }
+
+        #nav li:hover {}
+
+        #nav a {
+            /* 4) Unterstricht enfernen */
+            text-decoration: none;
+            /* 5) zu Blockelement machen */
+            display: block;
+            /* Präsentation */
+            color: black;
+            background-color: #ddd;
+            padding: 5px;
+        }
+
+        #nav a:hover {
+            background-color: yellow;
+        }
+
+        .content {
+            margin-left: 150px;
+            /* oder 
+            position: absolute;
+            left: 150px;
+            */
+        }
+
+        .content:target {
+            background-color: lightgreen;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="nav">
+        <!--ul>li*7>a{Hauptmenü $}-->
+        <ul>
+            <li><a href="#content1">Hauptmenü 1</a></li>
+            <li><a href="#content2">Hauptmenü 2</a></li>
+            <li><a href="#content3">Hauptmenü 3</a></li>
+            <li><a href="#content4">Hauptmenü 4</a></li>
+            <li><a href="#content5">Hauptmenü 5</a></li>
+            <li><a href="#content6">Hauptmenü 6</a></li>
+            <li><a href="#content7">Hauptmenü 7</a></li>
+        </ul>
+    </div>
+    <!-- div#content$.content*7>h1{Vertikale Navigation $}+p>lorem30-->
+    <div id="content1" class="content">
+        <h1>Vertikale Navigation 1</h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Reiciendis eveniet impedit assumenda quaerat eaque
+            laboriosam officiis deserunt quos provident non tempora esse neque architecto earum praesentium expedita
+            et, inventore sed.</p>
+    </div>
+    <div id="content2" class="content">
+        <h1>Vertikale Navigation 2</h1>
+        <p>Voluptatem distinctio facere commodi, pariatur laborum aliquam, autem aspernatur, officia unde saepe rem
+            provident vel placeat explicabo. Quisquam error unde excepturi aut consectetur corrupti perferendis,
+            blanditiis nobis doloremque voluptatum voluptas!</p>
+    </div>
+    <div id="content3" class="content">
+        <h1>Vertikale Navigation 3</h1>
+        <p>Iste quis minima ipsam aliquid doloribus vel velit dolores in doloremque officiis aperiam voluptatum
+            consequatur ipsa repellendus odio corporis, repudiandae reprehenderit vero, harum asperiores dolorem
+            architecto. Enim necessitatibus veritatis quos!</p>
+    </div>
+    <div id="content4" class="content">
+        <h1>Vertikale Navigation 4</h1>
+        <p>Laudantium nemo ex aperiam. Laboriosam ad earum, molestias magni corporis suscipit temporibus voluptas odit
+            esse asperiores praesentium, eos optio repudiandae ipsum reiciendis porro iusto dicta ullam aperiam maxime?
+            Asperiores, suscipit?</p>
+    </div>
+    <div id="content5" class="content">
+        <h1>Vertikale Navigation 5</h1>
+        <p>Iure ad dolore quasi facilis cum ab amet rerum, nesciunt nihil? Maxime odio in suscipit magnam ipsa
+            accusantium ut doloribus voluptate esse. Error ratione suscipit, exercitationem eligendi veritatis
+            voluptatibus est?</p>
+    </div>
+    <div id="content6" class="content">
+        <h1>Vertikale Navigation 6</h1>
+        <p>Eligendi reiciendis cumque debitis dolor, vitae velit! Unde repudiandae fugiat nihil id doloremque totam,
+            quo similique nobis? Ipsum eos quae, delectus, quas cumque, accusamus aperiam non qui nemo dolores
+            voluptas.</p>
+    </div>
+    <div id="content7" class="content">
+        <h1>Vertikale Navigation 7</h1>
+        <p>Quidem optio autem molestias ut dolore, repellat nisi delectus quod similique deleniti minus ipsum quam
+            libero eveniet voluptates obcaecati excepturi est repudiandae neque laudantium. Amet distinctio laboriosam
+            provident accusantium ad.</p>
+    </div>
+</body>
+
+</html>
