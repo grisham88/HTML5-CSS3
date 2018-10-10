@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Navigation, vertikal</title>
+    <style>
+
+        #nav {
+            float:left;
+            width:140px;
+        }
+        /* Ebene 1 */
+        #nav ul {
+            /* 1) Bullets entfernen */
+            list-style:none;
+            /* 2) Margin entfernen */
+            margin: 0;
+            /* 3) Padding entfernen */
+            padding-left: 0; /* Default: 2em | 40px */
+        }
+        #nav li {
+            margin-bottom: 4px;
+            position:relative;
+        }
+        #nav li:hover {
+        
+        }
+        #nav a {
+            /* 4) Unterstrich entfernen */
+            text-decoration: none;
+            /* 5) zu Blockelement machen */
+            display:block;
+            /* Präsentation hier */
+            color:black;
+            text-align: right;
+            background-color: #ddd;
+            padding: 5px;
+        }
+        #nav a:hover {
+            background-color: yellow;
+        }
+        /* Ebene  2 */
+
+        #nav ul li ul {
+            _display:none;
+            background-color: rgba(255,255,255, 0.8);
+            width: 0px;
+            transition:width 1s;
+            overflow:hidden;
+            position:absolute;
+            left:140px;
+            top:0;
+        }
+        #nav ul li:hover ul {
+            _display:block;
+            width: 140px;
+            transition:width 1s;
+        }
+        #nav ul ul li {
+            width: 140px;
+            float:right;
+        }
+        #nav ul ul a {
+            background-color: #eee;
+        }
+        #nav ul ul a:hover {
+            background-color: #ccc;
+        }
+
+
+
+
+        #content {
+            margin-left: 150px;
+            
+        }
+    </style>
+</head>
+<body>
+    <div id="nav">
+        <ul>
+            <li><a href="">Hauptmenü 1</a></li>
+            <li><a href="">Hauptmenü 2</a>
+                <ul>
+                    <li><a href="">Untermenü 1</a></li>
+                    <li><a href="">Untermenü 2</a></li>
+                    <li><a href="">Untermenü 3</a></li>
+                </ul>            
+            </li>
+            <li><a href="">Hauptmenü 3</a></li>
+
+            <li><a href="">Hauptmenü 4</a></li>
+            <li><a href="">Hauptmenü 5</a>
+                <ul>
+                    <li><a href="">Untermenü 1</a></li>
+                    <li><a href="">Untermenü 2</a></li>
+                    <li><a href="">Untermenü 3</a></li>
+                </ul>            
+            </li>
+            <li><a href="">Hauptmenü 6</a></li>
+            <li><a href="">Hauptmenü 7</a></li>
+        </ul>
+    </div>
+    <div id="content">
+        <h1>Vertikale Navigation</h1>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae ut mollitia soluta? Consectetur fugiat eum dolor temporibus natus. Tempore, possimus. Iusto voluptatum reiciendis libero error eligendi. Corporis consectetur eos explicabo et adipisci id qui voluptates.</p>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus doloribus ratione quidem accusantium enim debitis quia modi, voluptatem facilis unde recusandae? Quia ipsam maiores officiis velit reprehenderit. Doloremque dolorum inventore odio magni molestias, neque quis.</p>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum sequi alias cum tempore ducimus ea voluptate! Reprehenderit tempore tenetur dolore dignissimos quis vero tempora accusamus commodi voluptate deserunt ad saepe praesentium, cupiditate eius quam quo.</p>
+    </div>
+</body>
+</html>
