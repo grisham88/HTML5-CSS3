@@ -19,7 +19,7 @@
             position: relative;
 
             border-left: 0;
-            border-right: 0;
+            border-right: 2px;
             border-top: 0;
             border-bottom: 2px;
             border-color: black;
@@ -40,13 +40,12 @@
         }
 
         #left {
-            background-color: yellow;
             width: calc(35% - 10px);
             position: absolute;
             padding: 5px;
             min-height: 200px;
             border-left: 2px;
-            border-right: 2px;
+            border-right: 0;
             border-top: 0;
             border-bottom: 0;
             border-color: black;
@@ -54,13 +53,12 @@
         }
 
         #middle {
-            background-color: orange;
             width: calc(40% - 10px);
             padding: 5px;
             min-height: 200px;
             margin-left: 35%;
             border-left: 2px;
-            border-right: 2px;
+            border-right: 0;
             border-top: 0;
             border-bottom: 0;
             border-color: black;
@@ -68,7 +66,6 @@
         }
 
         #right {
-            background-color: pink;
             width: calc(25% - 10px);
             position: absolute;
             top: 0;
@@ -76,7 +73,7 @@
             padding: 5px;
             min-height: 200px;
             border-left: 2px;
-            border-right: 2px;
+            border-right: 0;
             border-top: 0;
             border-bottom: 0;
             border-color: black;
@@ -93,6 +90,14 @@
             border-top-color: black;
             border-color: firebrick;
             border-style: solid;
+        }
+
+        #contentwrapper:nth-child(even) {
+            background-color: yellow;
+        }
+
+        #contentwrapper:nth-child(odd) {
+            background-color: lightblue;
         }
     </style>
 </head>
