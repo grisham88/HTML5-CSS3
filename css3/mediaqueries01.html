@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mediaqueries</title>
+    <!--<link rel="stylesheet" href="css/style.css" media="all">
+    //link[rel=stylesheet][href=css/print.css][media=print]
+    <link rel="stylesheet" href="css/print.css" media="print">-->
+    <style>
+        /* style.css*/
+        @media screen {
+            h1 {
+                color: red;
+            }
+        }
+
+        @media screen and (monochrome) {
+            h1 {
+                color: red;
+                background-color: #ddd;
+            }
+        }
+
+        @media screen and (color) {
+            h1 {
+                color: red;
+                background-color: palegoldenrod;
+            }
+        }
+
+        @media screen and (device-aspect-ratio:3440/1440) {
+            h1 {
+                color: red;
+                background-color: lightgreen;
+            }
+        }
+
+        @media screen and (min-width:480px) and (max-width:639px) {
+            h1 {
+                color: red;
+                background-color: lightblue;
+                border: 2px solid red;
+            }
+        }
+
+        @media screen and (min-width:640px) {
+            h1 {
+                color: red;
+                background-color: lightgreen;
+                border: 2px solid red;
+            }
+        }
+
+        /* wird aussortiert, wenn Medientyp unbekannt */
+        @media kennichnicht and (min-width:640px) {
+            h1 {
+                color: red;
+                background-color: lightgreen;
+                border: 2px solid red;
+            }
+        }
+
+        /* print.css*/
+        @media print {
+            h1 {
+                color: #555;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+</body>
+<h1>Mediaqueries</h1>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Et excepturi cupiditate fugiat?</p>
+
+</html>
