@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Layout - Grid</title>
+    <style>
+        /* Elemente haben Defaultmargins von 8 */
+
+        #wrapper {
+            /* Mittige Ausrichtung, da alle Margins automatisch sich mittig vom Rand orientieren */
+            margin: auto;
+            width: 640px;
+            border: 2px solid black;
+            display: grid;
+            grid-template-columns: 25% 40% 35%;
+            grid-template-rows: auto auto auto;
+        }
+
+        header {
+            padding: 5px;
+            background-color: #ddd;
+            height: 80px;
+            border-left: 0;
+            border-right: 0;
+            border-top: 0;
+            border-bottom: 2px;
+            border-bottom-color: black;
+            border-style: solid;
+            grid-column: 1/4;
+        }
+
+        #left {
+            background-color: yellow;
+            padding: 5px;
+            border-left: 2px;
+            border-right: 0;
+            border-top: 0;
+            border-bottom: 2px;
+            border-color: black;
+            border-style: solid;
+            grid-column: 1/2;
+        }
+
+        #middle {
+            background-color: orange;
+            padding: 5px;
+            border-left: 2px;
+            border-right: 0;
+            border-top: 0;
+            border-bottom: 2px;
+            border-color: black;
+            border-style: solid;
+            grid-column: 2/3;
+        }
+
+        #right {
+            background-color: pink;
+            padding: 5px;
+            border-left: 2px;
+            border-right: 0;
+            border-top: 0;
+            border-bottom: 2px;
+            border-color: black;
+            border-style: solid;
+            grid-column: 3/4;
+        }
+
+        footer {
+            padding: 5px;
+            background-color: #ddd;
+            height: 60px;
+            border-left: 0;
+            border-right: 0;
+            border-top: 0;
+            border-bottom: 0;
+            border-top-color: black;
+            border-style: solid;
+            grid-column: 1/4;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrapper">
+        <header>Grid Layout</header>
+
+        <div id="left">
+            <h3>1.te Spalte 1</h3>
+            <p id="p1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, blanditiis.</p>
+        </div>
+        <div id="middle">
+            <h3>1.te Spalte 2</h3>
+            <p id="p1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima eligendi a, dicta saepe
+                nihil quam?</p>
+        </div>
+        <div id="right">
+            <h3>1.te Spalte 3</h3>
+            <p id="p1">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste hic molestias tempore eos
+                facere incidunt ipsam, harum magnam dignissimos. Corrupti!</p>
+        </div>
+        <div id="left">
+            <h3>2.te Spalte 1</h3>
+            <p id="p1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, blanditiis.</p>
+        </div>
+        <div id="middle">
+            <h3>2.te Spalte 2</h3>
+            <p id="p1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima eligendi a, dicta saepe
+                nihil quam?</p>
+        </div>
+        <div id="right">
+            <h3>2.te Spalte 3</h3>
+            <p id="p1">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste hic molestias tempore eos
+                facere incidunt ipsam, harum magnam dignissimos. Corrupti!.</p>
+        </div>
+        <div id="left">
+            <h3>3.te Spalte 1</h3>
+            <p id="p1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, blanditiis.</p>
+        </div>
+        <div id="middle">
+            <h3>3.te Spalte 2</h3>
+            <p id="p1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima eligendi a, dicta saepe
+                nihil quam?</p>
+        </div>
+        <div id="right">
+            <h3>3.te Spalte 3</h3>
+            <p id="p1">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iste hic molestias tempore eos
+                facere incidunt ipsam, harum magnam dignissimos. Corrupti!</p>
+        </div>
+        <footer>Footer</footer>
+    </div>
+</body>
+
+</html>
