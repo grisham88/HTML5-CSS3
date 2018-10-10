@@ -9,21 +9,25 @@
     <style>
         .panel {
             background-color: #ddd;
-            width: 0px;
+            width: 150px;
             overflow: hidden;
-            transition: width 1s;
-            height: 150px;
+            transition: height 1s;
+            height: 0px;
             border: 1px solid #999;
-            border-left-width: 20px;
+            border-top-width: 20px;
+            float: left;
+            margin-right: 20px;
         }
 
         .panelinnen {
-            width: 150px;
+            width: 140px;
+            height: 140px;
             padding: 5px;
         }
 
         .panelinnen2 {
             width: 140px;
+            height: 140px;
             padding: 5px;
             /* so:transition: 
             position: absolute;
@@ -41,7 +45,8 @@
 
         .panel:hover {
             width: 150px;
-            transition: width 1s ease-in-out;
+            height: 150px;
+            transition: height 1s ease-in-out;
         }
     </style>
 </head>
