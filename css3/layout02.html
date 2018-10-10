@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Layout</title>
+    <title>Layout - Position</title>
     <style>
         /* Elemente haben Defaultmargins */
         #wrapper {
@@ -19,22 +19,27 @@
 
         #left {
             background-color: yellow;
-            float: left;
+            /*float: left;*/
             width: calc(35% - 10px);
             padding: 5px;
+            position: absolute;
+            left: 40%;
         }
 
         #middle {
             background-color: orange;
-            float: left;
             width: calc(40% - 10px);
             padding: 5px;
+            min-height: 200px;
         }
 
         #right {
             background-color: pink;
-            float: left;
             width: calc(25% - 10px);
+            position: absolute;
+            /*float: left;*/
+            top: 0;
+            right: 0;
             padding: 5px;
         }
 
@@ -47,20 +52,22 @@
 </head>
 
 <body>
-    <h1>Floating Layout</h1>
+    <h1>Position Layout</h1>
     <div id="wrapper">
         <header>Header</header>
-        <div id="left">
-            <h3>Spalte 1</h3>
-            <p id="p1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, blanditiis.</p>
-        </div>
-        <div id="middle">
-            <h3>Spalte 2</h3>
-            <p id="p1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, blanditiis.</p>
-        </div>
-        <div id="right">
-            <h3>Spalte 3</h3>
-            <p id="p1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, blanditiis.</p>
+        <div id="contentwrapper">
+            <div id="left">
+                <h3>Spalte 1</h3>
+                <p id="p1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, blanditiis.</p>
+            </div>
+            <div id="middle">
+                <h3>Spalte 2</h3>
+                <p id="p1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, blanditiis.</p>
+            </div>
+            <div id="right">
+                <h3>Spalte 3</h3>
+                <p id="p1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, blanditiis.</p>
+            </div>
         </div>
         <footer>Footer</footer>
     </div>
