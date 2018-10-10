@@ -10,6 +10,7 @@
         /* Elemente haben Defaultmargins von 8 */
 
         #wrapper {
+            /* Mittige Ausrichtung, da alle Margins automatisch sich mittig vom Rand orientieren */
             margin: auto;
             width: 540px;
             position: relative;
@@ -17,14 +18,20 @@
 
         #contentwrapper {
             position: relative;
-
             border-left: 0;
             border-right: 2px;
             border-top: 0;
             border-bottom: 2px;
             border-color: black;
             border-style: solid;
+        }
 
+        #contentwrapper:nth-child(even) {
+            background-color: yellow;
+        }
+
+        #contentwrapper:nth-child(odd) {
+            background-color: lightblue;
         }
 
         header {
@@ -92,14 +99,6 @@
             border-top-color: black;
             border-color: firebrick;
             border-style: solid;
-        }
-
-        #contentwrapper:nth-child(even) {
-            background-color: yellow;
-        }
-
-        #contentwrapper:nth-child(odd) {
-            background-color: lightblue;
         }
     </style>
 </head>
