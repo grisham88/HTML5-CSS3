@@ -12,35 +12,69 @@
             width: 140px;
         }
 
+        /* Ebene 1 */
         #nav ul {
             /* 1) Bullets entfernen */
             list-style: none;
-            /* 2) Margins entfernen*/
+            /* 2) Margin entfernen */
             margin: 0;
-            /* 3) Padding entfernen*/
+            /* 3) Padding entfernen */
+            padding-left: 0;
             /* Default: 2em | 40px */
-            padding: 0;
         }
 
         #nav li {
             margin-bottom: 4px;
+            position: relative;
         }
 
         #nav li:hover {}
 
         #nav a {
-            /* 4) Unterstricht enfernen */
+            /* 4) Unterstrich entfernen */
             text-decoration: none;
             /* 5) zu Blockelement machen */
             display: block;
-            /* Präsentation */
+            /* Präsentation hier */
             color: black;
+            text-align: right;
             background-color: #ddd;
             padding: 5px;
         }
 
         #nav a:hover {
             background-color: yellow;
+        }
+
+        /* Ebene  2 */
+
+        #nav ul li ul {
+            background-color: rgba(255, 255, 255, 0.8);
+            width: 0px;
+            transition: width 1s;
+            overflow: hidden;
+            position: absolute;
+            left: 140px;
+            top: 0;
+        }
+
+        #nav ul li:hover ul {
+            _display: block;
+            width: 140px;
+            transition: width 1s;
+        }
+
+        #nav ul ul li {
+            width: 140px;
+            float: right;
+        }
+
+        #nav ul ul a {
+            background-color: #eee;
+        }
+
+        #nav ul ul a:hover {
+            background-color: #ccc;
         }
 
         .content {
@@ -54,18 +88,46 @@
         .content:target {
             background-color: lightgreen;
         }
+
+        .subcontent {
+            margin-left: 50px;
+            /* oder 
+            position: absolute;
+            left: 150px;
+            */
+        }
+
+        .subcontent:target {
+            background-color: lightcyan;
+        }
     </style>
 </head>
 
 <body>
+
+
     <div id="nav">
         <!--ul>li*7>a{Hauptmenü $}-->
         <ul>
             <li><a href="#content1">Hauptmenü 1</a></li>
-            <li><a href="#content2">Hauptmenü 2</a></li>
+            <li>
+                <a href="#content2">Hauptmenü 2</a>
+                <ul>
+                    <li><a href="#content2/subcontent1">Untermenü</a></li>
+                    <li><a href="#content2/subcontent2">Untermenü</a></li>
+                    <li><a href="#content2/subcontent3">Untermenü</a></li>
+                </ul>
+            </li>
             <li><a href="#content3">Hauptmenü 3</a></li>
             <li><a href="#content4">Hauptmenü 4</a></li>
-            <li><a href="#content5">Hauptmenü 5</a></li>
+            <li>
+                <a href="#content5">Hauptmenü 5</a>
+                <ul>
+                    <li><a href="#content5/subcontent1">Untermenü</a></li>
+                    <li><a href="#content5/subcontent2">Untermenü</a></li>
+                    <li><a href="#content5/subcontent3">Untermenü</a></li>
+                </ul>
+            </li>
             <li><a href="#content6">Hauptmenü 6</a></li>
             <li><a href="#content7">Hauptmenü 7</a></li>
         </ul>
@@ -82,6 +144,17 @@
         <p>Voluptatem distinctio facere commodi, pariatur laborum aliquam, autem aspernatur, officia unde saepe rem
             provident vel placeat explicabo. Quisquam error unde excepturi aut consectetur corrupti perferendis,
             blanditiis nobis doloremque voluptatum voluptas!</p>
+
+        <!--div#subcontent$.subcontent*3>p>lorem12-->
+        <div id="content2/subcontent1" class="subcontent">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde quibusdam temporibus dolore?</p>
+        </div>
+        <div id="content2/subcontent2" class="subcontent">
+            <p>Non dolore excepturi nam neque molestiae molestias odit pariatur est vero consequuntur.</p>
+        </div>
+        <div id="content2/subcontent3" class="subcontent">
+            <p>Eius corrupti distinctio, aliquam amet ullam cum illo animi quo ratione reiciendis.</p>
+        </div>
     </div>
     <div id="content3" class="content">
         <h1>Vertikale Navigation 3</h1>
@@ -100,6 +173,16 @@
         <p>Iure ad dolore quasi facilis cum ab amet rerum, nesciunt nihil? Maxime odio in suscipit magnam ipsa
             accusantium ut doloribus voluptate esse. Error ratione suscipit, exercitationem eligendi veritatis
             voluptatibus est?</p>
+        <!--div#subcontent$.subcontent*3>p>lorem12-->
+        <div id="content5/subcontent1" class="subcontent">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas cumque fugiat beatae.</p>
+        </div>
+        <div id="content5/subcontent2" class="subcontent">
+            <p>Repellendus cupiditate ut beatae? Amet sunt ipsum dolor. At cupiditate molestias odit?</p>
+        </div>
+        <div id="content5/subcontent3" class="subcontent">
+            <p>Incidunt culpa quas veniam, eum consequatur esse fugit atque iure deleniti mollitia!</p>
+        </div>
     </div>
     <div id="content6" class="content">
         <h1>Vertikale Navigation 6</h1>

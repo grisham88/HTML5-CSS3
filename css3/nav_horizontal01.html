@@ -5,21 +5,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Navigation, vertikal</title>
+    <title>Navigation, horizontal</title>
     <style>
-        #nav {
-            float: left;
-            width: 140px;
-        }
+        #nav {}
 
         #nav ul {
             /* 1) Bullets entfernen */
             list-style: none;
-            /* 2) Margins entfernen*/
+            /* 2) Margin entfernen */
             margin: 0;
-            /* 3) Padding entfernen*/
+            /* 3) Padding entfernen */
+            padding-left: 0;
             /* Default: 2em | 40px */
-            padding: 0;
+
+            display: flex;
         }
 
         #nav li {
@@ -29,11 +28,11 @@
         #nav li:hover {}
 
         #nav a {
-            /* 4) Unterstricht enfernen */
+            /* 4) Unterstrich entfernen */
             text-decoration: none;
             /* 5) zu Blockelement machen */
             display: block;
-            /* Präsentation */
+            /* Präsentation hier */
             color: black;
             background-color: #ddd;
             padding: 5px;
@@ -43,13 +42,7 @@
             background-color: yellow;
         }
 
-        .content {
-            margin-left: 150px;
-            /* oder 
-            position: absolute;
-            left: 150px;
-            */
-        }
+        .content {}
 
         .content:target {
             background-color: lightgreen;
@@ -59,7 +52,7 @@
 
 <body>
     <div id="nav">
-        <!--ul>li*7>a{Hauptmenü $}-->
+        <!-- ul>li*7>a[href=#content$]{Hauptmenü $}-->
         <ul>
             <li><a href="#content1">Hauptmenü 1</a></li>
             <li><a href="#content2">Hauptmenü 2</a></li>
