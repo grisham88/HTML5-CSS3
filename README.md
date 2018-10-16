@@ -113,13 +113,13 @@ h1 + p          | 0  | 0     | 2
 
 ### strukturellen Pseudoklassen
 
-:first-child
-:last-child
-:nth-child(even|odd) jedes gerade/ungerade Element
-:nth-child(number) - das Element an Position number
-:nth-child(n+2) - ab dem 2. Element alle
-:nth-child(3n) - jedes 3. Element
-:first-of-type
+* :first-child
+* :last-child
+* :nth-child(even|odd) jedes gerade/ungerade Element
+* :nth-child(number) - das Element an Position number
+* :nth-child(n+2) - ab dem 2. Element alle
+* :nth-child(3n) - jedes 3. Element
+* :first-of-type
 
  
 ## Layout-Modi
@@ -135,8 +135,139 @@ Standard-Layout
 1. Border
 1. Margin - mit Margin Merge - überlagern der Margins, der größere gewinnt; body margin geht nach innen! 
 
+#### Ränder & Schatten
 * border
 * border-radius
+* box-shadow
+```css
+        #p1 {
+            box-shadow: -5px -10px 5px darkgray; /* l(-)/r(+) t(-)/b(+) Verlauf */
+        }
+```
+  * inset - Shadow nach innen
+  * Listen von shadows - werden von rechts nach links "gemalt";
+
+#### Hintergrund
+* background: `url(special.gif);` oder `background-image: linear-gradient(155deg, 0%, red 100%);`
+  
+#### Sichtbarkeit
+```css
+        #p2 {
+            background-color: rosybrown;
+            _display: none; /* aus dem Flow herausnehmen */
+            _visibility: hidden; /* unsichtbar, aber Layout bleibt erhalten */
+            opacity: 0; /* 0 ... 1, Layout bleibt erhalten */
+        }
+```
+
+#### Positionierung
+ 
+position:   |  ist im Flow | ist positioniert
+------------|--------------|-----------------
+static      |   x          |    -
+relative    |   x          |    x
+absolute    |   -          |    x (relativ zum nächsten positionierten Parent)
+fixed       |   -          |    x (relativ zum viewport)
+sticky      |   -          |    x
+
+* `float: left|right` - um divs z.B. nebeneinander zu positionieren & `clear: left|both|right` um das nächste Element im Flow *nach* den gefloateten Elementen zu positionieren [float.html](./css3/float.html) und [float02.html](./css3/float02.html)
+
+### Tablelayout
+
+* `display: table;` - optional, solange kein Zugriff auf die ganze Tabelle benötigt wird
+* `display: table-row;` - optional, solange nur eine Zeile benötigt wird
+* `display: table-cell;` - Element soll 1-n Zellen füllen
+
+[layout_03.html](./css3/layout_03.html)
+
+### Flexlayout
+
+`display:flex`
+
+Elemente im Flexcontainer richten sich aus nach:
+
+Main Axis: links nach rechts
+```css
+justify-content: flex-start; /* | flex-start | flex-end | center | ... */
+```
+
+Cross Axis: oben nach unten
+```css
+align-items: center; /* | flex-start | flex-end | stretch (default) | ... */
+```
+
+Items haben
+* order - Reihenfolge festlegen
+* flex - relative Breite festlegen
+
+[layout_04.html](./css3/layout_04.html)
+
+[A Complete Guide to Flexbox](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 
 
+### Gridlayout
 
+`display:grid`
+
+Es wird ein Gridtemplate definert, das Spalten un Zeilen festlegt
+
+*Margins werden **nicht** gemerged, sondern addieren sich*
+
+Von-/Bis-Angaben beziehen sich auf die (Trenn-)Linien der Zeilen und Spalten, d.h. bei 3 Spalten habe ich die Linien 1, 2, 3, 4
+
+[layout_05.html](./css3/layout_05.html)
+
+https://developer.mozilla.org/de/docs/Web/CSS/CSS_Grid_Layout
+
+
+## Transitions
+
+Gesteuertes Umschalten von einer Darstellung zu einer anderen.
+
+
+Beispiel - Breite, Höhe, Farbe beim Übergang eine Sekunde lang ändern: 
+```css
+        .box:hover {
+            width: 100px;
+            height: 100px;
+            background-color: yellow;
+            transition: width 1s, height 1s, background-color 1s; /* = all 1s */
+        }
+```
+
+Angabe: Attribut Dauer [Verzögerung]
+
+
+## Panels ein-/ausblenden
+
+[panels01.html](css3\panels01.html)
+
+[schublade.html](css3\schublade.html)
+
+[schublade02.html](css3\schublade02.html)
+
+
+## Navigation bauen
+
+[NavigationVertikal.html](css3\NavigationVertikal.html)
+
+[NavigationHorizontal.html](css3\NavigationHorizontal.html)
+
+[NavigationVertikal02.html](css3\NavigationVertikal02.html)
+
+Style von c anpassen, wenn Hover über Parent-Element b von c:
+
+```css
+a b:hover c { ... }
+```
+
+## Mediaqueries
+
+[mediaqueries01.html](css3\mediaqueries01.html)
+
+
+## Hinweise
+
+https://www.rechnerhaus.de/blog/unterschied-zwischen-css-scss-sass
+
+https://scotch.io/tutorials/using-sass-with-the-angular-cli
